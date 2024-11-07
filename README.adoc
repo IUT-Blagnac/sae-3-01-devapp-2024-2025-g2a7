@@ -52,9 +52,10 @@ toc::[]
 
 Projet est réalisé par::
 
-- https://github.com/janeDoe[Jane Doe]
-- https://github.com/johnSmith[John Smith]
-...
+- https://github.com/janeDoe[Ducry Pierre-Louis]
+- https://github.com/johnSmith[Da Chao romain]
+- https://github.com/johnSmith[Razafinirina Mialisoa]
+- https://github.com/johnSmith[Pellegatta Matteo]
 
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
 
