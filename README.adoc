@@ -53,7 +53,7 @@ toc::[]
 Projet est réalisé par::
 
 - https://github.com/janeDoe[Ducry Pierre-Louis]
-- https://github.com/johnSmith[Da Chao romain]
+- https://github.com/johnSmith[Da Chao Romain]
 - https://github.com/johnSmith[Razafinirina Mialisoa]
 - https://github.com/johnSmith[Pellegatta Matteo]
 
