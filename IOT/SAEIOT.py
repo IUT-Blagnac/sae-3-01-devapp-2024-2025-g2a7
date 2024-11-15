@@ -32,6 +32,7 @@ def on_message(client, userdata, msg):
         print(f"Message reçu sur le topic: {msg.topic}")
         payload = json.loads(msg.payload.decode())
         
+        # Vérifie le type de données et appelle la fonction de traitement appropriée
         if isinstance(payload, list) and len(payload) == 2:
             if 'temperature' in payload[0]:
                 processed_data = process_am107_data(payload)
@@ -40,6 +41,7 @@ def on_message(client, userdata, msg):
         else:
             processed_data = process_solaredge_data(payload)
         
+        # Génère un timestamp et log les données traitées
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log_data(timestamp, msg.topic, processed_data)
 
@@ -56,31 +58,38 @@ def log_data(timestamp, topic, data):
         print(f"Erreur lors de l'écriture dans le fichier: {e}")
 
 def process_triphaso_data(payload):
-    power_data = payload[0]
-    device_info = payload[1]
+    donnees_puissance = payload[0]
+    infos_dispositif = payload[1]
     
-    result = []
-    if 'positive_active_power_W' in power_data:
-        result.append(f"Puissance active positive: {power_data['positive_active_power_W']} W")
-    if 'negative_reactive_power_VAR' in power_data:
-        result.append(f"Puissance réactive négative: {power_data['negative_reactive_power_VAR']} VAR")
-    if 'sum_positive_active_energy_Wh' in power_data:
-        result.append(f"Énergie active positive: {power_data['sum_positive_active_energy_Wh']} Wh")
-    if 'sum_negative_reactive_energy_VARh' in power_data:
-        result.append(f"Énergie réactive négative: {power_data['sum_negative_reactive_energy_VARh']} VARh")
+    results = []
     
-    if 'deviceName' in device_info:
-        result.append(f"Nom du dispositif: {device_info['deviceName']}")
-    if 'devEUI' in device_info:
-        result.append(f"Identifiant du dispositif (devEUI): {device_info['devEUI']}")
-    if 'room' in device_info:
-        result.append(f"Pièce: {device_info['room']}")
-    if 'floor' in device_info:
-        result.append(f"Étage: {device_info['floor']}")
-    if 'Building' in device_info:
-        result.append(f"Bâtiment: {device_info['Building']}")
-
-    return " | ".join(result)
+    # Dictionnaires des clés et modèles pour les données de puissance et les infos du dispositif
+    cles_puissance = {
+        'positive_active_power_W': "Puissance active positive: {} W",
+        'negative_reactive_power_VAR': "Puissance réactive négative: {} VAR",
+        'sum_positive_active_energy_Wh': "Énergie active positive: {} Wh",
+        'sum_negative_reactive_energy_VARh': "Énergie réactive négative: {} VARh"
+    }
+    
+    cles_dispositif = {
+        'deviceName': "Nom du dispositif: {}",
+        'devEUI': "Identifiant du dispositif (devEUI): {}",
+        'room': "Pièce: {}",
+        'floor': "Étage: {}",
+        'Building': "Bâtiment: {}"
+    }
+    
+    # Traitement des données de puissance
+    for cle, modele in cles_puissance.items():
+        if cle in donnees_puissance:
+            results.append(modele.format(donnees_puissance[cle]))
+    
+    # Traitement des infos du dispositif
+    for cle, modele in cles_dispositif.items():
+        if cle in infos_dispositif:
+            results.append(modele.format(infos_dispositif[cle]))
+    
+    return " | ".join(results)
 
 def process_am107_data(payload):
     print("Traitement AM107\n")
@@ -88,35 +97,36 @@ def process_am107_data(payload):
 
     result = []
     if isinstance(sensor_data, dict) and isinstance(device_info, dict):
-        if 'temperature' in sensor_data:
-            result.append(f"Température: {sensor_data['temperature']} °C")
-        if 'humidity' in sensor_data:
-            result.append(f"Humidité: {sensor_data['humidity']} %")
-        if 'co2' in sensor_data:
-            result.append(f"CO2: {sensor_data['co2']} ppm")
-        if 'tvoc' in sensor_data:
-            result.append(f"TVOC: {sensor_data['tvoc']} ppb")
-        if 'illumination' in sensor_data:
-            result.append(f"Illumination: {sensor_data['illumination']} lux")
-        if 'pressure' in sensor_data:
-            result.append(f"Pression: {sensor_data['pressure']} hPa")
-        if 'activity' in sensor_data:
-            result.append(f"Activité: {sensor_data['activity']}")
-        if 'infrared' in sensor_data:
-            result.append(f"Infrarouge: {sensor_data['infrared']}")
-        if 'infrared_and_visible' in sensor_data:
-            result.append(f"Infrarouge + Visible: {sensor_data['infrared_and_visible']}")
+        # Dictionnaires des clés et modèles pour les données des capteurs et les infos du dispositif
+        sensor_keys = {
+            'temperature': "Température: {} °C",
+            'humidity': "Humidité: {} %",
+            'co2': "CO2: {} ppm",
+            'tvoc': "TVOC: {} ppb",
+            'illumination': "Illumination: {} lux",
+            'pressure': "Pression: {} hPa",
+            'activity': "Activité: {}",
+            'infrared': "Infrarouge: {}",
+            'infrared_and_visible': "Infrarouge + Visible: {}"
+        }
 
-        if 'deviceName' in device_info:
-            result.append(f"Nom du dispositif: {device_info['deviceName']}")
-        if 'devEUI' in device_info:
-            result.append(f"Identifiant du dispositif (devEUI): {device_info['devEUI']}")
-        if 'room' in device_info:
-            result.append(f"Pièce: {device_info['room']}")
-        if 'floor' in device_info:
-            result.append(f"Étage: {device_info['floor']}")
-        if 'Building' in device_info:
-            result.append(f"Bâtiment: {device_info['Building']}")
+        device_keys = {
+            'deviceName': "Nom du dispositif: {}",
+            'devEUI': "Identifiant du dispositif (devEUI): {}",
+            'room': "Pièce: {}",
+            'floor': "Étage: {}",
+            'Building': "Bâtiment: {}"
+        }
+
+        # Traitement des données des capteurs
+        for key, template in sensor_keys.items():
+            if key in sensor_data:
+                result.append(template.format(sensor_data[key]))
+
+        # Traitement des infos du dispositif
+        for key, template in device_keys.items():
+            if key in device_info:
+                result.append(template.format(device_info[key]))
 
     else:
         result.append("Erreur : Le format du payload AM107 est invalide.")
@@ -125,19 +135,31 @@ def process_am107_data(payload):
 
 def process_solaredge_data(payload):
     print("Traitement Solaredge\n")
-    result = []
-    if 'lastUpdateTime' in payload: # Vérifier si le payload contient les données attendues
-        result.append(f"Dernière mise à jour: {payload['lastUpdateTime']}")
-        result.append(f"Énergie totale: {payload['lifeTimeData']} Wh")
-        result.append(f"Énergie l'année dernière: {payload['lastYearData']} Wh")
-        result.append(f"Énergie le mois dernier: {payload['lastMonthData']} Wh")
-        result.append(f"Énergie du dernier jour: {payload['lastDayData']} Wh")
-        result.append(f"Puissance actuelle: {payload['currentPower']} W")
-        result.append(f"Mesuré par: {payload['measuredBy']}")
-    return " | ".join(result)
+    
+    # Dictionnaire des clés et modèles pour les données Solaredge
+    modeles_cles = {
+        'lastUpdateTime': "Dernière mise à jour: {}",
+        'lifeTimeData': "Énergie totale: {} Wh",
+        'lastYearData': "Énergie l'année dernière: {} Wh",
+        'lastMonthData': "Énergie le mois dernier: {} Wh",
+        'lastDayData': "Énergie du dernier jour: {} Wh",
+        'currentPower': "Puissance actuelle: {} W",
+        'measuredBy': "Mesuré par: {}"
+    }
+
+    resultat = []
+    # Traitement des données Solaredge
+    for cle, modele in modeles_cles.items():
+        if cle in payload:
+            resultat.append(modele.format(payload[cle]))
+    
+    return " | ".join(resultat)
+
 
 def alertes_data(data):
     alerts = []
+    
+    # Vérification des seuils et ajout des alertes correspondantes
     if 'temperature' in data and data['temperature'] > temperature_max:
         alerts.append(f"Température élevée: {data['temperature']}°C (max {temperature_max}°C)")
     if 'humidity' in data and data['humidity'] > humidite_max:
@@ -145,6 +167,7 @@ def alertes_data(data):
     if 'pressure' in data and data['pressure'] > pression_max:
         alerts.append(f"Pression élevée: {data['pressure']} hPa (max {pression_max} hPa)")
 
+    # Enregistrement des alertes dans un fichier externe
     if alerts:
         with open('alertes.txt', 'a') as f:
             for alert in alerts:
