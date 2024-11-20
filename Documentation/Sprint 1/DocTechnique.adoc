@@ -12,5 +12,7 @@
 toc::[]
 ---
 
-== I. Contexte
+== I. Présentation du site E-commerce
+== II. Architecture 
+== III. Fonctionnalités
 
