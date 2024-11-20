@@ -91,13 +91,13 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 
 |===
-| Sprint | Doc.Tech | Doc.Util
+| Sprint | Doc.Tech | Doc.Util | User Story
 
-| Sprint 1 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Sprint%201/DocTechnique.adoc[Doc Technique] | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Sprint%201/DocUtilisateur.adoc[Doc Utilisateur]
-| Sprint 2 | |
-| Sprint 3 | |
-| Sprint 4 | |
-| Sprint 5 | |
+| Sprint 1 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Sprint%201/DocTechnique.adoc[Doc Technique] | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Sprint%201/DocUtilisateur.adoc[Doc Utilisateur]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/1[User Story 1]
+| Sprint 2 | | |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/3[User Story 2]
+| Sprint 3 | | |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/2[User Story 3]
+| Sprint 4 | | |
+| Sprint 5 | | |
 |===
 
 
