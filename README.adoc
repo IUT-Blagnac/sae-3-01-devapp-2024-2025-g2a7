@@ -54,8 +54,8 @@ Projet est réalisé par::
 
 - https://github.com/Ducry-PL[Ducry Pierre-Louis] : Scrum Master
 - https://github.com/Spiritdev31[Da Chao Romain] : Product Owner
-- https://github.com/Mialiso[Razafinirina Mialisoa] : Developper
-- https://github.com/MatteoPel[Pellegatta Matteo] : Developper
+- https://github.com/Mialiso[Razafinirina Mialisoa] : Développeur
+- https://github.com/MatteoPel[Pellegatta Matteo] : Développeur
 
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
 
