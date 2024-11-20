@@ -59,6 +59,16 @@ Projet est réalisé par::
 
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
 
+== Présentation du client : Brickolo SARL
+___Brickolo Sarl___, fondée en 1924 à Blagnac, est un acteur majeur dans la conception de briques de jeu en plastique. Initialement centrée sur les jouets en bois, l'entreprise a su évoluer pour répondre aux attentes de ses clients et s'adapter aux enjeux modernes.
+
+Depuis 2021, sous la direction d'Anna Müller, Brickolo s'engage dans une transition écologique en utilisant des plastiques recyclés pour ses produits. Parallèlement, l'entreprise investit dans une transformation numérique, avec ___une refonte complète de son site internet___, visant à :
+
+- Moderniser l'expérience utilisateur.
+- Offrir une interface sobre, intuitive et accessible.
+- Mettre en avant ses valeurs écologiques.
+- Renforcer sa présence en ligne pour répondre aux besoins d’un secteur en pleine mutation.
+
 == Contexte général
 
 TIP: Cette partie de votre `README.adoc` peut être supprimée ou mise ailleurs.
