@@ -17,3 +17,18 @@ image::./img/logo_iut_blagnac.jpg[Logo IUT de Blagnac, 200]
 image::./img/logo_univ_jean_jaures.jpg[Logo Université Toulouse II - Jean Jaurès, 200]
 
 ---
+
+== *Introduction*
+
+== *1. Architecture système*
+
+=== 1.1 Architecture logicielle
+
+=== 1.2 Logique métier (Diagramme des Classes Métier (DCM))
+
+== 2. Description des fonctionnalités
+=== 2.1 Diagramme des Cas d’Utilisation (DCU)
+=== 2.2 Diagrammes de Séquence Système (DSS)
+==== 2.2.1 Client non connecté
+==== 2.2.2 Client connecté
+==== 2.2.3 Administrateur
