@@ -1,0 +1,19 @@
+= Document de Conception
+:compat-mode!:
+:toc:
+:toc-title: Table des matières
+:toclevels: 4
+
+
+*Par :* _Ducry Pierre-Louis, Da Chao Romain, Razafinirina Mialisoa, Pellegatta Matteo_ +
+*Pour :* _Brickolo_ +
+*Date :* 20/11/2024 +
+*Équipe : 2A7* 
+
+---
+
+
+image::./img/logo_iut_blagnac.jpg[Logo IUT de Blagnac, 200]
+image::./img/logo_univ_jean_jaures.jpg[Logo Université Toulouse II - Jean Jaurès, 200]
+
+---
