@@ -25,6 +25,7 @@ Le projet comprendra **trois interfaces principales** :
 - Présente une vue d'ensemble des informations clés.
 - Les fonctionnalités incluent :
   - Affichage de graphiques et métriques en temps réel.
+- Il faut une donnée pour toutes les salles (par ex si on choisit d'afficher uniquement la température, alors on l'aura pour chaque salle)
 
 === 3. Page de Configuration
 
