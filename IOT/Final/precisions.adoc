@@ -42,8 +42,8 @@ Les icônes et les libellés sur la barre de navigation incluront :
 - **Tableau de Bord**
 - **Configuration**
 
--messages de confirmation quand il s'agit de modification ou d'insertion de données
--Si modifications par finies et que l'utilisateur change de pages, mettre message d'avertissement des données non enregistrées.
+- Messages de confirmation quand il s'agit de modification ou d'insertion de données
+- Si modifications par finies et que l'utilisateur change de pages, mettre message d'avertissement des données non enregistrées.
 
 == Notes Techniques
 
