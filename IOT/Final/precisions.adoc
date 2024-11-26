@@ -25,6 +25,7 @@ Le projet comprendra **trois interfaces principales** :
 - Présente une vue d'ensemble des informations clés.
 - Les fonctionnalités incluent :
   - Affichage de graphiques et métriques en temps réel.
+- On attérit dessus en premier quand on ouvre le jar.
 - Il faut une donnée pour toutes les salles (par ex si on choisit d'afficher uniquement la température, alors on l'aura pour chaque salle)
 
 === 3. Page de Configuration
@@ -40,6 +41,9 @@ Les icônes et les libellés sur la barre de navigation incluront :
 - **Logs Bruts**
 - **Tableau de Bord**
 - **Configuration**
+
+-messages de confirmation quand il s'agit de modification ou d'insertion de données
+-Si modifications par finies et que l'utilisateur change de pages, mettre message d'avertissement des données non enregistrées.
 
 == Notes Techniques
 
