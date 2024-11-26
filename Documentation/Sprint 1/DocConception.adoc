@@ -13,7 +13,7 @@
 ---
 
 
-image::./img/logo_iut_blagnac.jpg[Logo IUT de Blagnac, 200]
+image::./img/logo_iut_blagnac.png[Logo IUT de Blagnac, 200]
 image::./img/logo_univ_jean_jaures.jpg[Logo Université Toulouse II - Jean Jaurès, 200]
 
 ---
