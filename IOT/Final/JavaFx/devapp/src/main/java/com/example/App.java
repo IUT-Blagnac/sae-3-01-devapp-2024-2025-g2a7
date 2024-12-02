@@ -32,7 +32,12 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        System.out.println("En légende");
+        System.out.println("Crédits : DA CHAO Romain, PELLEGATTA Matteo, RAZAFINIRINA Mialisoa, DUCRY Pierre-Louis (MAGM - Groupe 11)");
+        System.out.println("Démarrage de l'application...");
         launch();
+        System.out.println("L'application s'est fermée.");
     }
+
 
 }
