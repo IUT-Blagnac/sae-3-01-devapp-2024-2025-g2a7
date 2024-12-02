@@ -100,6 +100,9 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 
 
+
+== Réalisations 
+
 |===
 | Sprint | Doc.Tech | Doc.Util | User Story
 
@@ -111,9 +114,12 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 |===
 
 
-== Réalisations 
-
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+|===
+| Semaine | ODJ | Bilan 
+| 49 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/ODJ_02-12-24.pdf[ODJ-S49]|
+| 50 ||
+| 51 ||
+|===
 
 == Gestion de projet & Qualité
 
