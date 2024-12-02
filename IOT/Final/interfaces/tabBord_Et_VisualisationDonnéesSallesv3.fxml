@@ -7,6 +7,7 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
@@ -143,9 +144,7 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <Label fx:id="lblUn" layoutX="29.0" layoutY="24.0" styleClass="bold" text="Salle1" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-                                          <Label fx:id="lblDeux" layoutX="29.0" layoutY="56.0" prefHeight="21.0" prefWidth="390.0" styleClass="bold" text="Salle2" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0" />
-                                          <Label fx:id="lblTrois" layoutX="29.0" layoutY="90.0" styleClass="bold" text="Salle3" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0" />
+                                          <ListView layoutX="16.0" layoutY="25.0" prefHeight="200.0" prefWidth="232.0" />
                                        </children>
                                     </AnchorPane>
                                  </content>
