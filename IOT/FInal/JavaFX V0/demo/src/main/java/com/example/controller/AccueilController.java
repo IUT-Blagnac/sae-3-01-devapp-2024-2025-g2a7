@@ -34,7 +34,7 @@ public class AccueilController {
         // Logique pour le bouton "Configuration"
         System.out.println("Configuration button clicked");
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/path/to/Config_UneDonnéeTousLesSalles.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/view/Config_UneDonnéeTousLesSalles.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Configuration");
@@ -47,13 +47,31 @@ public class AccueilController {
 
     @FXML
     private void handleDonneesSallesButtonAction() {
-        // Logique pour le bouton "Données salles"
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/view/tabBord.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Configuration");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Données salles button clicked");
     }
 
     @FXML
     private void handleSolarButtonAction() {
-        // Logique pour le bouton "Solar"
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/view/SolarEdge.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("SolarEdge");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Solar button clicked");
     }
 }
