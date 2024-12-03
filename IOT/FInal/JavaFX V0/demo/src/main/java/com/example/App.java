@@ -13,7 +13,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            scene = new Scene(loadFXML("view/Accueil"), 600, 800);
+            scene = new Scene(loadFXML("view/Accueil"), 600, 600);
             stage.setScene(scene);
             stage.setTitle("Configuration");
             stage.show();
