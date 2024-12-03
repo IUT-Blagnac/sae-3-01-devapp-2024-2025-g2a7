@@ -135,6 +135,8 @@ def donnee_filtree(data_list, config_file='config.ini', output_file='AM07_filtre
         
         if standardized_key in correspondances.keys():
             value_float = float(extraire_chiffres_et_points(value))
+            filtered_data[standardized_key] = value_float
+
 
                                                  
             # Si la valeur est supérieure au seuil pour ces paramètres
