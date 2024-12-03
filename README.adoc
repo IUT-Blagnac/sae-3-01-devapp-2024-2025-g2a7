@@ -121,6 +121,11 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 | 51 ||
 |===
 
+=== Retour communication semaine 48
+
+J'ai l'ODJ mais pas le compte rendu ! ODJ : Préciser qui est responsable de chaque rubrique, combien de temps on y consacre, qui fera le CR. 
+note : 0,3/3
+
 == Gestion de projet & Qualité
 
 Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
