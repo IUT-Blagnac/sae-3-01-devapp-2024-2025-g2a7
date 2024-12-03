@@ -1,8 +1,14 @@
 package com.example.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AccueilController {
 
@@ -27,6 +33,16 @@ public class AccueilController {
     private void handleConfigurationButtonAction() {
         // Logique pour le bouton "Configuration"
         System.out.println("Configuration button clicked");
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/path/to/Config_UneDonnéeTousLesSalles.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Configuration");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

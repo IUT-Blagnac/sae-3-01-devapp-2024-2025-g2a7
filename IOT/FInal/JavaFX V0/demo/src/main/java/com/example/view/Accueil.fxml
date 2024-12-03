@@ -10,7 +10,7 @@
    <center>
       <VBox alignment="CENTER" prefHeight="323.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="132.0" text="Configuration" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="132.0" text="Configuration" textAlignment="CENTER" onAction="#handleConfigurationButtonAction">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

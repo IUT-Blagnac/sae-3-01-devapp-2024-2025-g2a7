@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../../../../../../../../sae3-01-devapp-g1a-1-master/Applications/Java/src/application/ressource/configStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ConfigController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../../../../../../../../sae3-01-devapp-g1a-1-master/Applications/Java/src/application/ressource/configStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ConfigController">
    <center>
       <SplitPane dividerPositions="0.3" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
          <items>
