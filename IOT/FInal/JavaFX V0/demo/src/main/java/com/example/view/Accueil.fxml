@@ -18,7 +18,7 @@
                   <Insets top="40.0" />
                </VBox.margin>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="134.0" text="Données salles" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="134.0" text="Données salles" textAlignment="CENTER" onAction="#handleDonneesSallesButtonAction">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -26,7 +26,7 @@
                   <Insets top="40.0" />
                </VBox.margin>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="39.0" prefWidth="134.0" text="Solar" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="39.0" prefWidth="134.0" text="Solar" textAlignment="CENTER" onAction="#handleSolarButtonAction">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
