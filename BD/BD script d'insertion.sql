@@ -668,3 +668,87 @@ VALUES (49, 'Richard', 'Bernard', 'H', 'bernard.richard@gmail.com', '$2a$10$Mj8m
 INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
 VALUES (50, 'Dumont', 'Florence', 'F', 'florence.dumont@gmail.com', '$2a$10$Nj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0621222324', 'Client');
 
+
+
+DELETE FROM Avis;
+
+-- Avis 1
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (1, '5', 'Produit incroyable, je le recommande vivement !', '2024-12-01', 'Top qualité', 1, 1);
+
+-- Avis 2
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (2, '4', 'Bon produit mais livraison lente.', '2024-12-02', 'Satisfaisant', 2, 2);
+
+-- Avis 3
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (3, '3', 'La couleur ne correspond pas à la description.', '2024-12-03', 'Déçu par la couleur', 3, 3);
+
+-- Avis 4
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (4, '5', 'Livraison rapide, produit conforme.', '2024-12-04', 'Très satisfait', 4, 4);
+
+-- Avis 5
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (5, '2', 'La qualité laisse à désirer.', '2024-12-05', 'Mauvaise qualité', 5, 5);
+
+-- Avis 6
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (6, '5', 'Produit conforme à la description et très pratique.', '2024-12-06', 'Pratique et conforme', 6, 6);
+
+-- Avis 7
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (7, '4', 'Bon rapport qualité/prix.', '2024-12-07', 'Bon achat', 7, 7);
+
+-- Avis 8
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (8, '1', 'Le produit est arrivé endommagé.', '2024-12-08', 'Produit endommagé', 8, 8);
+
+-- Avis 9
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (9, '5', 'Très satisfait du service client.', '2024-12-09', 'Service client au top', 9, 9);
+
+-- Avis 10
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (10, '3', 'Les instructions d\'utilisation ne sont pas claires.', '2024-12-10', 'Manque de clarté', 10, 10);
+
+-- Avis 11
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (11, '4', 'Produit conforme mais emballage peu soigné.', '2024-12-11', 'Bon produit, emballage médiocre', 11, 11);
+
+-- Avis 12
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (12, '5', 'Article parfait pour un cadeau.', '2024-12-12', 'Idéal pour offrir', 12, 12);
+
+-- Avis 13
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (13, '2', 'Produit inutilisable après quelques jours.', '2024-12-13', 'Déçu', 13, 13);
+
+-- Avis 14
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (14, '5', 'Excellente qualité, je rachèterai.', '2024-12-14', 'Qualité exceptionnelle', 14, 14);
+
+-- Avis 15
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (15, '3', 'Le produit ne vaut pas son prix.', '2024-12-15', 'Trop cher', 15, 15);
+
+-- Avis 16
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (16, '4', 'Livraison dans les délais, produit conforme.', '2024-12-16', 'Bonne expérience', 16, 16);
+
+-- Avis 17
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (17, '1', 'Aucun suivi après vente.', '2024-12-17', 'Service client absent', 17, 17);
+
+-- Avis 18
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (18, '5', 'Produit innovant et facile à utiliser.', '2024-12-18', 'Produit génial', 18, 18);
+
+-- Avis 19
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (19, '4', 'Léger problème avec la livraison, mais tout s\'est réglé.', '2024-12-19', 'Bon suivi', 19, 19);
+
+-- Avis 20
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (20, '2', 'Mauvaise expérience, produit non conforme.', '2024-12-20', 'Non conforme', 20, 20);
+
