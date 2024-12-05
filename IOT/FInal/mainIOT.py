@@ -5,10 +5,13 @@ import json
 import configparser
 from datetime import datetime
 import ast  # Pour convertir les chaînes de type dictionnaire en dict Python
+import os 
 
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+configpath = os.path.join(os.path.dirname(__file__), 'config.ini')
+config.read(configpath)
+
 
 solaredge_id = config['mqtt'].get('solaredge_id', '')
 room = config['mqtt'].get('room', '')
@@ -48,7 +51,7 @@ def on_message(client, userdata, msg):
 
 def log_data(timestamp, topic, data):
     try:
-        with open("data_log.txt", "a", encoding='utf-8') as f:
+        with open("IOT/FInal/datas/data_log.txt", "a", encoding='utf-8') as f:
             log_entry = f"[{timestamp}] Topic: {topic} | Data: {data}\n"
             f.write(log_entry)
         print("Données enregistrées dans le fichier.")
@@ -60,11 +63,8 @@ def extraire_chiffres_et_points(chaine):
 
 
 
-def donnee_filtree(data_list, config_file='config.ini', output_file='AM07_filtre_data.json'):
-    config = configparser.ConfigParser()
-    config.read(config_file)
-    
-    # Chargement des options data_selection
+def donnee_filtree(data_list, config_file='config.ini', output_file='IOT/FInal/datas/AM07_filtre_data.json'):
+
     
     # Chargement des seuils
     seuils = {key: config.getfloat('seuils', key) for key in config['seuils']}
@@ -211,7 +211,7 @@ def process_triphaso_data(payload):
             result.append(modele.format(infos_dispositif[cle]))
 
 
-    donnee_filtree(result,'config.ini','Triphaso_filtre_data.json')
+    donnee_filtree(result,'config.ini','IOT/FInal/datas/Triphaso_filtre_data.json')
     return " | ".join(result)
 
 def process_am107_data(payload):
@@ -266,7 +266,7 @@ def process_solaredge_data(payload):
         if cle in payload:
             resultat.append(modele.format(payload[cle]))
 
-    donnee_filtree(resultat,'config.ini','Solaredge_filtre_data.json')
+    donnee_filtree(resultat,'config.ini','IOT/FInal/datas/Solaredge_filtre_data.json')
     
 
     return " | ".join(resultat)

@@ -2,9 +2,11 @@ import paho.mqtt.client as mqtt
 import json
 import configparser
 from datetime import datetime
+import os 
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+configpath = os.path.join(os.path.dirname(__file__), 'config.ini')
+config.read(configpath)
 
 solaredge_id = config['mqtt']['solaredge_id']
 room = config['mqtt']['room']
