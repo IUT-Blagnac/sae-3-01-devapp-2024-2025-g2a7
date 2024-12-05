@@ -17,16 +17,7 @@ public class ConfigController {
     public ConfigController(Stage _parentStage){
         // Logique pour le bouton "Configuration"
         System.out.println("Configuration button clicked");
-        /*try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ressources/application/view/Config_UneDonnéeTousLesSalles.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Configuration");
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
+        
         try {
 			FXMLLoader loader = new FXMLLoader(
 			ConfigViewController.class.getResource("/ressources/application/view/Config_UneDonnéeTousLesSalles.fxml"));

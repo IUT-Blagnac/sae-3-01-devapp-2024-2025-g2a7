@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 public class AffDonneesController {
     private Stage donneeStage;
+    
 
     public AffDonneesController(Stage parentStage) {
         try {

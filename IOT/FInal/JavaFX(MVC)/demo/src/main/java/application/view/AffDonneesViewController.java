@@ -2,9 +2,11 @@ package application.view;
 
 import java.io.File;
 import java.io.FileReader;
+import java.util.List;
 
 import application.control.AffDonneesController;
-import application.model.data.ChargementDonnees;
+import application.model.data.Room;
+import application.model.data.RoomManager;
 import application.tools.AlertUtilities;
 import javafx.beans.Observable;
 import javafx.collections.ObservableList;
@@ -20,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tab;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -28,7 +31,7 @@ public class AffDonneesViewController {
     // Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
 	private Stage containingStage;
     private AffDonneesController donnees; 
-    private ObservableList<ChargementDonnees> olistDonnees; 
+    private RoomManager roomManager;
 
     /**
 	 * Initialisation du contrôleur de vue DailyBankMainFrameController.
@@ -142,25 +145,34 @@ public class AffDonneesViewController {
     private Button retour3;
 
     @FXML
-    void afficheSalle(ActionEvent event) {
-        /*Object o = new JsonParser().parse(new FileReader(File.json));
-
-            JSONObject j = (JSONObject) o;
-
-            String Name = (String) j.get("Name");
-
-        */
-    }
-
-
-    @FXML
     private void ActionBtnRetour() {
         Stage stage = (Stage) retour1.getScene().getWindow();
         stage.close();
     }
+   
 
+    // Cette méthode charge les salles dans le MenuButton
+    @FXML
+    private void afficheSalle() {
+        if (roomManager != null) {
+            salles.getItems().clear();  // Efface les anciennes salles si elles existent déjà
 
+            List<Room> rooms = roomManager.getRoomsList();  // Récupère la liste des salles
 
+            for (Room room : rooms) {
+                MenuItem item = new MenuItem(room.getRoomId());  // Crée un item de menu pour chaque salle
+                item.setOnAction(event -> handleRoomSelection(room));  // Gère la sélection d'une salle
+                salles.getItems().add(item);  // Ajoute l'item au MenuButton
+            }
+        }
+    }
+
+    // Méthode appelée lorsqu'une salle est sélectionnée
+    private void handleRoomSelection(Room room) {
+        System.out.println("Salle sélectionnée : " + room.getRoomId());
+        // Vous pouvez ici ajouter une logique pour afficher les données de la salle dans l'interface
+    }
+    
     /**
 	 * Action menu quitter. Demander une confirmation puis fermer la fenêtre (donc
 	 * l'application car fenêtre principale).
