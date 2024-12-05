@@ -41,7 +41,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.App</mainClass>
+                            <mainClass>application.example.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>

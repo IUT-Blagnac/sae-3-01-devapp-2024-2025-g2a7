@@ -1,12 +1,28 @@
-package com.example.controller;
+package application.view;
 
+import application.control.AffDonneesController;
+import application.control.ConfigController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class ConfigController {
+public class ConfigViewController {
+    private Stage containingStage;
+    private ConfigController config; 
 
+    /**
+	 * Initialisation du contrôleur de vue DailyBankMainFrameController.
+	 *
+	 * @param _containingStage Stage qui contient le fichier xml contrôlé par
+	 *                         DailyBankMainFrameController
+	 */
+	public void initContext(Stage _containingStage, ConfigController _config) {
+		this.containingStage = _containingStage;
+        this.config = _config; 
+
+	}
     @FXML
     private TextField outField;
 
@@ -47,6 +63,9 @@ public class ConfigController {
     private Button valid;
 
     @FXML
+    private Button retour2;
+
+    @FXML
     private void modifOutField() {
         // Logique pour modifier le champ outField
     }
@@ -60,4 +79,16 @@ public class ConfigController {
     private void valid() {
         // Logique pour valider les modifications
     }
+
+    @FXML
+    private void handleBackButtonAction() {
+        // Fermer la fenêtre actuelle
+        Stage stage = (Stage) retour2.getScene().getWindow();
+        stage.close();
+    }
+
+    public void showDialog() {
+        this.containingStage.showAndWait();
+    }
+    
 }

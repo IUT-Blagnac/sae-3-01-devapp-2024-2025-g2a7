@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../../../../../../../../sae3-01-devapp-g1a-1-master/Applications/Java/src/application/ressource/configStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ConfigController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../../../../../../../../sae3-01-devapp-g1a-1-master/Applications/Java/src/application/ressource/configStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ConfigViewController">
    <center>
       <SplitPane dividerPositions="0.3" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
          <items>
@@ -218,6 +218,7 @@
    <bottom>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <buttons>
+            <Button mnemonicParsing="false" text="Retour" fx:id="retour2"  onAction="#handleBackButtonAction" />
             <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" text="Annuler" />
             <Button fx:id="valid" mnemonicParsing="false" onAction="#valid" text="Valider" />
          </buttons>
