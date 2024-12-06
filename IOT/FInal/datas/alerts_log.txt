@@ -124,3 +124,22 @@ Alerte: puissance_active_positive (300.0) dépasse le seuil (200.0) à 2024-12-0
 Alerte: puissance_reactive_negative (289.0) dépasse le seuil (150.0) à 2024-12-05 20:03:35.515720
 Alerte: energie_active_positive (4327373.0) dépasse le seuil (400000.0) à 2024-12-05 20:03:35.515720
 Alerte: energie_reactive_negative (2253758.0) dépasse le seuil (900000.0) à 2024-12-05 20:03:35.515720
+Alerte: puissance_active_positive (461.0) dépasse le seuil (200.0) à 2024-12-06 10:06:01.806636
+Alerte: puissance_reactive_negative (275.0) dépasse le seuil (150.0) à 2024-12-06 10:06:01.806636
+Alerte: energie_active_positive (2659929.0) dépasse le seuil (400000.0) à 2024-12-06 10:06:01.806636
+Alerte: energie_reactive_negative (2021182.0) dépasse le seuil (900000.0) à 2024-12-06 10:06:01.806636
+Alerte: temperature (20.5) dépasse le seuil (10.0) à 2024-12-06 10:06:02.655941
+Alerte: humidity (60.5) dépasse le seuil (60.0) à 2024-12-06 10:06:02.655941
+Alerte: co2 (1339.0) dépasse le seuil (1000.0) à 2024-12-06 10:06:02.655941
+Alerte: tvoc (287.0) est inférieur au seuil (2000.0) à 2024-12-06 10:06:02.655941
+Alerte: puissance_active_positive (1220.0) dépasse le seuil (200.0) à 2024-12-06 10:06:02.928630
+Alerte: puissance_reactive_negative (767.0) dépasse le seuil (150.0) à 2024-12-06 10:06:02.928630
+Alerte: energie_active_positive (7217838.0) dépasse le seuil (400000.0) à 2024-12-06 10:06:02.928630
+Alerte: energie_reactive_negative (6776601.0) dépasse le seuil (900000.0) à 2024-12-06 10:06:02.928630
+Alerte: puissance_active_positive (373.0) dépasse le seuil (200.0) à 2024-12-06 10:06:04.018242
+Alerte: energie_active_positive (4333492.0) dépasse le seuil (400000.0) à 2024-12-06 10:06:04.018242
+Alerte: energie_reactive_negative (2257378.0) dépasse le seuil (900000.0) à 2024-12-06 10:06:04.018242
+Alerte: puissance_reactive_negative (265.0) dépasse le seuil (150.0) à 2024-12-06 10:06:09.510640
+Alerte: energie_active_positive (746457.0) dépasse le seuil (400000.0) à 2024-12-06 10:06:09.510640
+Alerte: energie_reactive_negative (2776578.0) dépasse le seuil (900000.0) à 2024-12-06 10:06:09.510640
+Alerte: energie_reactive_negative (1221796.0) dépasse le seuil (900000.0) à 2024-12-06 10:06:10.644685

@@ -63,7 +63,7 @@ def extraire_chiffres_et_points(chaine):
 
 
 
-def donnee_filtree(data_list, config_file='config.ini', output_file='IOT/FInal/datas/AM07_filtre_data.json'):
+def donnee_filtree(data_list, config_file='config.ini', output_file='C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\datas\\AM07_filtre_data.json'):
 
     
     # Chargement des seuils
@@ -211,7 +211,7 @@ def process_triphaso_data(payload):
             result.append(modele.format(infos_dispositif[cle]))
 
 
-    donnee_filtree(result,'config.ini','IOT/FInal/datas/Triphaso_filtre_data.json')
+    donnee_filtree(result,'config.ini','C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\datas\\Triphaso_filtre_data.json')
     return " | ".join(result)
 
 def process_am107_data(payload):
@@ -266,7 +266,7 @@ def process_solaredge_data(payload):
         if cle in payload:
             resultat.append(modele.format(payload[cle]))
 
-    donnee_filtree(resultat,'config.ini','IOT/FInal/datas/Solaredge_filtre_data.json')
+    donnee_filtree(resultat,'config.ini','C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\datas\\Solaredge_filtre_data.json')
     
 
     return " | ".join(resultat)

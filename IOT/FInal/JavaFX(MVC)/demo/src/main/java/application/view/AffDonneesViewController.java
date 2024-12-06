@@ -45,7 +45,7 @@ public class AffDonneesViewController {
 
 	}
 
-     @FXML
+    @FXML
     private Tab tabBord;
 
     @FXML
@@ -106,7 +106,8 @@ public class AffDonneesViewController {
     private Tab compDonnees;
 
     @FXML
-    private ListView<?> listeSalles;
+    private ListView<?> listeSalles = new ListView();
+
 
     @FXML
     private Tab CD_temperature;
@@ -149,11 +150,20 @@ public class AffDonneesViewController {
         Stage stage = (Stage) retour1.getScene().getWindow();
         stage.close();
     }
-   
-
+    
+    private void configure(){
+        this.containingStage.setOnCloseRequest(e-> this.closeWindow(e));
+        
+    }
     // Cette méthode charge les salles dans le MenuButton
     @FXML
-    private void afficheSalle() {
+    private void afficheSalle(ActionEvent  event){
+        listeSalles(); 
+    }
+
+    
+
+    private void listeSalles() {
         if (roomManager != null) {
             salles.getItems().clear();  // Efface les anciennes salles si elles existent déjà
 
@@ -172,6 +182,8 @@ public class AffDonneesViewController {
         System.out.println("Salle sélectionnée : " + room.getRoomId());
         // Vous pouvez ici ajouter une logique pour afficher les données de la salle dans l'interface
     }
+
+    
     
     /**
 	 * Action menu quitter. Demander une confirmation puis fermer la fenêtre (donc

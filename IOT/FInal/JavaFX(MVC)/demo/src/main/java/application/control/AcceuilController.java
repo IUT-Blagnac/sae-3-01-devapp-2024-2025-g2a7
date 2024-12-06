@@ -77,7 +77,7 @@ public class AcceuilController extends Application {
             try {
                 System.out.println("Starting Python script...");
     
-                String scriptPath = "C:\\Users\\utilisateur.DESKTOP-EUMFJ5H\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\mainIOT.py";
+                String scriptPath = "C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\mainIOT.py";
                 ProcessBuilder processBuilder = new ProcessBuilder("python", "-u", scriptPath);
                 File scriptDirectory = new File(scriptPath).getParentFile();
                 processBuilder.directory(scriptDirectory);

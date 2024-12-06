@@ -11,7 +11,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -146,12 +145,7 @@
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <MenuButton fx:id="salles" layoutY="2.0" mnemonicParsing="false" onAction="#afficheSalle" text="Salle">
-                                      <items>
-                                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                                        <MenuItem mnemonicParsing="false" text="Action 2" />
-                                      </items>
-                                    </MenuButton>
+                                    <MenuButton fx:id="salles" layoutY="2.0" mnemonicParsing="false" onAction="#afficheSalle" text="Salle" />
                                     <Button fx:id="retour1" layoutX="694.0" layoutY="6.0" mnemonicParsing="false" onAction="#ActionBtnRetour" text="Retour" />
                                  </children>
                               </AnchorPane>
