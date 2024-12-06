@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import application.App;
+import application.model.data.RoomManager;
 import application.view.AccueilViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +19,7 @@ public class AcceuilController extends Application {
     private static Scene scene;
     private Thread pythonThread;
     private Process pythonProcess;
+    private RoomManager roomManager;
 
     @Override
     public void start(Stage primaryStage) {
@@ -32,6 +34,8 @@ public class AcceuilController extends Application {
 
             AccueilViewController controller = loader.getController();
             controller.initContext(primaryStage, this);
+            roomManager = new RoomManager();
+            roomManager.loadDataFromJson();
 
             launchPythonScript(); 
 

@@ -9,6 +9,7 @@ import application.model.data.Room;
 import application.model.data.RoomManager;
 import application.tools.AlertUtilities;
 import javafx.beans.Observable;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,10 +30,11 @@ import javafx.stage.WindowEvent;
 
 public class AffDonneesViewController {
     // Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
-	private Stage containingStage;
+    private Stage containingStage;
     private AffDonneesController donnees; 
     private RoomManager roomManager;
-
+    private ObservableList<Room> oListRoom = FXCollections.observableArrayList(); // Initialize with an empty list
+    
     /**
 	 * Initialisation du contrôleur de vue DailyBankMainFrameController.
 	 *
@@ -42,6 +44,7 @@ public class AffDonneesViewController {
 	public void initContext(Stage _containingStage, AffDonneesController _donnees) {
 		this.containingStage = _containingStage;
         this.donnees = _donnees; 
+        this.configure();
 
 	}
 
@@ -106,7 +109,7 @@ public class AffDonneesViewController {
     private Tab compDonnees;
 
     @FXML
-    private ListView<?> listeSalles = new ListView();
+    private ListView<Room> listeSalles = new ListView();
 
 
     @FXML
@@ -152,8 +155,10 @@ public class AffDonneesViewController {
     }
     
     private void configure(){
-        this.containingStage.setOnCloseRequest(e-> this.closeWindow(e));
-        
+        this.containingStage.setOnCloseRequest(e -> this.closeWindow(e));
+        this.oListRoom = FXCollections.observableArrayList(); 
+        //oListRoom = (ObservableList<Room>) roomManager.getRoomsList(); 
+        this.loadRooms(); // Load rooms when configuring the UI
     }
     // Cette méthode charge les salles dans le MenuButton
     @FXML
@@ -161,7 +166,19 @@ public class AffDonneesViewController {
         listeSalles(); 
     }
 
-    
+    private void loadRooms() {
+        if (roomManager != null) {
+            // Populate MenuButton and ListView with rooms
+            List<Room> rooms = roomManager.getRoomsList();
+            for (Room room : rooms) {
+                MenuItem item = new MenuItem(room.getRoomId());
+                item.setOnAction(event -> handleRoomSelection(room));
+                salles.getItems().add(item);
+            }
+            oListRoom.clear();
+            oListRoom.addAll(rooms); // Update the ListView with rooms
+        }
+    }
 
     private void listeSalles() {
         if (roomManager != null) {
@@ -182,8 +199,6 @@ public class AffDonneesViewController {
         System.out.println("Salle sélectionnée : " + room.getRoomId());
         // Vous pouvez ici ajouter une logique pour afficher les données de la salle dans l'interface
     }
-
-    
     
     /**
 	 * Action menu quitter. Demander une confirmation puis fermer la fenêtre (donc

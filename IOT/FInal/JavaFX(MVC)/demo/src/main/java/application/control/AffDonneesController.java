@@ -2,6 +2,7 @@ package application.control;
 
 import java.io.IOException;
 
+import application.model.data.RoomManager;
 import application.view.AffDonneesViewController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +14,7 @@ public class AffDonneesController {
     private Stage donneeStage;
     
 
-    public AffDonneesController(Stage parentStage) {
+    public AffDonneesController(Stage parentStage){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ressources/application/view/tabBord.fxml"));
             BorderPane root = loader.load();
@@ -25,6 +26,7 @@ public class AffDonneesController {
             this.donneeStage.setScene(scene);
             this.donneeStage.setTitle("Données");
             this.donneeStage.setResizable(true);
+            
 
             AffDonneesViewController viewController = loader.getController();
             viewController.initContext(this.donneeStage, this);
