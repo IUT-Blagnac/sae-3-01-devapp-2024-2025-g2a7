@@ -1,7 +1,7 @@
 package application.view;
 
 import java.io.IOException;
-
+import java.util.Map;
 import application.control.SolarEdgeController;
 import application.model.data.EnergieData;
 import application.model.data.JsonConverter;
@@ -20,11 +20,7 @@ public class SolarEdgeViewController {
 
     private Stage containingStage;
     private SolarEdgeController solar;
-    private EnergieData energieData;
-    private Number lastEnergieJourDernier = null;
-    private Number lastEnergieMoisDernier = null;
-    private Number lastEnergieTotale = null;
-
+    private EnergieData energieData; // Une seule instance de EnergieData contenant les enregistrements
 
     @FXML
     private Button btnRetour;
@@ -33,11 +29,11 @@ public class SolarEdgeViewController {
     @FXML
     private Button btnRetour2;
     @FXML
-    private LineChart<String, Number> GrapheEvolution;  
+    private LineChart<String, Number> GrapheEvolution;
     @FXML
-    private BarChart<String, Number> GrapheComparaison; 
+    private BarChart<String, Number> GrapheComparaison;
     @FXML
-    private LineChart<String, Number> GrapheTotal;      
+    private LineChart<String, Number> GrapheTotal;
 
     @FXML
     private CategoryAxis xAxisEnergyEvolution;
@@ -56,100 +52,83 @@ public class SolarEdgeViewController {
 
     public void initContext(Stage _containingStage, SolarEdgeController _solar) {
         this.containingStage = _containingStage;
-        this.solar = _solar; 
+        this.solar = _solar;
     }
 
     @FXML
     public void initialize() {
-        
+        // Charger les données à partir du JSON
         JsonConverter jsonConverter = new JsonConverter();
         energieData = jsonConverter.loadEnergieDataFromJson();
-    
-        startUpdateThreadForEvolution();
-        startUpdateThreadForComparaison();
-        startUpdateThreadForTotal();
-    }
-    
 
-   
-    
-    
-
-    private void startUpdateThreadForEvolution() {
-        Thread threadEvolution = new Thread(() -> {
-            while (true) { 
-                try {
-                    Thread.sleep(10000); 
-                    Platform.runLater(this::updateGrapheEvolution);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                    Thread.currentThread().interrupt();
-                }
-            }
-        });
-        threadEvolution.start();
+        // Mettre à jour les graphiques directement lors de l'initialisation
+        updateGrapheEvolution();
+        updateGrapheComparaison();
+        updateGrapheTotal();
     }
 
-    private void startUpdateThreadForComparaison() {
-        Thread threadComparaison = new Thread(() -> {
-            while (true) {
-                try {
-                    Thread.sleep(10000); 
-                    Platform.runLater(this::updateGrapheComparaison);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                    Thread.currentThread().interrupt();
-                }
-            }
-        });
-        threadComparaison.start();
-    }
-
-    private void startUpdateThreadForTotal() {
-        Thread threadTotal = new Thread(() -> {
-            while (true) {
-                try {
-                    Thread.sleep(10000); 
-                    Platform.runLater(this::updateGrapheTotal);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                    Thread.currentThread().interrupt();
-                }
-            }
-        });
-        threadTotal.start();
-    }
-
+    // Mise à jour du graphique d'évolution (jour dernier)
     private void updateGrapheEvolution() {
-        if (energieData == null) return;
+        if (energieData == null || energieData.getRecords().isEmpty()) return;
+
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Énergie quotidienne");
 
-        series.getData().add(new XYChart.Data<>("Jour Dernier", energieData.getEnergie_jour_dernier()));
+        // Ajouter chaque donnée d'énergie (jour dernier) dans la série
+        for (Map.Entry<String, EnergieData.EnergieRecord> entry : energieData.getRecords().entrySet()) {
+            EnergieData.EnergieRecord record = entry.getValue();
+            series.getData().add(new XYChart.Data<>(record.getLastUpdateTime(), record.getEnergie_jour_dernier()));
+        }
 
         GrapheEvolution.getData().clear();
         GrapheEvolution.getData().add(series);
     }
 
+    // Mise à jour du graphique de comparaison (mois dernier et moyenne mensuelle)
     private void updateGrapheComparaison() {
-        if (energieData == null) return;
-        XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.setName("Comparaison");
+    // Vérifier si les données sont valides (non nulles et non vides)
+    if (energieData == null || energieData.getRecords().isEmpty()) return;
 
-        series.getData().add(new XYChart.Data<>("Mois dernier", energieData.getEnergie_mois_dernier()));
-        series.getData().add(new XYChart.Data<>("Moyenne mensuelle", energieData.getEnergie_moyenne_mensuelle()));
-
-
-        GrapheComparaison.getData().clear();
-        GrapheComparaison.getData().add(series);
+    // Obtenez le dernier enregistrement (ici, on suppose que l'index du dernier élément est le plus grand)
+    Map.Entry<String, EnergieData.EnergieRecord> lastEntry = null;
+    for (Map.Entry<String, EnergieData.EnergieRecord> entry : energieData.getRecords().entrySet()) {
+        lastEntry = entry; // Récupère le dernier élément
     }
 
+    // Si aucun enregistrement n'est trouvé, on ne fait rien
+    if (lastEntry == null) return;
+
+    // Récupérer les données du dernier enregistrement
+    String index = lastEntry.getKey();
+    EnergieData.EnergieRecord lastRecord = lastEntry.getValue();
+
+    // Créer une nouvelle série pour afficher les comparaisons
+    XYChart.Series<String, Number> series = new XYChart.Series<>();
+    series.setName("Comparaison Dernier Prélèvement");
+
+    // Ajouter les données du dernier enregistrement à la série (uniquement pour "mois dernier" et "moyenne mensuelle")
+    series.getData().add(new XYChart.Data<>(  " Mois dernier", lastRecord.getEnergie_mois_dernier()));
+    series.getData().add(new XYChart.Data<>( " Moyenne mensuelle", lastRecord.getEnergie_moyenne_mensuelle()));
+
+    // Effacer les anciennes données et ajouter la nouvelle série
+    GrapheComparaison.getData().clear();
+    GrapheComparaison.getData().add(series);
+}
+
+
+    // Mise à jour du graphique de l'énergie totale
     private void updateGrapheTotal() {
-        if (energieData == null) return;
+        if (energieData == null || energieData.getRecords().isEmpty()) return;
+
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Total énergie");
 
-        series.getData().add(new XYChart.Data<>("Energie totale", energieData.getEnergie_totale()));
+        // Ajouter chaque donnée d'énergie (énergie totale) dans la série
+        for (Map.Entry<String, EnergieData.EnergieRecord> entry : energieData.getRecords().entrySet()) {
+            EnergieData.EnergieRecord record = entry.getValue();
+            series.getData().add(new XYChart.Data<>(record.getLastUpdateTime(), record.getEnergie_totale()));
+        }
+
         GrapheTotal.getData().clear();
         GrapheTotal.getData().add(series);
     }

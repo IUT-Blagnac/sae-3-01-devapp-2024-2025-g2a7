@@ -251,25 +251,47 @@ def process_am107_data(payload):
     return " | ".join(result)
 
 def process_solaredge_data(payload):
-    modeles_cles = {
-        'lastUpdateTime': "Dernière mise à jour: {}",
-        'lifeTimeData': "Énergie totale: {} Wh",
-        'lastYearData': "Énergie l'année dernière: {} Wh",
-        'lastMonthData': "Énergie le mois dernier: {} Wh",
-        'lastDayData': "Énergie du dernier jour: {} Wh",
-        'currentPower': "Puissance actuelle: {} W",
-        'measuredBy': "Mesuré par: {}"
+    # Définir le chemin du fichier
+    output_file = 'IOT/Final/datas/Solaredge_filtre_data.json'
+
+    # Charger les données existantes
+    if os.path.exists(output_file):
+        with open(output_file, 'r', encoding='utf-8') as json_file:
+            try:
+                solar_data = json.load(json_file)
+            except json.JSONDecodeError:
+                solar_data = {"solar": {}}
+    else:
+        solar_data = {"solar": {}}
+
+    # Trouver le prochain index disponible
+    next_index = str(len(solar_data["solar"]))
+
+    # Ajouter les nouvelles données avec le bon format
+    solar_data["solar"][next_index] = {
+        "currentPower": {
+            "power": float(payload.get('currentPower', {}).get('power', 0))  # Conversion en float
+        },
+        "lastDayData": {
+            "energy": float(payload.get('lastDayData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+        },
+        "lastMonthData": {
+            "energy": float(payload.get('lastMonthData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+        },
+        "lastYearData": {
+            "energy": float(payload.get('lastYearData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+        },
+        "lifeTimeData": {
+            "energy": float(payload.get('lifeTimeData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+        },
+        "lastUpdateTime": payload.get('lastUpdateTime', "")
     }
 
-    resultat = []
-    for cle, modele in modeles_cles.items():
-        if cle in payload:
-            resultat.append(modele.format(payload[cle]))
-
-    donnee_filtree(resultat,'config.ini','IOT/FInal/datas/Solaredge_filtre_data.json')
+    # Sauvegarder les données mises à jour dans le fichier JSON
+    with open(output_file, 'w', encoding='utf-8') as json_file:
+        json.dump(solar_data, json_file, ensure_ascii=False, indent=4)
     
-
-    return " | ".join(resultat)
+    return solar_data
 
 client = mqtt.Client()
 
