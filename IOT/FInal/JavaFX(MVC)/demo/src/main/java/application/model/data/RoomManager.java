@@ -9,10 +9,13 @@ import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import application.control.AffDonneesController;
+import application.view.AffDonneesViewController;
+
 public class RoomManager {
     private List<Room> roomsList = new ArrayList<>();
     private static final String JSON_FILE = "IOT/FInal/datas/AM07_filtre_data.json"; // Remplacez par le chemin réel
-
+    AffDonneesViewController viewDonnees = new AffDonneesViewController(); 
     // Ajouter une salle si elle n'existe pas encore
     private Room findRoomById(String roomId) {
         for (Room room : roomsList) {
@@ -51,6 +54,16 @@ public class RoomManager {
             e.printStackTrace();
         }
     }
+
+    public void addNewRoomData(String roomId, Double temperature, Double humidity, Double co2, Double illumination) {
+        Room room = findRoomById(roomId);
+        if (room != null) {
+            room.addData(temperature, humidity, co2, illumination);
+            // Après avoir ajouté les nouvelles données, on recharge les données
+            viewDonnees.loadRooms();
+        }
+    }
+    
     public List<Room> getRoomsList() {
         return roomsList;
     }

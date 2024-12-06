@@ -57,14 +57,7 @@
                                                       <Insets bottom="150.0" left="10.0" />
                                                    </GridPane.margin>
                                                 </Label>
-                                                <LineChart fx:id="lineChart_temp" prefHeight="261.0" prefWidth="293.0" GridPane.columnIndex="1">
-                                                  <xAxis>
-                                                    <CategoryAxis fx:id="TB_xTemp" side="BOTTOM" />
-                                                  </xAxis>
-                                                  <yAxis>
-                                                    <NumberAxis fx:id="TB_yTemp" side="LEFT" />
-                                                  </yAxis>
-                                                </LineChart>
+                                                <PieChart fx:id="pieChartTempe" GridPane.columnIndex="1" />
                                              </children>
                                           </GridPane>
                                           <GridPane style="-fx-border-width: 1; -fx-border-color: gray;" GridPane.columnIndex="1">
@@ -124,7 +117,7 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                              </rowConstraints>
                                              <children>
-                                                <Label fx:id="labActivite" text="Activité :">
+                                                <Label fx:id="labActivite" text="CO2">
                                                    <GridPane.margin>
                                                       <Insets bottom="150.0" left="10.0" />
                                                    </GridPane.margin>
@@ -146,7 +139,7 @@
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
                                     <MenuButton fx:id="salles" layoutY="2.0" mnemonicParsing="false" onAction="#afficheSalle" text="Salle" />
-                                    <Button fx:id="retour1" layoutX="694.0" layoutY="6.0" mnemonicParsing="false" onAction="#ActionBtnRetour" text="Retour" />
+                                    <Button fx:id="retour1" layoutX="694.0" layoutY="5.0" mnemonicParsing="false" onAction="#ActionBtnRetour" text="Retour" />
                                  </children>
                               </AnchorPane>
                           </items>
@@ -195,7 +188,7 @@
                                              </children></AnchorPane>
                                     </content>
                                   </Tab>
-                                  <Tab fx:id="CD_activite" text="Activité">
+                                  <Tab fx:id="CD_activite" text="CO2">
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>

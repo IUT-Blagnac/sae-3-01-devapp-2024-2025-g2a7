@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 
 public class AffDonneesController {
     private Stage donneeStage;
-    
+    private RoomManager roomManager;
 
-    public AffDonneesController(Stage parentStage){
+    public AffDonneesController(Stage parentStage, RoomManager roomManager){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ressources/application/view/tabBord.fxml"));
             BorderPane root = loader.load();
@@ -27,9 +27,9 @@ public class AffDonneesController {
             this.donneeStage.setTitle("Données");
             this.donneeStage.setResizable(true);
             
-
+            // Passage du RoomManager au contrôleur de la vue
             AffDonneesViewController viewController = loader.getController();
-            viewController.initContext(this.donneeStage, this);
+            viewController.initContext(this.donneeStage, this, roomManager); // Passer roomManager ici
         } catch (IOException e) {
             e.printStackTrace();
         }

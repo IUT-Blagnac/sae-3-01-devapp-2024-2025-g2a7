@@ -25,7 +25,7 @@ public class AcceuilController extends Application {
     public void start(Stage primaryStage) {
         try {
             // Initialisation de la fenêtre principale
-            this.mainStage = primaryStage; // Ajouter cette ligne
+            this.mainStage = primaryStage;
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ressources/application/view/Accueil.fxml"));
             Scene scene = new Scene(loader.load(), 600, 600);
@@ -35,19 +35,21 @@ public class AcceuilController extends Application {
             AccueilViewController controller = loader.getController();
             controller.initContext(primaryStage, this);
             roomManager = new RoomManager();
-            roomManager.loadDataFromJson();
+            roomManager.loadDataFromJson(); // Charger les données des salles
 
-            launchPythonScript(); 
+            launchPythonScript(); // Démarrer le script Python
+
+            primaryStage.show();
 
             this.mainStage.setOnCloseRequest(e -> {
-            System.out.println("Arret du script Python");
-            stopPythonScript();
+                System.out.println("Arrêt du script Python");
+                stopPythonScript(); // Assurez-vous de stopper proprement le script Python
             });
-            primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     private static javafx.scene.Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AcceuilController.class.getResource(fxml + ".fxml"));
@@ -63,7 +65,7 @@ public class AcceuilController extends Application {
     }
 
     public void affDonnees() {
-        AffDonneesController donnees = new AffDonneesController(mainStage);
+        AffDonneesController donnees = new AffDonneesController(mainStage, roomManager); // Passer le RoomManager
         donnees.doCapteurDialog();
     }
 
