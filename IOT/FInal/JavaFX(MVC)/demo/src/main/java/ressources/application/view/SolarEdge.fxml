@@ -53,13 +53,13 @@
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
                                     <LineChart fx:id="GrapheTotal" axisSortingPolicy="Y_AXIS" layoutX="14.0" layoutY="14.0" prefHeight="467.0" prefWidth="797.0" title="Evolution de l'énergie totale">
-                                       <xAxis>
-                                          <CategoryAxis side="BOTTOM" />
-                                       </xAxis>
-                                       <yAxis>
-                                          <NumberAxis fx:id="yAxisTotalEnergy" autoRanging="false" lowerBound="3200000.0" side="LEFT" upperBound="3500000.0" />
-                                       </yAxis>
-                                    </LineChart>
+   <xAxis>
+      <CategoryAxis side="BOTTOM" />
+   </xAxis>
+   <yAxis>
+      <NumberAxis fx:id="yAxisTotalEnergy" autoRanging="false" lowerBound="3400000.0" upperBound="3500000.0" tickUnit="10000.0" side="LEFT" />
+   </yAxis>
+</LineChart>
                                  </children>
                               </AnchorPane>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">

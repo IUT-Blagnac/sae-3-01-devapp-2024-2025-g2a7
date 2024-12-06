@@ -1,9 +1,11 @@
 package application.view;
 
-import application.control.AffDonneesController;
+import java.io.IOException;
+
 import application.control.SolarEdgeController;
-import application.model.data.ChargementDonnees;
-import javafx.collections.ObservableList;
+import application.model.data.EnergieData;
+import application.model.data.JsonConverter;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
@@ -17,9 +19,13 @@ import javafx.stage.Stage;
 public class SolarEdgeViewController {
 
     private Stage containingStage;
-    private SolarEdgeController solar; 
-    private ObservableList<ChargementDonnees> olistDonnees; 
-    
+    private SolarEdgeController solar;
+    private EnergieData energieData;
+    private Number lastEnergieJourDernier = null;
+    private Number lastEnergieMoisDernier = null;
+    private Number lastEnergieTotale = null;
+
+
     @FXML
     private Button btnRetour;
     @FXML
@@ -49,79 +55,113 @@ public class SolarEdgeViewController {
     private NumberAxis yAxisTotalEnergy;
 
     public void initContext(Stage _containingStage, SolarEdgeController _solar) {
-		this.containingStage = _containingStage;
+        this.containingStage = _containingStage;
         this.solar = _solar; 
+    }
 
-	}
     @FXML
     public void initialize() {
         
-        updateGrapheEvolution();
-        updateGrapheComparaison();
-        updateGrapheTotal();
+        JsonConverter jsonConverter = new JsonConverter();
+        energieData = jsonConverter.loadEnergieDataFromJson();
+    
+        startUpdateThreadForEvolution();
+        startUpdateThreadForComparaison();
+        startUpdateThreadForTotal();
+    }
+    
+
+   
+    
+    
+
+    private void startUpdateThreadForEvolution() {
+        Thread threadEvolution = new Thread(() -> {
+            while (true) { 
+                try {
+                    Thread.sleep(10000); 
+                    Platform.runLater(this::updateGrapheEvolution);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
+                }
+            }
+        });
+        threadEvolution.start();
     }
 
-    
+    private void startUpdateThreadForComparaison() {
+        Thread threadComparaison = new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(10000); 
+                    Platform.runLater(this::updateGrapheComparaison);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
+                }
+            }
+        });
+        threadComparaison.start();
+    }
+
+    private void startUpdateThreadForTotal() {
+        Thread threadTotal = new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(10000); 
+                    Platform.runLater(this::updateGrapheTotal);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
+                }
+            }
+        });
+        threadTotal.start();
+    }
+
     private void updateGrapheEvolution() {
-        
+        if (energieData == null) return;
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Énergie quotidienne");
 
-        // Données test
-        series.getData().add(new XYChart.Data<>("2024-11-13", 2719));
-        series.getData().add(new XYChart.Data<>("2024-11-14", 159));
-        series.getData().add(new XYChart.Data<>("2024-11-15", 1500));
-        series.getData().add(new XYChart.Data<>("2024-11-16", 2000));
+        series.getData().add(new XYChart.Data<>("Jour Dernier", energieData.getEnergie_jour_dernier()));
 
-        series.getData().add(new XYChart.Data<>("2024-11-17", 1800));
-
-
-        
         GrapheEvolution.getData().clear();
         GrapheEvolution.getData().add(series);
     }
 
-    
     private void updateGrapheComparaison() {
-        
+        if (energieData == null) return;
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Comparaison");
 
-        // Données test
-        series.getData().add(new XYChart.Data<>("Mois dernier", 128917)); 
-        series.getData().add(new XYChart.Data<>("Moyenne annuelle", (3244173 - 2763789) / 12)); 
+        series.getData().add(new XYChart.Data<>("Mois dernier", energieData.getEnergie_mois_dernier()));
+        series.getData().add(new XYChart.Data<>("Moyenne mensuelle", energieData.getEnergie_moyenne_mensuelle()));
 
-        
+
         GrapheComparaison.getData().clear();
         GrapheComparaison.getData().add(series);
     }
 
-    
     private void updateGrapheTotal() {
-        
+        if (energieData == null) return;
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Total énergie");
 
-        // Données test
-        series.getData().add(new XYChart.Data<>("2024-11-13", 3244173));
-        series.getData().add(new XYChart.Data<>("2024-11-14", 3250385));
-        series.getData().add(new XYChart.Data<>("2024-11-15", 3252105));
-
+        series.getData().add(new XYChart.Data<>("Energie totale", energieData.getEnergie_totale()));
         GrapheTotal.getData().clear();
         GrapheTotal.getData().add(series);
-        
     }
 
-    
- @FXML
-private void ActionBtnRetour(ActionEvent event) {
-    Button sourceButton = (Button) event.getSource();
-    Stage stage = (Stage) sourceButton.getScene().getWindow();
-    stage.close();
-}
+    @FXML
+    private void ActionBtnRetour(ActionEvent event) {
+        Button sourceButton = (Button) event.getSource();
+        Stage stage = (Stage) sourceButton.getScene().getWindow();
+        stage.close();
+    }
 
     public void showDialog() {
         this.containingStage.showAndWait();
     }
-    
 }
