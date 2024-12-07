@@ -20,7 +20,7 @@ public class SolarEdgeViewController {
 
     private Stage containingStage;
     private SolarEdgeController solar;
-    private EnergieData energieData; // Une seule instance de EnergieData contenant les enregistrements
+    private EnergieData energieData; 
 
     @FXML
     private Button btnRetour;
@@ -57,60 +57,51 @@ public class SolarEdgeViewController {
 
     @FXML
     public void initialize() {
-        // Charger les données à partir du JSON
+        // On charge les données du json
         JsonConverter jsonConverter = new JsonConverter();
         energieData = jsonConverter.loadEnergieDataFromJson();
 
-        // Mettre à jour les graphiques directement lors de l'initialisation
+        // On met à jour les graphes
         updateGrapheEvolution();
         updateGrapheComparaison();
         updateGrapheTotal();
     }
 
-    // Mise à jour du graphique d'évolution (jour dernier)
+    // Mise à jour du graphique d'évolution 
     private void updateGrapheEvolution() {
         if (energieData == null || energieData.getRecords().isEmpty()) return;
 
         XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.setName("Énergie quotidienne");
+        series.setName("Puissance en W");
 
-        // Ajouter chaque donnée d'énergie (jour dernier) dans la série
         for (Map.Entry<String, EnergieData.EnergieRecord> entry : energieData.getRecords().entrySet()) {
             EnergieData.EnergieRecord record = entry.getValue();
-            series.getData().add(new XYChart.Data<>(record.getLastUpdateTime(), record.getEnergie_jour_dernier()));
+            series.getData().add(new XYChart.Data<>(record.getLastUpdateTime(), record.getPuissance()));
         }
 
         GrapheEvolution.getData().clear();
         GrapheEvolution.getData().add(series);
     }
 
-    // Mise à jour du graphique de comparaison (mois dernier et moyenne mensuelle)
+    
     private void updateGrapheComparaison() {
-    // Vérifier si les données sont valides (non nulles et non vides)
     if (energieData == null || energieData.getRecords().isEmpty()) return;
 
-    // Obtenez le dernier enregistrement (ici, on suppose que l'index du dernier élément est le plus grand)
     Map.Entry<String, EnergieData.EnergieRecord> lastEntry = null;
     for (Map.Entry<String, EnergieData.EnergieRecord> entry : energieData.getRecords().entrySet()) {
-        lastEntry = entry; // Récupère le dernier élément
+        lastEntry = entry; 
     }
 
-    // Si aucun enregistrement n'est trouvé, on ne fait rien
     if (lastEntry == null) return;
 
-    // Récupérer les données du dernier enregistrement
-    String index = lastEntry.getKey();
     EnergieData.EnergieRecord lastRecord = lastEntry.getValue();
 
-    // Créer une nouvelle série pour afficher les comparaisons
     XYChart.Series<String, Number> series = new XYChart.Series<>();
-    series.setName("Comparaison Dernier Prélèvement");
+    series.setName("Comparaison Dernier Prélèvement en W/h");
 
-    // Ajouter les données du dernier enregistrement à la série (uniquement pour "mois dernier" et "moyenne mensuelle")
     series.getData().add(new XYChart.Data<>(  " Mois dernier", lastRecord.getEnergie_mois_dernier()));
     series.getData().add(new XYChart.Data<>( " Moyenne mensuelle", lastRecord.getEnergie_moyenne_mensuelle()));
 
-    // Effacer les anciennes données et ajouter la nouvelle série
     GrapheComparaison.getData().clear();
     GrapheComparaison.getData().add(series);
 }
@@ -121,9 +112,8 @@ public class SolarEdgeViewController {
         if (energieData == null || energieData.getRecords().isEmpty()) return;
 
         XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.setName("Total énergie");
+        series.setName("Total énergie en W/h");
 
-        // Ajouter chaque donnée d'énergie (énergie totale) dans la série
         for (Map.Entry<String, EnergieData.EnergieRecord> entry : energieData.getRecords().entrySet()) {
             EnergieData.EnergieRecord record = entry.getValue();
             series.getData().add(new XYChart.Data<>(record.getLastUpdateTime(), record.getEnergie_totale()));

@@ -28,9 +28,16 @@ public class EnergieData {
         private double energie_annee_derniere;
         private double energie_mois_dernier;
         private double energie_jour_dernier;
+        private double puissance;
         private String lastUpdateTime;
 
-        // Getters and Setters
+        public double getPuissance() {
+            return puissance;
+        }
+        public void setPuissance(double Puissance) {
+            this.puissance = Puissance;
+        }
+
         public double getEnergie_totale() {
             return energie_totale;
         }

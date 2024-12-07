@@ -270,19 +270,19 @@ def process_solaredge_data(payload):
     # Ajouter les nouvelles données avec le bon format
     solar_data["solar"][next_index] = {
         "currentPower": {
-            "power": float(payload.get('currentPower', {}).get('power', 0))  # Conversion en float
+            "power": float(payload.get('currentPower', {}).get('power', 0))  
         },
         "lastDayData": {
-            "energy": float(payload.get('lastDayData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+            "energy": float(payload.get('lastDayData', {}).get('energy', 0))  
         },
         "lastMonthData": {
-            "energy": float(payload.get('lastMonthData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+            "energy": float(payload.get('lastMonthData', {}).get('energy', 0))  
         },
         "lastYearData": {
-            "energy": float(payload.get('lastYearData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+            "energy": float(payload.get('lastYearData', {}).get('energy', 0))  
         },
         "lifeTimeData": {
-            "energy": float(payload.get('lifeTimeData', {}).get('energy', 0))  # Accès à 'energy' et conversion
+            "energy": float(payload.get('lifeTimeData', {}).get('energy', 0))  
         },
         "lastUpdateTime": payload.get('lastUpdateTime', "")
     }
