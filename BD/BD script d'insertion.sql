@@ -468,48 +468,48 @@ VALUES (88, 'Connecteurs Spéciaux Brickolo™', 'Connecteurs techniques avancé
 
 -- Articles Figurines Humaines
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (89, 'Pack Famille Brickolo™', 'Set de 4 figurines famille', 14.99, 0.2, '5x2x2', 20, '4+', 'Multicolore', TRUE, 24, 91);
+VALUES (89, 'Pack Famille Brickolo™', 'Set de 4 figurines famille (produit composé)', 14.99, 0.2, '5x2x2', 20, '4+', 'Multicolore', TRUE, 24, 91);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (90, 'Personnages Métiers Brickolo™', 'Set de 6 figurines professionnelles', 19.99, 0.3, '5x2x2', 30, '4+', 'Multicolore', FALSE, 24, 92);
+VALUES (90, 'Personnages Métiers Brickolo™', 'Set de 6 figurines professionnelles (produit composé)', 19.99, 0.3, '5x2x2', 30, '4+', 'Multicolore', FALSE, 24, 92);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (91, 'Figurines Sport Brickolo™', 'Set de 5 athlètes', 16.99, 0.25, '5x2x2', 25, '4+', 'Multicolore', TRUE, 24, 93);
+VALUES (91, 'Figurines Sport Brickolo™', 'Set de 5 athlètes (produit composé)', 16.99, 0.25, '5x2x2', 25, '4+', 'Multicolore', TRUE, 24, 93);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (92, 'Mini-Figurines Aventuriers Brickolo™', 'Set de 3 explorateurs', 12.99, 0.15, '5x2x2', 15, '4+', 'Multicolore', FALSE, 24, 94);
+VALUES (92, 'Mini-Figurines Aventuriers Brickolo™', 'Set de 3 explorateurs (produit composé)', 12.99, 0.15, '5x2x2', 15, '4+', 'Multicolore', FALSE, 24, 94);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (93, 'Personnages Historiques Brickolo™', 'Set de 4 figurines historiques', 17.99, 0.2, '5x2x2', 20, '6+', 'Multicolore', TRUE, 24, 95);
+VALUES (93, 'Personnages Historiques Brickolo™', 'Set de 4 figurines historiques (produit composé)', 17.99, 0.2, '5x2x2', 20, '6+', 'Multicolore', TRUE, 24, 95);
 
 -- Articles Figurines Animaux
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (94, 'Animaux Domestiques Brickolo™', 'Set de 6 animaux de compagnie', 13.99, 0.2, '4x2x2', 18, '4+', 'Multicolore', TRUE, 25, 96);
+VALUES (94, 'Animaux Domestiques Brickolo™', 'Set de 6 animaux de compagnie (produit composé)', 13.99, 0.2, '4x2x2', 18, '4+', 'Multicolore', TRUE, 25, 96);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (95, 'Animaux Sauvages Brickolo™', 'Set de 5 animaux de la savane', 15.99, 0.25, '5x3x2', 20, '4+', 'Multicolore', FALSE, 25, 97);
+VALUES (95, 'Animaux Sauvages Brickolo™', 'Set de 5 animaux de la savane (produit composé)', 15.99, 0.25, '5x3x2', 20, '4+', 'Multicolore', FALSE, 25, 97);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (96, 'Créatures Marines Brickolo™', 'Set de 4 animaux marins', 12.99, 0.15, '4x2x2', 16, '4+', 'Multicolore', TRUE, 25, 98);
+VALUES (96, 'Créatures Marines Brickolo™', 'Set de 4 animaux marins (produit composé)', 12.99, 0.15, '4x2x2', 16, '4+', 'Multicolore', TRUE, 25, 98);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (97, 'Dinosaures Brickolo™', 'Set de 3 dinosaures', 18.99, 0.3, '6x4x3', 15, '6+', 'Multicolore', FALSE, 25, 99);
+VALUES (97, 'Dinosaures Brickolo™', 'Set de 3 dinosaures (produit composé)', 18.99, 0.3, '6x4x3', 15, '6+', 'Multicolore', FALSE, 25, 99);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (98, 'Animaux Fantastiques Brickolo™', 'Set de 4 créatures mythiques', 16.99, 0.25, '5x3x2', 20, '6+', 'Multicolore', TRUE, 25, 100);
+VALUES (98, 'Animaux Fantastiques Brickolo™', 'Set de 4 créatures mythiques (produit composé)', 16.99, 0.25, '5x3x2', 20, '6+', 'Multicolore', TRUE, 25, 100);
 
 -- Articles Figurines Collectors
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
 VALUES (99, 'Héros Édition Limitée Brickolo™', 'Figurine collector superhéros', 29.99, 0.2, '5x3x2', 10, '8+', 'Or', TRUE, 26, 101);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (100, 'Personnages Rares Brickolo™', 'Set de 2 figurines exclusives', 34.99, 0.3, '6x4x3', 15, '8+', 'Chrome', FALSE, 26, 102);
+VALUES (100, 'Personnages Rares Brickolo™', 'Set de 2 figurines exclusives (produit composé)', 34.99, 0.3, '6x4x3', 15, '8+', 'Chrome', FALSE, 26, 102);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
 VALUES (101, 'Figurine 25ème Anniversaire Brickolo™', 'Édition spéciale commemorative', 39.99, 0.25, '5x3x2', 12, '8+', 'Platine', TRUE, 26, 103);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
-VALUES (102, 'Collectors Pack Brickolo™', 'Pack exclusif de 3 figurines rares', 49.99, 0.4, '8x6x4', 25, '8+', 'Multicolore', TRUE, 26, 104);
+VALUES (102, 'Collectors Pack Brickolo™', 'Pack exclusif de 3 figurines rares (produit composé)', 49.99, 0.4, '8x6x4', 25, '8+', 'Multicolore', TRUE, 26, 104);
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
 VALUES (103, 'Figurine Signature Brickolo™', 'Pièce numérotée et signée', 44.99, 0.3, '6x4x3', 15, '12+', 'Édition Spéciale', FALSE, 26, 105);
