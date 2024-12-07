@@ -752,3 +752,32 @@ VALUES (19, '4', 'Léger problème avec la livraison, mais tout s\'est réglé.'
 INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
 VALUES (20, '2', 'Mauvaise expérience, produit non conforme.', '2024-12-20', 'Non conforme', 20, 20);
 
+
+-- Insertion des relations entre produits
+
+DELETE FROM Produit_Apparenté;
+
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (1, 4, 'complémentaire'); -- Station de Police et Caserne de Pompiers
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (2, 3, 'similaire'); -- Gare et École
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (5, 7, 'cross-sell'); -- Centre Commercial et Usine Automatisée
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (6, 8, 'complémentaire'); -- Robots en Action et Véhicules Futuristes
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (9, 10, 'similaire'); -- Générateur d'Énergie et Construction Mécanique
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (11, 13, 'cross-sell'); -- Jungle d'Explorer et Safari en Afrique
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (12, 14, 'complémentaire'); -- Base Arctique et Expédition Désertique
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (15, 17, 'similaire'); -- Rivière Sauvage et Véhicules Aquatiques
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (16, 18, 'cross-sell'); -- Station Sous-Marine et Créatures Marines
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (19, 20, 'complémentaire'); -- Épave du Titanic et Île Sous-Marine
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (21, 22, 'similaire'); -- Panorama des Grandes Villes et Paysages de l'Asie
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (23, 24, 'cross-sell'); -- Safari en Afrique et Scène de Film Noir
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (25, 26, 'complémentaire'); -- Diner Américain des Années 50 et Voitures Classiques des Années 60
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (27, 28, 'similaire'); -- Télévision Vintage et Quartier Rétro
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (29, 30, 'cross-sell'); -- Parc d'Aventure Kidz et Petite Ferme Kidz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (31, 32, 'complémentaire'); -- Super-Héros Kidz et Centre Commercial Kidz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (33, 34, 'similaire'); -- Cité des Animaux Kidz et Studio de Musique Teenz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (35, 36, 'cross-sell'); -- Salle de Sport Teenz et Café-Pâtisserie Teenz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (37, 38, 'complémentaire'); -- Salle de Cinéma Teenz et Shopping Mall Teenz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (39, 40, 'similaire'); -- Rome Antique History et Château Médiéval History
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (41, 42, 'cross-sell'); -- Pirates du Passé History et Égypte Ancienne History
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (43, 44, 'complémentaire'); -- Japon Féodal History et Briques de Construction Brickolo
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (45, 46, 'similaire'); -- Briques Géantes Brickolo et Kit de Mosaïque Brickolo
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (47, 48, 'cross-sell'); -- Briques Colorées Brickolo et Boîte Créative Brickolo
