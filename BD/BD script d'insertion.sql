@@ -834,3 +834,15 @@ INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement
 INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (48, '56', 'Rue de la Chaussée', '31000', 'Toulouse', 'France', NULL, 48);
 INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (49, '78', 'Rue de la Garonne', '31000', 'Toulouse', 'France', NULL, 49);
 INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (50, '90', 'Rue de la Daurade', '31000', 'Toulouse', 'France', NULL, 50);
+
+-- Insertion des références de carte bancaire pour une dizaine d'utilisateurs
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (1, '1234567812345678', '2025-12-31', 1);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (2, '2345678923456789', '2024-11-30', 2);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (3, '3456789034567890', '2023-10-31', 3);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (4, '4567890145678901', '2026-09-30', 4);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (5, '5678901256789012', '2025-08-31', 5);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (6, '6789012367890123', '2024-07-31', 6);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (7, '7890123478901234', '2023-06-30', 7);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (8, '8901234589012345', '2026-05-31', 8);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (9, '9012345690123456', '2025-04-30', 9);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (10, '0123456701234567', '2024-03-31', 10);
