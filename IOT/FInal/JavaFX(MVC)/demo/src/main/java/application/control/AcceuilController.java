@@ -78,13 +78,15 @@ public class AcceuilController extends Application {
         config.doConfigDialog();
     }
 
-    public void launchPythonScript(){
+    public void launchPythonScript() {
         pythonThread = new Thread(() -> {
             try {
                 System.out.println("Starting Python script...");
-    
-                String scriptPath = "C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\mainIOT.py";
+                
+                // Chemin relatif au projet
+                String scriptPath = new File("IOT/FInal/mainIOT.py").getCanonicalPath();
                 ProcessBuilder processBuilder = new ProcessBuilder("python", "-u", scriptPath);
+    
                 File scriptDirectory = new File(scriptPath).getParentFile();
                 processBuilder.directory(scriptDirectory);
     
@@ -92,7 +94,7 @@ public class AcceuilController extends Application {
                 processBuilder.redirectErrorStream(true);
     
                 this.pythonProcess = processBuilder.start();
-                
+    
                 try (InputStream inputStream = pythonProcess.getInputStream();
                      BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
                     String line;
@@ -104,7 +106,6 @@ public class AcceuilController extends Application {
                 int exitCode = pythonProcess.waitFor();
                 System.out.println("Python script exited with code: " + exitCode);
     
-                System.out.println("Python script finished.");
             } catch (Exception e) {
                 if (pythonProcess != null && pythonThread != null) {
                     pythonProcess.destroy();
@@ -116,6 +117,7 @@ public class AcceuilController extends Application {
     
         pythonThread.start();
     }
+    
     
     public void stopPythonScript(){
         if (pythonProcess != null && pythonThread.isAlive()) {

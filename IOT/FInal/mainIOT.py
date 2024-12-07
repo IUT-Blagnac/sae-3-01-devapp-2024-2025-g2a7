@@ -1,17 +1,15 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- 
 
 import paho.mqtt.client as mqtt
 import json
 import configparser
 from datetime import datetime
-import ast  # Pour convertir les chaînes de type dictionnaire en dict Python
-import os 
+import os
 
-
+# Charger la configuration
 config = configparser.ConfigParser()
-configpath = os.path.join(os.path.dirname(__file__), 'config.ini')
+configpath = os.path.normpath(os.path.join(os.path.dirname(__file__), 'config.ini'))
 config.read(configpath)
-
 
 solaredge_id = config['mqtt'].get('solaredge_id', '')
 room = config['mqtt'].get('room', '')
@@ -20,8 +18,6 @@ topic_triphaso = config['mqtt']['topic_triphaso'].format(room=room)
 topic_am107 = config['mqtt']['topic_am107'].format(room=room)
 topic_solaredge = config['mqtt']['topic_solaredge'].format(solaredge_id=solaredge_id)
 broker = config['mqtt']['broker']
-
-
 
 def on_connect(client, userdata, flags, rc):
     print(f"Connecté avec le code de résultat {rc}")
@@ -51,136 +47,35 @@ def on_message(client, userdata, msg):
 
 def log_data(timestamp, topic, data):
     try:
-        with open("IOT/FInal/datas/data_log.txt", "a", encoding='utf-8') as f:
+        log_path = os.path.normpath(os.path.join(os.path.dirname(__file__), 'IOT', 'Final', 'datas', 'data_log.txt'))
+        
+        # Créer le répertoire si nécessaire
+        if not os.path.exists(os.path.dirname(log_path)):
+            os.makedirs(os.path.dirname(log_path))
+        
+        with open(log_path, "a", encoding='utf-8') as f:
             log_entry = f"[{timestamp}] Topic: {topic} | Data: {data}\n"
             f.write(log_entry)
         print("Données enregistrées dans le fichier.")
-    except Exception:
-        pass  # Ne rien afficher en cas d'erreur
+    except Exception as e:
+        print(f"Erreur lors de l'enregistrement des données: {e}")
 
-def extraire_chiffres_et_points(chaine):
-    return ''.join(caractere for caractere in chaine if caractere.isdigit() or caractere == '.')
-
-
-
-def donnee_filtree(data_list, config_file='config.ini', output_file='C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\datas\\AM07_filtre_data.json'):
-
-    
-    # Chargement des seuils
-    seuils = {key: config.getfloat('seuils', key) for key in config['seuils']}
-    
-    # Chargement de la salle depuis la configuration
-    room_filter = config['device']['room'].strip().lower()
-    
-    # Dictionnaire de correspondance pour les noms
-    key_mapping = {
-        # AM107
-        "température": "temperature",
-        "humidité": "humidity",
-        "co2": "co2",
-        "tvoc": "tvoc",
-        "illumination": "illumination",
-        "pression": "pressure",
-        "activité": "activity",
-        "infrarouge": "infrared",
-        "infrarouge + visible": "infrared_and_visible",
+def donnee_filtree(data_list, output_file):
+    try:
+        # Chemin absolu pour éviter les doublons
+        output_path = os.path.normpath(os.path.join(os.path.dirname(__file__), output_file.lstrip('/').lstrip('\\')))
         
-        # Triphaso
-        "puissance active positive": "puissance_active_positive",
-        "puissance réactive négative": "puissance_reactive_negative",
-        "énergie active positive": "energie_active_positive",
-        "énergie réactive négative": "energie_reactive_negative",
-        "pièce": "room",
+        # Créer le répertoire si nécessaire
+        if not os.path.exists(os.path.dirname(output_path)):
+            os.makedirs(os.path.dirname(output_path))
+
+        with open(output_path, 'w', encoding='utf-8') as json_file:
+            json.dump(data_list, json_file, ensure_ascii=False, indent=4)
         
-        # SolarEdge
-        "dernière mise à jour": "derniere_maj",
-        "énergie totale": "energie_totale",
-        "énergie l'année dernière": "energie_annee_derniere",
-        "énergie le mois dernier": "energie_mois_dernier",
-        "énergie du dernier jour": "energie_jour_dernier"
-    }
-    
-    # Extraction des données pertinentes
-    filtered_data = {}
-    room_matched = False
-    alert_log = []
+        print(f"Données filtrées sauvegardées dans {output_path}")
+    except Exception as e:
+        print(f"Erreur lors de la sauvegarde des données filtrées: {e}")
 
-    correspondances = {
-    "temperature": "temperature_max",
-    "humidity": "humidity_max",
-    "co2": "co2_max",
-    "tvoc": "tvoc_min",
-    "illumination": "illumination_min",
-    "pressure": "pressure_min",
-    "puissance_active_positive": "puissance_active_positive_max",
-    "puissance_reactive_negative": "puissance_reactive_negative_max",
-    "energie_active_positive": "energie_active_positive_max",
-    "energie_reactive_negative": "energie_reactive_negative_max",
-
-    "energie_totale":"energie_totale_max",
-    "energie_annee_derniere":"energie_annee_derniere_max",
-    "energie_mois_dernier":"energie_mois_dernier_max",
-    "energie_jour_dernier":"energie_jour_dernier_max"
-    }
-    
-    cleaned_data = []
-
-    for item in data_list:
-        key, value = item.split(':', 1)
-        key = key.strip().lower()
-        if 'mise' in item:
-
-            for item in data_list:
-                if "{" in item and "}" in item:
-                    prefix, value = item.split(": {")
-                    key_value = value.split(": ")[1].rstrip("} WhW")
-                    cleaned_data.append(f"{prefix}: {key_value}")
-                else:
-                    cleaned_data.append(item)
-            data_list=cleaned_data
-            
-
-        # Vérification de la correspondance avec le dictionnaire de mapping
-
-        standardized_key = key_mapping.get(key)
-        
-        if standardized_key == "room":
-            room_value = value.strip().lower()
-            
-            # Si room_filter est égal à '0', on bypasse le filtre sur la salle
-            if room_filter == '0' or room_value == room_filter:
-                room_matched = True
-            continue
-        
-        if standardized_key in correspondances.keys():
-            value_float = float(extraire_chiffres_et_points(value))
-            filtered_data[standardized_key] = value_float
-                                                 
-            if standardized_key in ['tvoc', 'illumination', 'pressure']:
-                # Si la valeur est inférieure au seuil pour ces paramètres
-                if value_float < seuils[correspondances[standardized_key]]:
-                    alert_log.append(f"Alerte: {standardized_key} ({value_float}) est inférieur au seuil ({seuils[correspondances[standardized_key]]}) à {datetime.now()}")
-            else:
-                
-                # Si la valeur est supérieure au seuil pour ces paramètres
-                if value_float > seuils[correspondances[standardized_key]]:
-                    alert_log.append(f"Alerte: {standardized_key} ({value_float}) dépasse le seuil ({seuils[correspondances[standardized_key]]}) à {datetime.now()}")
-
-                
-    # Sauvegarde dans un fichier JSON uniquement si la salle correspond ou si room_filter est '0'
-    if room_matched or room_filter == '0':
-        #TODO Si y'a bien un truc dans le payload , le mettre dans le json sinon non 
-        with open(output_file, 'w', encoding='utf-8') as json_file:
-            json.dump(filtered_data, json_file, ensure_ascii=False, indent=4)
-    
-    # Sauvegarde des alertes dans un fichier si des alertes existent
-    if alert_log:
-        alert_log_file = config['alerts']['alert_log_file']
-        with open(alert_log_file, 'a', encoding='utf-8') as alert_file:
-            for alert in alert_log:
-                alert_file.write(alert + '\n')
-
-        
 def process_triphaso_data(payload):
     donnees_puissance = payload[0]
     infos_dispositif = payload[1]
@@ -210,8 +105,7 @@ def process_triphaso_data(payload):
         if cle in infos_dispositif:
             result.append(modele.format(infos_dispositif[cle]))
 
-
-    donnee_filtree(result,'config.ini','C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\datas\\Triphaso_filtre_data.json')
+    donnee_filtree(result, 'datas/Triphaso_filtre_data.json')
     return " | ".join(result)
 
 def process_am107_data(payload):
@@ -245,8 +139,8 @@ def process_am107_data(payload):
     for key, template in device_keys.items():
         if key in device_info:
             result.append(template.format(device_info[key]))
-    
-    donnee_filtree(result,'config.ini')
+
+    donnee_filtree(result, 'datas/AM07_filtre_data.json')
 
     return " | ".join(result)
 
@@ -266,8 +160,7 @@ def process_solaredge_data(payload):
         if cle in payload:
             resultat.append(modele.format(payload[cle]))
 
-    donnee_filtree(resultat,'config.ini','C:\\Users\\Etudiant\\Downloads\\sae-3-01-devapp-2024-2025-g2a7\\IOT\\FInal\\datas\\Solaredge_filtre_data.json')
-    
+    donnee_filtree(resultat, 'datas/Solaredge_filtre_data.json')
 
     return " | ".join(resultat)
 

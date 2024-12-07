@@ -31,6 +31,7 @@ public class AffDonneesViewController {
     private AffDonneesController donnees;
     private RoomManager roomManager;
     private ObservableList<String> oListDonnees;  // Liste observable pour les données à afficher
+    private ObservableList<Room> roomList = FXCollections.observableArrayList();
     
     public void initContext(Stage _containingStage, AffDonneesController _donnees, RoomManager _roomManager) {
         this.containingStage = _containingStage;
@@ -73,7 +74,7 @@ public class AffDonneesViewController {
     private Label labLum;
 
     @FXML
-    private LineChart<?, ?> lineChart_Lum;
+    private LineChart<String, Number> lineChart_Lum;
 
     @FXML
     private CategoryAxis TB_xLum;
@@ -85,7 +86,7 @@ public class AffDonneesViewController {
     private Label labActivite;
 
     @FXML
-    private ScatterChart<?, ?> scatterChart_Activite;
+    private ScatterChart<String, Number> scatterChart_Activite;
 
     @FXML
     private CategoryAxis TB_xActivite;
@@ -102,6 +103,8 @@ public class AffDonneesViewController {
     @FXML
     private Tab compDonnees;
 
+    @FXML
+    private ListView<Room> listeSalles;
 
     @FXML
     private Tab CD_temperature;
@@ -151,6 +154,9 @@ public class AffDonneesViewController {
         tousLesDonnees.setItems(oListDonnees); // Lier la ListView avec cette ObservableList
         this.loadRooms(); // Charge les salles dans l'interface
         this.listeSalles(); 
+        this.updateListeSalles(); // Charger les salles dans la ListView
+        this.configureListeSalles(); // Configurer l'affichage des salles
+        
     }
 
     // Cette méthode charge les salles dans le MenuButton
@@ -200,31 +206,59 @@ public class AffDonneesViewController {
         }
     }
 
+    private void updateListeSalles() {
+        if (roomManager != null) {
+            roomList.clear();
+            roomList.addAll(roomManager.getRoomsList()); // Ajouter les salles à l'ObservableList
+            listeSalles.setItems(roomList); // Lier l'ObservableList à la ListView
+        }
+    }
+
+    private void configureListeSalles() {
+        listeSalles.setCellFactory(lv -> new javafx.scene.control.ListCell<Room>() {
+            @Override
+            protected void updateItem(Room item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    setText(null);
+                } else {
+                    setText(item.getRoomId()); // Afficher l'ID de la salle
+                }
+            }
+        });
+    }
+
     
     private void handleRoomSelection(Room room) {
         System.out.println("Salle sélectionnée : " + room.getRoomId());
     
-        // Récupérer la dernière température de la salle
+        // Mettre à jour les graphiques pour cette salle
         Double lastTemperature = room.getTemperatureList().isEmpty() ? null : room.getTemperatureList().get(room.getTemperatureList().size() - 1);
-        // Récupérer la dernière humidité de la salle
         Double lastHumidity = room.getHumidityList().isEmpty() ? null : room.getHumidityList().get(room.getHumidityList().size() - 1);
-        
-        // Vérifiez si la température est valide (non nulle)
+    
         if (lastTemperature != null) {
-            // Mettre à jour le PieChart avec la température en prenant en compte le seuil de 30°C
             updatePieChart(lastTemperature);
         } else {
             System.out.println("Aucune température disponible pour cette salle.");
         }
     
-        // Vérifiez si l'humidité est valide (non nulle)
         if (lastHumidity != null) {
-            // Mettre à jour le BarChart avec l'humidité
             updateBarChartHum(lastHumidity);
         } else {
             System.out.println("Aucune humidité disponible pour cette salle.");
         }
+    
+        // Vérifiez et mettez à jour le LineChart pour la luminosité
+        if (!room.getIlluminationList().isEmpty()) {
+            updateLineChartLum(room);
+        } else {
+            System.out.println("Aucune luminosité disponible pour cette salle.");
+        }
+    
+        // Mettez à jour le ScatterChart pour le CO2
+        updateScatterChartCo2(room);
     }
+    
     
     private void updateBarChartHum(Double humidity) {
         // Créer une ObservableList pour afficher l'humidité sur le BarChart
@@ -279,8 +313,68 @@ public class AffDonneesViewController {
         // Afficher la température réelle dans un label ou un autre élément visuel, si nécessaire
         labTemp.setText("Température: " + temperature + "°C");
     }
+
+    private void updateLineChartLum(Room room) {
+        // Créer une ObservableList pour contenir les séries de données
+        ObservableList<LineChart.Series<String, Number>> lineChartData = FXCollections.observableArrayList();
+    
+        // Créer une série pour la luminosité
+        LineChart.Series<String, Number> series = new LineChart.Series<>();
+        series.setName("Luminosité");
+    
+        // Ajouter les données de luminosité de la salle
+        List<Double> illuminationList = room.getIlluminationList();
+        for (int i = 0; i < illuminationList.size(); i++) {
+            series.getData().add(new LineChart.Data<>("T" + (i + 1), illuminationList.get(i))); // T1, T2, etc. pour le temps
+        }
+    
+        // Ajouter la série au LineChart
+        lineChart_Lum.getData().clear();
+        lineChart_Lum.getData().add(series);
+    
+        // Mettre à jour le label de luminosité
+        Double lastIllumination = illuminationList.isEmpty() ? null : illuminationList.get(illuminationList.size() - 1);
+        if (lastIllumination != null) {
+            labLum.setText("Luminosité : " + lastIllumination + " lx");
+        } else {
+            labLum.setText("Luminosité : N/A");
+        }
+    }
     
     
+    private void updateScatterChartCo2(Room room) {
+        // Vérifiez si la liste des valeurs de CO2 n'est pas vide
+        if (room.getCo2List().isEmpty()) {
+            System.out.println("Aucune donnée de CO2 disponible pour cette salle.");
+            return;
+        }
+    
+        // Créez une série pour le graphique
+        ScatterChart.Series<String, Number> series = new ScatterChart.Series<>();
+        series.setName("CO2");
+    
+        // Ajoutez les données du CO2 à la série
+        List<Double> co2List = room.getCo2List();
+        for (int i = 0; i < co2List.size(); i++) {
+            series.getData().add(new ScatterChart.Data<>("T" + (i + 1), co2List.get(i))); // T1, T2 pour le temps
+        }
+    
+        // Effacez les anciennes données du ScatterChart
+        scatterChart_Activite.getData().clear();
+    
+        // Ajoutez la nouvelle série au ScatterChart
+        scatterChart_Activite.getData().add(series);
+    
+        // Mettre à jour le label de l'activité si nécessaire
+        Double lastCo2 = co2List.get(co2List.size() - 1); // Dernière valeur
+        if (lastCo2 != null) {
+            labActivite.setText("Activité CO2 : " + lastCo2 + " ppm");
+        } else {
+            labActivite.setText("Activité CO2 : N/A");
+        }
+    }
+
+
     /**
      * Action menu quitter. Demander une confirmation puis fermer la fenêtre (donc
      * l'application car fenêtre principale).

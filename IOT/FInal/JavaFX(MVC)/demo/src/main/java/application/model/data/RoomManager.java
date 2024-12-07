@@ -34,6 +34,8 @@ public class RoomManager {
             roomsList.add(room);
         }
         room.addData(temperature, humidity, co2, illumination);
+        System.out.println("Données ajoutées : Temp=" + temperature + ", Hum=" + humidity + ", CO2=" + co2 + ", Lum=" + illumination);
+
     }
 
     // Lire les données du fichier JSON et ajouter les données dans les salles
@@ -49,6 +51,8 @@ public class RoomManager {
             Double illumination = (Double) data.get("illumination");
 
             addRoomData(roomId, temperature, humidity, co2, illumination);
+            System.out.println("Données ajoutées : Temp=" + temperature + ", Hum=" + humidity + ", CO2=" + co2 + ", Lum=" + illumination);
+
 
         } catch (IOException e) {
             e.printStackTrace();
