@@ -513,3 +513,242 @@ VALUES (102, 'Collectors Pack Brickolo™', 'Pack exclusif de 3 figurines rares'
 
 INSERT INTO Article (idArticle, nomArticle, description, prix, poids, dimension, nbPièce, trancheAge, couleur, nouveaute, idCatégorie, idStock)
 VALUES (103, 'Figurine Signature Brickolo™', 'Pièce numérotée et signée', 44.99, 0.3, '6x4x3', 15, '12+', 'Édition Spéciale', FALSE, 26, 105);
+
+  --insertion des clients
+
+DELETE FROM Utilisateur;
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (1, 'Martin', 'Jean', 'H', 'jean.martin@gmail.com', '$2a$10$M9OguM5w5dVZm.uzRmB9s.xjxHqIcFmjEB5HQU0UlM0TgZGTzFd9G', '0612345678', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (2, 'Durand', 'Sophie', 'F', 'sophie.durand@gmail.com', '$2a$10$1Od2E2K4jm1p/5BdWoeIsOm7JYoF2vIkdknLO7WBBy9lFh/CVqaR.', '0623456789', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (3, 'Bernard', 'Luc', 'H', 'luc.bernard@gmail.com', '$2a$10$QbGr7joGmUkHh0.02sV9gB5rpO7D5GpETy3ZgsQYP8smRJZXHkp1S', '0634567890', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (4, 'Petit', 'Camille', 'F', 'camille.petit@gmail.com', '$2a$10$Eqq6tTa6aCw1Wy2dOgjL6sB5pxZKlAoFhANz9hRYKkS9KkzgF6eyK', '0645678901', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (5, 'Roux', 'Julie', 'F', 'julie.roux@gmail.com', '$2a$10$X9QNYgMjhtYQq56Hhr9tPgbCUcJ1e9dHoDRUuwvD2OeeaeRzmXs9m', '0656789012', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (6, 'Moreau', 'Jacques', 'H', 'jacques.moreau@gmail.com', '$2a$10$Y8jRrnKrIrVJ4SKslUkBo2dxgePyO1FwZ2E2xBOzFTAKWmwwa3nKm', '0667890123', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (7, 'Fournier', 'Claire', 'F', 'claire.fournier@gmail.com', '$2a$10$Wvj0LrXShMbUwCvIrS4QmO4dPhjbkZ3Dl2TyzShVJrLtyzXpbkdqG', '0678901234', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (8, 'Girard', 'Paul', 'H', 'paul.girard@gmail.com', '$2a$10$rcFwQ.XRz3Kse49gks6.OxjqBoMRV0q1xQhgNGFjkH1OZQZGQe5m6', '0689012345', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (9, 'Lemoine', 'Bernadette', 'F', 'bernadette.lemoine@gmail.com', '$2a$10$RAt6y/N7Q1BG0HlFlNYOTny5XzS/6HAPw6A.B8Ck9URqu9tw8F8Vm', '0690123456', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (10, 'Leclerc', 'Henri', 'H', 'henri.leclerc@gmail.com', '$2a$10$KNjZXKNSLU6bkTucdV91lBl6ddHhXqYN.f7e2Wf.Bm0aZ9jXgdiD6', '0611122334', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (11, 'Deschamps', 'Marie', 'F', 'marie.deschamps@gmail.com', '$2a$10$YhIkOUFv5IGrKnpdXUMfF12bni0OZs61yZsUp9mv1dwZ5B88FXBGq', '0722334455', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (12, 'Dufresne', 'Pierre', 'H', 'pierre.dufresne@gmail.com', '$2a$10$CbGHkmfO3dV1QEnr2y3QZfHqz3cRg8g9LZVLMnmco0z6XoFjTHY3S', '0733445566', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (13, 'Lemoine', 'Jean', 'H', 'jean.lemoine@gmail.com', '$2a$10$F7dUJt3yVpXjiP1p02O5so3ijYO4eQHiFqTPfzOs3nVtvfK3C7cTS', '0744556677', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (14, 'Benoit', 'Charlotte', 'F', 'charlotte.benoit@gmail.com', '$2a$10$Ut41O4tn/Zf/VqTLrpnt37c8c88BF61qth1.bG9s4yoGNh35N4jkf', '0755667788', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (15, 'Muller', 'Claude', 'H', 'claude.muller@gmail.com', '$2a$10$TyFx8hKEl/Jhz3ftREx9FeDzJlk.f5LOE79o57uOsaRHrxszB9k6m', '0766778899', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (16, 'Lemoine', 'Sébastien', 'H', 'sebastien.lemoine@gmail.com', '$2a$10$O.yC6y7qYd9ReBc19Hg30J6Q8zO0WwWlfjB8woQe0TpPlM42I9KxS', '0777889900', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (17, 'Lemoine', 'Isabelle', 'F', 'isabelle.lemoine@gmail.com', '$2a$10$TkY7MOaHRkLIMwMd5Gr1J5Y0oy2P/jti6m0Xw09cML9y6dIQec0Jk', '0788990011', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (18, 'Roche', 'François', 'H', 'francois.roche@gmail.com', '$2a$10$Y74G1guL5qa3c1/x0fKlUmI7KTzMkmCZPsrMn7.IgDce7kjiXbaDi', '0799001122', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (19, 'Lemoine', 'Lucie', 'F', 'lucie.lemoine@gmail.com', '$2a$10$1WYjXZlrpYzS1x1EhvOIfTTr2Dh9fpJv1nDzy.Nw2AGvPh93Y0c9C', '0800112233', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (20, 'Pires', 'Vincent', 'H', 'vincent.pires@gmail.com', '$2a$10$9XnHgFrLVK68w8hbZy5gnVfTEm9FqU9.HGZ39BIMtLFSHmr0EnyNe', '0811223344', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (21, 'Vasseur', 'Emma', 'F', 'emma.vasseur@gmail.com', '$2a$10$WV9V1dOkVfq0m5c4tzkmLP9ykf84dzy6mvT5tHTeVZjKp3zYo.PU1', '0822334455', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (22, 'Lemoine', 'Pierre', 'H', 'pierre.lemoine@gmail.com', '$2a$10$XZ7Otn1ZTZVknQkgjEdA.dwrM6yKh5EuAD5SeIQHQtj3fNNIuN.nW', '0833445566', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (23, 'Lemoine', 'Thomas', 'H', 'thomas.lemoine@gmail.com', '$2a$10$JTpUw8Nr65HAdPx7XvP2rli6uCqKrdVe4xYekHsq4y8ou0xYgGqL1', '0844556677', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (24, 'Dubois', 'Alice', 'F', 'alice.dubois@gmail.com', '$2a$10$KjL8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J', '0855667788', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (25, 'Laurent', 'Marc', 'H', 'marc.laurent@gmail.com', '$2a$10$Nj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0866778899', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (26, 'Simon', 'Élise', 'F', 'elise.simon@gmail.com', '$2a$10$Pj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0877889900', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (27, 'Michel', 'Philippe', 'H', 'philippe.michel@gmail.com', '$2a$10$Qj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0888990011', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (28, 'Lefevre', 'Catherine', 'F', 'catherine.lefevre@gmail.com', '$2a$10$Rj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0899001122', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (29, 'Garcia', 'Antoine', 'H', 'antoine.garcia@gmail.com', '$2a$10$Sj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0900112233', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (30, 'David', 'Sylvie', 'F', 'sylvie.david@gmail.com', '$2a$10$Tj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0911223344', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (31, 'Bertrand', 'Nicolas', 'H', 'nicolas.bertrand@gmail.com', '$2a$10$Uj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0922334455', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (32, 'Thomas', 'Caroline', 'F', 'caroline.thomas@gmail.com', '$2a$10$Vj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0933445566', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (33, 'Robert', 'Mathieu', 'H', 'mathieu.robert@gmail.com', '$2a$10$Wj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0944556677', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (34, 'Petit', 'Anne', 'F', 'anne.petit@gmail.com', '$2a$10$Xj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0955667788', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (35, 'Richard', 'Guillaume', 'H', 'guillaume.richard@gmail.com', '$2a$10$Yj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0966778899', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (36, 'Dumont', 'Céline', 'F', 'celine.dumont@gmail.com', '$2a$10$Zj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0977889900', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (37, 'Leroy', 'Alexandre', 'H', 'alexandre.leroy@gmail.com', '$2a$10$Aj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0988990011', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (38, 'Moreau', 'Nathalie', 'F', 'nathalie.moreau@gmail.com', '$2a$10$Bj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0999001122', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (39, 'Simon', 'Patrick', 'H', 'patrick.simon@gmail.com', '$2a$10$Cj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0610111213', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (40, 'Laurent', 'Christine', 'F', 'christine.laurent@gmail.com', '$2a$10$Dj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0611121314', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (41, 'Michel', 'Stéphane', 'H', 'stephane.michel@gmail.com', '$2a$10$Ej8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0612131415', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (42, 'Lefevre', 'Valérie', 'F', 'valerie.lefevre@gmail.com', '$2a$10$Fj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0613141516', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (43, 'Garcia', 'Olivier', 'H', 'olivier.garcia@gmail.com', '$2a$10$Gj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0614151617', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (44, 'David', 'Sandrine', 'F', 'sandrine.david@gmail.com', '$2a$10$Hj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0615161718', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (45, 'Bertrand', 'Laurent', 'H', 'laurent.bertrand@gmail.com', '$2a$10$Ij8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0616171819', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (46, 'Thomas', 'Isabelle', 'F', 'isabelle.thomas@gmail.com', '$2a$10$Jj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0617181920', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (47, 'Robert', 'Daniel', 'H', 'daniel.robert@gmail.com', '$2a$10$Kj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0618192021', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (48, 'Petit', 'Marie-Claire', 'F', 'marie-claire.petit@gmail.com', '$2a$10$Lj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0619202122', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (49, 'Richard', 'Bernard', 'H', 'bernard.richard@gmail.com', '$2a$10$Mj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0620212223', 'Client');
+
+INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
+VALUES (50, 'Dumont', 'Florence', 'F', 'florence.dumont@gmail.com', '$2a$10$Nj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0621222324', 'Client');
+
+
+
+DELETE FROM Avis;
+
+-- Avis 1
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (1, '5', 'Produit incroyable, je le recommande vivement !', '2024-12-01', 'Top qualité', 1, 1);
+
+-- Avis 2
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (2, '4', 'Bon produit mais livraison lente.', '2024-12-02', 'Satisfaisant', 2, 2);
+
+-- Avis 3
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (3, '3', 'La couleur ne correspond pas à la description.', '2024-12-03', 'Déçu par la couleur', 3, 3);
+
+-- Avis 4
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (4, '5', 'Livraison rapide, produit conforme.', '2024-12-04', 'Très satisfait', 4, 4);
+
+-- Avis 5
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (5, '2', 'La qualité laisse à désirer.', '2024-12-05', 'Mauvaise qualité', 5, 5);
+
+-- Avis 6
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (6, '5', 'Produit conforme à la description et très pratique.', '2024-12-06', 'Pratique et conforme', 6, 6);
+
+-- Avis 7
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (7, '4', 'Bon rapport qualité/prix.', '2024-12-07', 'Bon achat', 7, 7);
+
+-- Avis 8
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (8, '1', 'Le produit est arrivé endommagé.', '2024-12-08', 'Produit endommagé', 8, 8);
+
+-- Avis 9
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (9, '5', 'Très satisfait du service client.', '2024-12-09', 'Service client au top', 9, 9);
+
+-- Avis 10
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (10, '3', 'Les instructions d\'utilisation ne sont pas claires.', '2024-12-10', 'Manque de clarté', 10, 10);
+
+-- Avis 11
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (11, '4', 'Produit conforme mais emballage peu soigné.', '2024-12-11', 'Bon produit, emballage médiocre', 11, 11);
+
+-- Avis 12
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (12, '5', 'Article parfait pour un cadeau.', '2024-12-12', 'Idéal pour offrir', 12, 12);
+
+-- Avis 13
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (13, '2', 'Produit inutilisable après quelques jours.', '2024-12-13', 'Déçu', 13, 13);
+
+-- Avis 14
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (14, '5', 'Excellente qualité, je rachèterai.', '2024-12-14', 'Qualité exceptionnelle', 14, 14);
+
+-- Avis 15
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (15, '3', 'Le produit ne vaut pas son prix.', '2024-12-15', 'Trop cher', 15, 15);
+
+-- Avis 16
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (16, '4', 'Livraison dans les délais, produit conforme.', '2024-12-16', 'Bonne expérience', 16, 16);
+
+-- Avis 17
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (17, '1', 'Aucun suivi après vente.', '2024-12-17', 'Service client absent', 17, 17);
+
+-- Avis 18
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (18, '5', 'Produit innovant et facile à utiliser.', '2024-12-18', 'Produit génial', 18, 18);
+
+-- Avis 19
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (19, '4', 'Léger problème avec la livraison, mais tout s\'est réglé.', '2024-12-19', 'Bon suivi', 19, 19);
+
+-- Avis 20
+INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
+VALUES (20, '2', 'Mauvaise expérience, produit non conforme.', '2024-12-20', 'Non conforme', 20, 20);
+

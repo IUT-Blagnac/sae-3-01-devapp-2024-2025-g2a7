@@ -1,8 +1,10 @@
 {
+
     "temperature": 20.6,
     "humidity": 53.0,
     "co2": 488.0,
     "tvoc": 260.0,
     "illumination": 2.0,
     "pressure": 1000.6
+
 }

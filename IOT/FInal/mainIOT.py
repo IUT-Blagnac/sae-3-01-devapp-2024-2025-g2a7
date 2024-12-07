@@ -287,9 +287,11 @@ def process_solaredge_data(payload):
         "lastUpdateTime": payload.get('lastUpdateTime', "")
     }
 
+
     # Sauvegarder les données mises à jour dans le fichier JSON
     with open(output_file, 'w', encoding='utf-8') as json_file:
         json.dump(solar_data, json_file, ensure_ascii=False, indent=4)
+
     
     return solar_data
 
