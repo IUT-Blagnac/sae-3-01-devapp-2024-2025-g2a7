@@ -52,7 +52,8 @@ public class AcceuilController extends Application {
     }
 
     public void solar() {
-        System.out.println("Solar feature to be implemented.");
+        SolarEdgeController solar = new SolarEdgeController (mainStage);
+        solar.doCapteurDialog();
     }
 
     public void config() {
