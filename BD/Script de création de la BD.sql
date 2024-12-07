@@ -1,4 +1,5 @@
 -- Suppression des tables si elles existent déjà
+DROP TABLE IF EXISTS Produit_Apparenté;
 DROP TABLE IF EXISTS Livraison;
 DROP TABLE IF EXISTS Paiement;
 DROP TABLE IF EXISTS Commande;
