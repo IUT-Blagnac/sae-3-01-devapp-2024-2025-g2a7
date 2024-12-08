@@ -1,4 +1,5 @@
 -- Suppression des tables si elles existent déjà
+DROP TABLE IF EXISTS Produit_Apparenté;
 DROP TABLE IF EXISTS Livraison;
 DROP TABLE IF EXISTS Paiement;
 DROP TABLE IF EXISTS Commande;
@@ -131,3 +132,14 @@ CREATE TABLE Livraison (
     FOREIGN KEY (idCommande) REFERENCES Commande(idCommande),
     FOREIGN KEY (idAdresse) REFERENCES Adresse(idAdresse)
 );
+
+-- Table des relations entre produits
+CREATE TABLE Produit_Apparenté (
+    idArticle1 INT NOT NULL,
+    idArticle2 INT NOT NULL,
+    TypeRelation ENUM('complémentaire', 'similaire', 'cross-sell', 'parent-enfant') NOT NULL,
+    PRIMARY KEY (idArticle1, idArticle2),
+    FOREIGN KEY (idArticle1) REFERENCES Article(idArticle),
+    FOREIGN KEY (idArticle2) REFERENCES Article(idArticle)
+);
+

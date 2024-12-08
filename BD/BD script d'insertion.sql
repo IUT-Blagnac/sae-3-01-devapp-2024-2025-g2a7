@@ -752,3 +752,97 @@ VALUES (19, '4', 'Léger problème avec la livraison, mais tout s\'est réglé.'
 INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
 VALUES (20, '2', 'Mauvaise expérience, produit non conforme.', '2024-12-20', 'Non conforme', 20, 20);
 
+
+-- Insertion des relations entre produits
+
+DELETE FROM Produit_Apparenté;
+
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (1, 4, 'complémentaire'); -- Station de Police et Caserne de Pompiers
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (2, 3, 'similaire'); -- Gare et École
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (5, 7, 'cross-sell'); -- Centre Commercial et Usine Automatisée
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (6, 8, 'complémentaire'); -- Robots en Action et Véhicules Futuristes
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (9, 10, 'similaire'); -- Générateur d'Énergie et Construction Mécanique
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (11, 13, 'cross-sell'); -- Jungle d'Explorer et Safari en Afrique
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (12, 14, 'complémentaire'); -- Base Arctique et Expédition Désertique
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (15, 17, 'similaire'); -- Rivière Sauvage et Véhicules Aquatiques
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (16, 18, 'cross-sell'); -- Station Sous-Marine et Créatures Marines
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (19, 20, 'complémentaire'); -- Épave du Titanic et Île Sous-Marine
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (21, 22, 'similaire'); -- Panorama des Grandes Villes et Paysages de l'Asie
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (23, 24, 'cross-sell'); -- Safari en Afrique et Scène de Film Noir
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (25, 26, 'complémentaire'); -- Diner Américain des Années 50 et Voitures Classiques des Années 60
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (27, 28, 'similaire'); -- Télévision Vintage et Quartier Rétro
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (29, 30, 'cross-sell'); -- Parc d'Aventure Kidz et Petite Ferme Kidz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (31, 32, 'complémentaire'); -- Super-Héros Kidz et Centre Commercial Kidz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (33, 34, 'similaire'); -- Cité des Animaux Kidz et Studio de Musique Teenz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (35, 36, 'cross-sell'); -- Salle de Sport Teenz et Café-Pâtisserie Teenz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (37, 38, 'complémentaire'); -- Salle de Cinéma Teenz et Shopping Mall Teenz
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (39, 40, 'similaire'); -- Rome Antique History et Château Médiéval History
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (41, 42, 'cross-sell'); -- Pirates du Passé History et Égypte Ancienne History
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (43, 44, 'complémentaire'); -- Japon Féodal History et Briques de Construction Brickolo
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (45, 46, 'similaire'); -- Briques Géantes Brickolo et Kit de Mosaïque Brickolo
+INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (47, 48, 'cross-sell'); -- Briques Colorées Brickolo et Boîte Créative Brickolo
+
+
+-- Insertion des adresses pour les utilisateurs existants
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (1, '12', 'Rue de la Paix', '75002', 'Paris', 'France', NULL, 1);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (2, '34', 'Avenue des Champs-Élysées', '75008', 'Paris', 'France', NULL, 2);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (3, '56', 'Boulevard Saint-Germain', '75005', 'Paris', 'France', NULL, 3);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (4, '78', 'Rue de Rivoli', '75001', 'Paris', 'France', NULL, 4);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (5, '90', 'Rue du Faubourg Saint-Honoré', '75008', 'Paris', 'France', NULL, 5);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (6, '23', 'Rue de la République', '69002', 'Lyon', 'France', NULL, 6);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (7, '45', 'Cours Lafayette', '69003', 'Lyon', 'France', NULL, 7);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (8, '67', 'Rue Victor Hugo', '69002', 'Lyon', 'France', NULL, 8);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (9, '89', 'Avenue Jean Jaurès', '69007', 'Lyon', 'France', NULL, 9);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (10, '12', 'Rue de la Liberté', '21000', 'Dijon', 'France', NULL, 10);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (11, '34', 'Rue des Godrans', '21000', 'Dijon', 'France', NULL, 11);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (12, '56', 'Rue de la Préfecture', '21000', 'Dijon', 'France', NULL, 12);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (13, '78', 'Rue Monge', '21000', 'Dijon', 'France', NULL, 13);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (14, '90', 'Rue Chabot-Charny', '21000', 'Dijon', 'France', NULL, 14);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (15, '23', 'Rue de la Bourse', '33000', 'Bordeaux', 'France', NULL, 15);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (16, '45', 'Cours de l\'Intendance', '33000', 'Bordeaux', 'France', NULL, 16);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (17, '67', 'Rue Sainte-Catherine', '33000', 'Bordeaux', 'France', NULL, 17);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (18, '89', 'Rue du Pas-Saint-Georges', '33000', 'Bordeaux', 'France', NULL, 18);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (19, '12', 'Rue des Remparts', '33000', 'Bordeaux', 'France', NULL, 19);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (20, '34', 'Rue du Palais Gallien', '33000', 'Bordeaux', 'France', NULL, 20);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (21, '56', 'Rue de la Devise', '33000', 'Bordeaux', 'France', NULL, 21);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (22, '78', 'Rue du Loup', '33000', 'Bordeaux', 'France', NULL, 22);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (23, '90', 'Rue du Mirail', '33000', 'Bordeaux', 'France', NULL, 23);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (24, '23', 'Rue de la Porte Dijeaux', '33000', 'Bordeaux', 'France', NULL, 24);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (25, '45', 'Rue du Parlement Sainte-Catherine', '33000', 'Bordeaux', 'France', NULL, 25);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (26, '67', 'Rue du Pas-Saint-Georges', '33000', 'Bordeaux', 'France', NULL, 26);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (27, '89', 'Rue des Bahutiers', '33000', 'Bordeaux', 'France', NULL, 27);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (28, '12', 'Rue du Chai des Farines', '33000', 'Bordeaux', 'France', NULL, 28);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (29, '34', 'Rue du Languedoc', '31000', 'Toulouse', 'France', NULL, 29);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (30, '56', 'Rue de Metz', '31000', 'Toulouse', 'France', NULL, 30);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (31, '78', 'Rue Alsace Lorraine', '31000', 'Toulouse', 'France', NULL, 31);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (32, '90', 'Rue de la Pomme', '31000', 'Toulouse', 'France', NULL, 32);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (33, '23', 'Rue du Taur', '31000', 'Toulouse', 'France', NULL, 33);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (34, '45', 'Rue Saint-Rome', '31000', 'Toulouse', 'France', NULL, 34);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (35, '67', 'Rue des Filatiers', '31000', 'Toulouse', 'France', NULL, 35);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (36, '89', 'Rue de la Bourse', '31000', 'Toulouse', 'France', NULL, 36);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (37, '12', 'Rue des Lois', '31000', 'Toulouse', 'France', NULL, 37);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (38, '34', 'Rue Gambetta', '31000', 'Toulouse', 'France', NULL, 38);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (39, '56', 'Rue de la Colombette', '31000', 'Toulouse', 'France', NULL, 39);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (40, '78', 'Rue de la Concorde', '31000', 'Toulouse', 'France', NULL, 40);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (41, '90', 'Rue des Arts', '31000', 'Toulouse', 'France', NULL, 41);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (42, '23', 'Rue de l\'Industrie', '31000', 'Toulouse', 'France', NULL, 42);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (43, '45', 'Rue de la Fonderie', '31000', 'Toulouse', 'France', NULL, 43);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (44, '67', 'Rue de la Chaussée', '31000', 'Toulouse', 'France', NULL, 44);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (45, '89', 'Rue de la Garonne', '31000', 'Toulouse', 'France', NULL, 45);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (46, '12', 'Rue de la Daurade', '31000', 'Toulouse', 'France', NULL, 46);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (47, '34', 'Rue de la Fonderie', '31000', 'Toulouse', 'France', NULL, 47);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (48, '56', 'Rue de la Chaussée', '31000', 'Toulouse', 'France', NULL, 48);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (49, '78', 'Rue de la Garonne', '31000', 'Toulouse', 'France', NULL, 49);
+INSERT INTO Adresse (idAdresse, numAdr, rue, codePostal, ville, pays, complement, idUtilisateur) VALUES (50, '90', 'Rue de la Daurade', '31000', 'Toulouse', 'France', NULL, 50);
+
+-- Insertion des références de carte bancaire pour une dizaine d'utilisateurs
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (1, '1234567812345678', '2025-12-31', 1);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (2, '2345678923456789', '2024-11-30', 2);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (3, '3456789034567890', '2023-10-31', 3);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (4, '4567890145678901', '2026-09-30', 4);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (5, '5678901256789012', '2025-08-31', 5);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (6, '6789012367890123', '2024-07-31', 6);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (7, '7890123478901234', '2023-06-30', 7);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (8, '8901234589012345', '2026-05-31', 8);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (9, '9012345690123456', '2025-04-30', 9);
+INSERT INTO CB (idCarte, numeroCarte, dateExpiration, idUtilisateur) VALUES (10, '0123456701234567', '2024-03-31', 10);
