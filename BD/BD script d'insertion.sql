@@ -2,6 +2,10 @@
 DELETE FROM Article;
 DELETE FROM Stock;
 DELETE FROM Catégorie;
+DELETE FROM Utilisateur;
+DELETE FROM Avis;
+DELETE FROM Produit_Apparenté;
+
 
 -- Ajout des catégories principales
 INSERT INTO Catégorie (idCat, nomCat, description, idCatPere) VALUES (1, 'Sets de jeu complet', 'Sets de jeu à thème', NULL);
@@ -516,8 +520,6 @@ VALUES (103, 'Figurine Signature Brickolo™', 'Pièce numérotée et signée', 
 
   --insertion des clients
 
-DELETE FROM Utilisateur;
-
 INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
 VALUES (1, 'Martin', 'Jean', 'H', 'jean.martin@gmail.com', '$2a$10$M9OguM5w5dVZm.uzRmB9s.xjxHqIcFmjEB5HQU0UlM0TgZGTzFd9G', '0612345678', 'Client');
 
@@ -668,10 +670,6 @@ VALUES (49, 'Richard', 'Bernard', 'H', 'bernard.richard@gmail.com', '$2a$10$Mj8m
 INSERT INTO Utilisateur (idUtilisateur, nom, prenom, Civilite, email, mdp, numTel, rôle)
 VALUES (50, 'Dumont', 'Florence', 'F', 'florence.dumont@gmail.com', '$2a$10$Nj8mN9pX6rQ2Y5vH3n1Z.8J5q6X9K8tQ5X2Y9K5nM2X5vH3n1Z8J5', '0621222324', 'Client');
 
-
-
-DELETE FROM Avis;
-
 -- Avis 1
 INSERT INTO Avis (idAvis, note, commentaire, date, titre, idUtilisateur, idArticle)
 VALUES (1, '5', 'Produit incroyable, je le recommande vivement !', '2024-12-01', 'Top qualité', 1, 1);
@@ -754,8 +752,6 @@ VALUES (20, '2', 'Mauvaise expérience, produit non conforme.', '2024-12-20', 'N
 
 
 -- Insertion des relations entre produits
-
-DELETE FROM Produit_Apparenté;
 
 INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (1, 4, 'complémentaire'); -- Station de Police et Caserne de Pompiers
 INSERT INTO Produit_Apparenté (idArticle1, idArticle2, TypeRelation) VALUES (2, 3, 'similaire'); -- Gare et École
