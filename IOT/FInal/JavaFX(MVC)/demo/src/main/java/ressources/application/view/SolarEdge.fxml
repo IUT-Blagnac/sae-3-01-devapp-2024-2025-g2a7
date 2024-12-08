@@ -57,7 +57,7 @@
       <CategoryAxis side="BOTTOM" />
    </xAxis>
    <yAxis>
-      <NumberAxis fx:id="yAxisTotalEnergy" autoRanging="false" lowerBound="3460000.0" side="LEFT" tickUnit="10000.0" upperBound="3490000.0" />
+      <NumberAxis fx:id="yAxisTotalEnergy" autoRanging="true" lowerBound="3460000.0" side="LEFT" tickUnit="10000.0" upperBound="3490000.0" />
    </yAxis>
 </LineChart>
                                  </children>
