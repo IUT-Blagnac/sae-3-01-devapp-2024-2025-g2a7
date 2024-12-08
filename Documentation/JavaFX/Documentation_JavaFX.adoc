@@ -71,6 +71,9 @@ Le contrôleur sert de lien entre la vue et le modèle. Il est responsable de la
 * **JsonConverter.java** : Convertit les json en EnergieData
 * **Solaredge_filtre_data.json** : stock les données des panneaux solaires
 
+
+image::../images/DS_SolarEdge.PNG[DS_SolarEdge]
+
 === 4. Configuration
 * **ConfigController.java** : Initialise la fenêtre
 * **ConfigViewController.java** :Défini les actions des boutons de seuils et de relevés 
