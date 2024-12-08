@@ -2,9 +2,20 @@
 :toc:
 :toc-title: Sommaire
 
-:Version: 1.1
-:Auteur: Équipe de développement
+:Version: Finale
+:Auteurs: 
 :Date: 2023-10-01
+
+== Informations générales
+==== Version : {Version}  
+
+==== Auteurs 
+
+DA CHAO Romain, DUCRY Pierre-Louis, PELLEGATTA Matteo, RAZAFINIRINA Mialisoa
+
+==== Date 
+
+{Date}
 
 == Introduction
 
