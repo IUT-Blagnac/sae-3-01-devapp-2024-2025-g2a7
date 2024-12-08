@@ -22,6 +22,8 @@ L’application développée vise à gérer et surveiller les données en proven
 * **Communication entre Java et Python** : Le programme Java peut lancer et interagir avec le programme Python, en s’assurant que les deux parties fonctionnent en harmonie.
 * **Gestion de la configuration** : L'utilisateur peut configurer le comportement du système via un fichier de configuration qui définit les types de données à récupérer, la fréquence de lecture, les seuils d’alerte, et d'autres paramètres.
 
+image::../images/Use_Case_JavaFX.PNG[Use Case général de l'appli]
+
 
 == II. Architecture
 
