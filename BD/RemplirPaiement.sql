@@ -7,6 +7,7 @@ BEGIN
   DECLARE c_dateCommande DATE;
   DECLARE c_MontantLiv DECIMAL(10,2);
   DECLARE c_montant DECIMAL(10,2);
+  DECLARE c_idCarte INT;
   DECLARE next_idPaiement INT;
 
   DECLARE curs CURSOR FOR
@@ -14,10 +15,12 @@ BEGIN
       c.idCommande,
       c.dateCommande,
       l.MontantLiv,
-      p.montant
+      p.montant,
+      cb.idCarte
     FROM Commande c
     JOIN Livraison l ON l.idCommande = c.idCommande
-    JOIN Panier p ON p.idPanier = c.idPanier;
+    JOIN Panier p ON p.idPanier = c.idPanier
+    JOIN CB cb ON cb.idUtilisateur = p.idUtilisateur;
 
   DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
 
@@ -27,7 +30,7 @@ BEGIN
   OPEN curs;
 
   read_loop: LOOP
-    FETCH curs INTO c_idCommande, c_dateCommande, c_MontantLiv, c_montant;
+    FETCH curs INTO c_idCommande, c_dateCommande, c_MontantLiv, c_montant, c_idCarte;
     IF done THEN
       LEAVE read_loop;
     END IF;
@@ -43,11 +46,11 @@ BEGIN
       idCarte
     ) VALUES (
       next_idPaiement,
-      'CB', -- Vous pouvez changer le typeP selon vos besoins
+      'CB', -- Vous pouvez modifier le type de paiement si nécessaire
       c_dateCommande,
       c_MontantLiv + c_montant,
       c_idCommande,
-      NULL -- idCarte est laissé vide pour le moment
+      c_idCarte
     );
   END LOOP;
 
