@@ -3,31 +3,41 @@ package application.control;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import application.App;
 import application.model.data.JsonFileWatcher;
 import application.model.data.RoomManager;
+
+import application.model.FichierSuivi;
+
 import application.view.AccueilViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class AcceuilController extends Application {
-    private Stage mainStage; 
+    private Stage mainStage;
     private static Scene scene;
+
     private Thread pythonThread;
     private Process pythonProcess;
     private RoomManager roomManager;
     private Thread jsonWatcherThread;
     private JsonFileWatcher jsonFileWatcher;
 
+    private ThreadSurveillanceFichier threadSurveillance;
+
+
     @Override
     public void start(Stage primaryStage) {
         try {
-            // Initialisation de la fenêtre principale
+
             this.mainStage = primaryStage;
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ressources/application/view/Accueil.fxml"));
@@ -46,7 +56,23 @@ public class AcceuilController extends Application {
             launchPythonScript(); // Démarrer le script Python
             
 
+            // Initialiser la surveillance du fichier
+            java.net.URL fileUrl = getClass().getResource("/ressources/alerts_log.txt");
+            if (fileUrl != null) {
+                java.nio.file.Path filePath = java.nio.file.Paths.get(fileUrl.toURI());
+                FichierSuivi fichierSuivi = new FichierSuivi(filePath.toString());
+                threadSurveillance = new ThreadSurveillanceFichier(fichierSuivi, this);
+                threadSurveillance.setDaemon(true);
+                threadSurveillance.start();
+
+            } else {
+                throw new IOException("Fichier alerts_log.txt introuvable dans les ressources.");
+            }
+
+            primaryStage.setOnCloseRequest(event -> fermerApplication());
+
             primaryStage.show();
+
 
             this.mainStage.setOnCloseRequest(e -> {
                 e.consume(); // Empêche la fermeture par défaut
@@ -56,6 +82,7 @@ public class AcceuilController extends Application {
                 stopJsonWatcher();
             });
         } catch (IOException e) {
+
             e.printStackTrace();
         }
     }
@@ -93,13 +120,15 @@ public class AcceuilController extends Application {
     }
 
     public void solar() {
-        System.out.println("Solar feature to be implemented.");
+        SolarEdgeController solar = new SolarEdgeController(mainStage);
+        solar.doCapteurDialog();
     }
 
     public void config() {
         ConfigController config = new ConfigController(mainStage);
         config.doConfigDialog();
     }
+
 
     public void launchPythonScript() {
         pythonThread = new Thread(() -> {
@@ -154,6 +183,20 @@ public class AcceuilController extends Application {
         }
         if (pythonThread != null && pythonThread.isAlive()) {
             pythonThread.interrupt();
+
+    // Méthode pour notifier qu'une nouvelle entrée a été trouvée
+    public void notifierNouvelleEntree(String ligne) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Nouvelle Entrée Détectée");
+        alert.setHeaderText("Une nouvelle entrée a été trouvée dans le fichier !");
+        alert.setContentText("Contenu : " + ligne);
+        alert.showAndWait();
+    }
+
+    // Arrêter proprement la surveillance à la fermeture
+    private void fermerApplication() {
+        if (threadSurveillance != null) {
+            threadSurveillance.arreter();
         }
     }
 }

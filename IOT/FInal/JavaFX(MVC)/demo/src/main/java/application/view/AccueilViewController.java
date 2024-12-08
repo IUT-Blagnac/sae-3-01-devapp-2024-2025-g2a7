@@ -47,7 +47,7 @@ public class AccueilViewController {
 
     @FXML
     private void handleSolarButtonAction() {
-        System.out.println("Solar button clicked.");
+        this.accueil.solar();
     }
 
     /**
