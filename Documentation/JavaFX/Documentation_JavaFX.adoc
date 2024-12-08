@@ -55,6 +55,30 @@ Le contrôleur sert de lien entre la vue et le modèle. Il est responsable de la
 * Lancer le programme Python qui lit les données des capteurs et des panneaux solaires.
 
 == III. Fonctionnalités
+=== 1. Lancer l'application
+* **App.java** : Le fichier App.java permet de lancer l'application en appelant AccueilController.java
+
+=== 2. Redirections de la page principale
+* **AccueilController.java** : Initialise la fenêtre principlale et implémente les fonctions des boutons
+* **Accueil.fxml** : Interface graphique de la fenêtre principale
+* **AcueilViewController.java** : fait le lien entre le fxml et le controller en associant une fonction à chaque bouton
+
+=== 3. Visualiser les panneaux solaire 
+* **SolarEdgeController.java** : Initialise la fenêtre
+* **SolarEdge.fxml** : Interface graphique de la fenêtre des données solaires
+* **SolarEdgeViewController.java** : fait le lien entre le fxml et le controller en associant une fonction à chaque bouton et en créant les graphes
+* **EnergieData.java** : Classe définissant les attributs des relevés solaires
+* **JsonConverter.java** : Convertit les json en EnergieData
+* **Solaredge_filtre_data.json** : stock les données des panneaux solaires
+
+=== 4. Configuration
+* **ConfigController.java** : Initialise la fenêtre
+* **ConfigViewController.java** :Défini les actions des boutons de seuils et de relevés 
+* **Config.fxml** : Interface graphique de configuration
+* **INIReader.java** : permet la liaison entre le viewController et le fichier config.ini
+* **config.ini** : stock les données de configuration des données
+
+
 
 
 
