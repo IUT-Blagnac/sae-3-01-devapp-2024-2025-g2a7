@@ -168,6 +168,8 @@ public class ConfigViewController {
 
             // Sauvegarder dans le fichier
             iniReader.save();
+
+            System.out.println("Enregistrement teriné");
         } catch (IOException e) {
             e.printStackTrace();
         }
