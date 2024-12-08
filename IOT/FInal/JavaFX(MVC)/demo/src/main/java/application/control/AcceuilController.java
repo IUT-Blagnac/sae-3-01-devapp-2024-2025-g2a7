@@ -1,23 +1,24 @@
 package application.control;
 
 import java.io.IOException;
-
-import application.App;
+import application.model.FichierSuivi;
 import application.view.AccueilViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class AcceuilController extends Application {
-    private Stage mainStage; 
+    private Stage mainStage;
     private static Scene scene;
+    private ThreadSurveillanceFichier threadSurveillance;
 
     @Override
     public void start(Stage primaryStage) {
         try {
-            // Initialisation de la fenêtre principale
-            this.mainStage = primaryStage; // Ajouter cette ligne
+            this.mainStage = primaryStage;
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ressources/application/view/Accueil.fxml"));
             Scene scene = new Scene(loader.load(), 600, 600);
@@ -27,8 +28,23 @@ public class AcceuilController extends Application {
             AccueilViewController controller = loader.getController();
             controller.initContext(primaryStage, this);
 
+            // Initialiser la surveillance du fichier
+            java.net.URL fileUrl = getClass().getResource("/ressources/alerts_log.txt");
+            if (fileUrl != null) {
+                java.nio.file.Path filePath = java.nio.file.Paths.get(fileUrl.toURI());
+                FichierSuivi fichierSuivi = new FichierSuivi(filePath.toString());
+                threadSurveillance = new ThreadSurveillanceFichier(fichierSuivi, this);
+                threadSurveillance.setDaemon(true);
+                threadSurveillance.start();
+
+            } else {
+                throw new IOException("Fichier alerts_log.txt introuvable dans les ressources.");
+            }
+
+            primaryStage.setOnCloseRequest(event -> fermerApplication());
+
             primaryStage.show();
-        } catch (IOException e) {
+        } catch (IOException | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
     }
@@ -52,12 +68,28 @@ public class AcceuilController extends Application {
     }
 
     public void solar() {
-        SolarEdgeController solar = new SolarEdgeController (mainStage);
+        SolarEdgeController solar = new SolarEdgeController(mainStage);
         solar.doCapteurDialog();
     }
 
     public void config() {
         ConfigController config = new ConfigController(mainStage);
         config.doConfigDialog();
+    }
+
+    // Méthode pour notifier qu'une nouvelle entrée a été trouvée
+    public void notifierNouvelleEntree(String ligne) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Nouvelle Entrée Détectée");
+        alert.setHeaderText("Une nouvelle entrée a été trouvée dans le fichier !");
+        alert.setContentText("Contenu : " + ligne);
+        alert.showAndWait();
+    }
+
+    // Arrêter proprement la surveillance à la fermeture
+    private void fermerApplication() {
+        if (threadSurveillance != null) {
+            threadSurveillance.arreter();
+        }
     }
 }
