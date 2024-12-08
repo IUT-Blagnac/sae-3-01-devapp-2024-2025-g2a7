@@ -85,13 +85,22 @@ image::../images/DS_SolarEdge.PNG[DS_SolarEdge]
 image::../images/DS_Config.PNG[DS_Config]
 
 
+=== 4. Visualiser les données par salles
+* **AffDonneeController.java** : Initialise la fenêtre
+* **AffDonneeViewController.java** :Défini les actions des boutons et initialise les graphes
+* **AffDonnee.fxml** : Interface graphique du tableau de bord
+* **Room.java** : Classe définissant la structure d'une salle
+
 
 
 == IV. Eléments essentiels à connaître
 
+Pour lancer l'application en raison de difficultées rencontrées lors de la création du jar et profiter de toutes les options : +
+1. Ouvrir le dossier du projet +
+2. Chercher le fichier App.java dans IOT/Final et le lancer (le python et l'application java se lanceront en même temps)
 
 
-== V. Conclusion
 
-Cette documentation technique présente les éléments essentiels à connaître pour comprendre l'application e-commerce, les technologies utilisées, ainsi que les fonctionnalités développées. Elle sert de référence pour la maintenance et l'extension future de l'application.
+
+
 
