@@ -50,11 +50,21 @@ public class SolarEdgeViewController {
     @FXML
     private NumberAxis yAxisTotalEnergy;
 
+    /**
+     * Initialise le contrôleur avec le stage et le contrôleur SolarEdge.
+     *
+     * @param _containingStage La fenêtre principale contenant la vue.
+     * @param _solar Le contrôleur SolarEdge pour accéder aux données.
+     */
     public void initContext(Stage _containingStage, SolarEdgeController _solar) {
         this.containingStage = _containingStage;
         this.solar = _solar;
     }
 
+    /**
+     * Méthode d'initialisation qui charge les données énergétiques depuis un fichier 
+     * JSON et met à jour les graphiques affichés.
+     */
     @FXML
     public void initialize() {
         // On charge les données du json
@@ -67,7 +77,10 @@ public class SolarEdgeViewController {
         updateGrapheTotal();
     }
 
-    // Mise à jour du graphique d'évolution 
+    /**
+     * Met à jour le graphique représentant l'évolution de la puissance au fil du temps.
+     * Ce graphique affiche la puissance mesurée en watts pour chaque enregistrement.
+     */
     private void updateGrapheEvolution() {
         if (energieData == null || energieData.getRecords().isEmpty()) return;
 
@@ -84,6 +97,10 @@ public class SolarEdgeViewController {
     }
 
     
+    /**
+     * Met à jour le graphique de comparaison montrant l'énergie consommée pendant le mois
+     * dernier par rapport à la moyenne mensuelle.
+     */
     private void updateGrapheComparaison() {
     if (energieData == null || energieData.getRecords().isEmpty()) return;
 
@@ -107,7 +124,10 @@ public class SolarEdgeViewController {
 }
 
 
-    // Mise à jour du graphique de l'énergie totale
+    /**
+     * Met à jour le graphique représentant l'énergie totale mesurée sur une période donnée.
+     * Ce graphique affiche l'énergie totale en watts-heures pour chaque enregistrement.
+     */
     private void updateGrapheTotal() {
         if (energieData == null || energieData.getRecords().isEmpty()) return;
 
@@ -123,6 +143,11 @@ public class SolarEdgeViewController {
         GrapheTotal.getData().add(series);
     }
 
+    /**
+     * Gère l'action de fermeture de la fenêtre en cliquant sur un bouton.
+     *
+     * @param event L'événement généré par le clic sur le bouton.
+     */
     @FXML
     private void ActionBtnRetour(ActionEvent event) {
         Button sourceButton = (Button) event.getSource();

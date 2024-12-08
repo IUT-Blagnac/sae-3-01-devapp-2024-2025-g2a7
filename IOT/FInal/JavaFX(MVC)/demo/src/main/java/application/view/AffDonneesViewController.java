@@ -139,13 +139,18 @@ public class AffDonneesViewController {
     @FXML
     private Button retour3;
 
+    /**
+     * Ferme la scène actuelle lorsque le bouton "Retour" est cliqué.
+     */
     @FXML
     private void ActionBtnRetour() {
         Stage stage = (Stage) retour1.getScene().getWindow();
         stage.close();
     }
 
-
+     /**
+     * Configure l'état initial du contrôleur, y compris le chargement des salles et l'initialisation de l'affichage.
+     */
     private void configure() {       
         this.loadRooms(); // Charge les salles dans l'interface
         tousLesDonnees.setItems(oListDonnees); // Lier la ListView avec cette ObservableList
@@ -168,6 +173,12 @@ public class AffDonneesViewController {
             displayRoomData(lastRoom);
         }
     }
+
+    /**
+     * Affiche les données pour la salle sélectionnée.
+     *
+     * @param room La salle dont les données doivent être affichées.
+     */ 
     private void displayRoomData(Room room) {
         if (room == null) return;
     
@@ -190,6 +201,13 @@ public class AffDonneesViewController {
         labCO2.setText("CO2 : " + (lastCO2 != null ? lastCO2 + " ppm" : "N/A"));
         labLum.setText("Luminosité : " + (lastLum != null ? lastLum + " lx" : "N/A"));
     }
+
+    /**
+     * Récupère la dernière valeur d'une liste de valeurs de type Double.
+     *
+     * @param values La liste de valeurs à partir de laquelle récupérer la dernière valeur.
+     * @return La dernière valeur de la liste, ou null si la liste est vide.
+     */
     private Double getLastValue(List<Double> values) {
         return values.isEmpty() ? null : values.get(values.size() - 1);
     }
@@ -201,6 +219,9 @@ public class AffDonneesViewController {
         listeSalles(); 
     }
 
+    /**
+     * Charge les données des salles dans la liste observable pour l'affichage.
+     */
     public void loadRooms() {
         if (roomManager != null) {
             List<Room> rooms = roomManager.getRoomsList();
@@ -253,6 +274,9 @@ public class AffDonneesViewController {
         }
     }
 
+    /**
+     * Met à jour la liste des salles dans la ListView.
+     */
     private void updateListeSalles() {
         if (roomManager != null) {
             roomList.clear();
@@ -261,6 +285,9 @@ public class AffDonneesViewController {
         }
     }
 
+    /**
+     * Configure l'affichage de la ListView des salles.
+     */
     private void configureListeSalles() {
         listeSalles.setCellFactory(lv -> new javafx.scene.control.ListCell<Room>() {
             @Override
@@ -286,6 +313,11 @@ public class AffDonneesViewController {
         });
     }
     
+    /**
+     * Gère la sélection d'une salle depuis le menu.
+     *
+     * @param room La salle sélectionnée.
+     */
     private void handleRoomSelection(Room room) {
         System.out.println("Salle sélectionnée : " + room.getRoomId());
     
@@ -336,6 +368,11 @@ public class AffDonneesViewController {
         barChart_Hum.getData().add(series); // Ajouter la nouvelle série au graphique
     }
     
+    /**
+     * Met à jour le PieChart avec les données de température.
+     *
+     * @param temperature La valeur de la température à afficher.
+     */
     private void updatePieChart(Double temperature) {
         // Seuil de température
         double seuilTemperature = 30.0;
@@ -374,6 +411,11 @@ public class AffDonneesViewController {
         labTemp.setText("Température: " + temperature + "°C");
     }
 
+    /**
+     * Met à jour le LineChart avec les données de luminosité pour la salle sélectionnée.
+     *
+     * @param room La salle sélectionnée.
+     */
     private void updateLineChartLum(Room room) {
         // Créer une ObservableList pour contenir les séries de données
         ObservableList<LineChart.Series<String, Number>> lineChartData = FXCollections.observableArrayList();
@@ -401,7 +443,11 @@ public class AffDonneesViewController {
         }
     }
     
-    
+    /**
+     * Met à jour le ScatterChart avec les données de CO2 pour la salle sélectionnée.
+     *
+     * @param room La salle sélectionnée.
+     */
     private void updateScatterChartCo2(Room room) {
         // Vérifiez si la liste des valeurs de CO2 n'est pas vide
         if (room.getCo2List().isEmpty()) {
@@ -434,6 +480,11 @@ public class AffDonneesViewController {
         }
     }
 
+    /**
+     * Met à jour le BarChart avec les données de température pour la salle sélectionnée.
+     *
+     * @param room La salle sélectionnée.
+     */
     private void updateBarChartTemp(Room room) {
                 // Vérifie si une série pour cette salle existe déjà
         for (BarChart.Series<String, Number> series : barchartTemp.getData()) {
@@ -477,6 +528,11 @@ public class AffDonneesViewController {
                 barchartLum.getData().add(newSeries);
             }
             
+    /**
+     * Met à jour le BarChart avec les données d'humidité pour la salle sélectionnée.
+     *
+     * @param room La salle sélectionnée.
+     */
     private void updateBarChartHum(Room room) {
         for (BarChart.Series<String, Number> series : barchartHum.getData()) {
             if (series.getName().equals(room.getRoomId())) {
@@ -497,6 +553,11 @@ public class AffDonneesViewController {
     }
     
     
+    /**
+     * Met à jour le BarChart avec les données de CO2 pour la salle sélectionnée.
+     *
+     * @param room La salle sélectionnée.
+     */
     private void updateBarChartCO2(Room room) {
         for (BarChart.Series<String, Number> series : barchartCO2.getData()) {
             if (series.getName().equals(room.getRoomId())) {
@@ -515,6 +576,10 @@ public class AffDonneesViewController {
     
         barchartCO2.getData().add(newSeries);
     }
+
+    /**
+     * Rafraîchit les données dans la vue actuelle.
+     */
     public void refreshData() {
         Room selectedRoom = listeSalles.getSelectionModel().getSelectedItem();
         if (selectedRoom != null) {

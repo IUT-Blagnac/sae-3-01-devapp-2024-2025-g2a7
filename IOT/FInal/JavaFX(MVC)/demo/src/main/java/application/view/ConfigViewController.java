@@ -23,6 +23,11 @@ public class ConfigViewController {
     private boolean energieActivePositiveCheck;
     private boolean energieReactiveNegativeCheck;
 
+    /**
+     * Initialise le contrôleur avec la scène contenant cette vue.
+     *
+     * @param _containingStage La scène contenant cette vue.
+     */
     public void initContext(Stage _containingStage) {
         this.containingStage = _containingStage;
     }
@@ -83,6 +88,9 @@ public class ConfigViewController {
     @FXML
     private CheckBox energie_reactive_negative_checkbox;
 
+    /**
+     * Ferme la fenêtre de configuration lorsqu'on clique sur le bouton "Retour".
+     */
     @FXML
     private void handleBackButtonAction() {
         Stage stage = (Stage) retour.getScene().getWindow();
@@ -94,6 +102,9 @@ public class ConfigViewController {
         this.containingStage.showAndWait();
     }
 
+    /**
+     * Charge les données de configuration depuis le fichier INI et met à jour les champs de texte et les cases à cocher.
+     */
     public void loadIniData() {
         try {
             INIReader iniReader = new INIReader("IOT/FInal/config.ini");
@@ -138,6 +149,9 @@ public class ConfigViewController {
         }
     }
 
+    /**
+     * Applique les modifications et enregistre les nouveaux paramètres dans le fichier INI.
+     */
     @FXML
     private void handleApplyButtonAction() {
         try {
@@ -175,51 +189,79 @@ public class ConfigViewController {
         }
     }
 
+    /**
+     * Met à jour la valeur du champ `temperatureCheck` en fonction de l'état de la case à cocher "temperature_check".
+     */
     @FXML
     private void handleTemperatureCheckBoxAction() {
         temperatureCheck = temperature_check.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `humidityCheck` en fonction de l'état de la case à cocher "humidity_check".
+     */
     @FXML
     private void handleHumidityCheckBoxAction() {
         humidityCheck = humidity_check.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `co2Check` en fonction de l'état de la case à cocher "co2_check".
+     */
     @FXML
     private void handleCO2CheckBoxAction() {
         co2Check = co2_check.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `tvocCheck` en fonction de l'état de la case à cocher "tvoc_check".
+     */
     @FXML
     private void handleTVOCCheckBoxAction() {
         tvocCheck = tvoc_check.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `illuminationCheck` en fonction de l'état de la case à cocher "illumination_check".
+     */
     @FXML
     private void handleIlluminationCheckBoxAction() {
         illuminationCheck = illumination_check.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `pressureCheck` en fonction de l'état de la case à cocher "pressure_check".
+     */
     @FXML
     private void handlePressureCheckBoxAction() {
         pressureCheck = pressure_check.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `puissanceActivePositiveCheck` en fonction de l'état de la case à cocher "puissance_active_positive_checkbox".
+     */
     @FXML
     private void handlePuissanceActivePositiveMaxCheckBoxAction() {
         puissanceActivePositiveCheck = puissance_active_positive_checkbox.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `puissanceReactiveNegativeCheck` en fonction de l'état de la case à cocher "puissance_reactive_negative_checkbox".
+     */
     @FXML
     private void handlePuissanceReactiveNegativeMaxCheckBoxAction() {
         puissanceReactiveNegativeCheck = puissance_reactive_negative_checkbox.isSelected();
     }
 
+    /**
+     * Met à jour la valeur du champ `energieActivePositiveCheck` en fonction de l'état de la case à cocher "energie_active_positive_checkbox".
+     */
     @FXML
     private void handleEnergieActivePositiveMaxCheckBoxAction() {
         energieActivePositiveCheck = energie_active_positive_checkbox.isSelected();
     }
 
+    
     @FXML
     private void handleEnergieReactiveNegativeMaxCheckBoxAction() {
         energieReactiveNegativeCheck = energie_reactive_negative_checkbox.isSelected();

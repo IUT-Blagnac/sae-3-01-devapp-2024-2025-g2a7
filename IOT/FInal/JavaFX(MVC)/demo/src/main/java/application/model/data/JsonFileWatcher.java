@@ -16,6 +16,12 @@ public class JsonFileWatcher implements Runnable {
     private final RoomManager roomManager;
     private boolean running = true;
 
+    /**
+     * Constructeur de la classe {JsonFileWatcher}.
+     *
+     * @param jsonFilePath Le chemin absolu du fichier JSON à surveiller.
+     * @param roomManager L'objet RoomManager qui gère les données et les chambres.
+     */
     public JsonFileWatcher(String jsonFilePath, RoomManager roomManager) {
         this.jsonFilePath = jsonFilePath;
         this.roomManager = roomManager;
@@ -25,6 +31,12 @@ public class JsonFileWatcher implements Runnable {
         running = false;
     }
 
+    /**
+     * Méthode principale de surveillance du fichier JSON.
+     * Cette méthode attend des modifications sur le fichier JSON spécifié et, lorsqu'une modification
+     * est détectée, elle charge les nouvelles données et met à jour l'interface graphique.
+     * Elle est exécutée dans un thread séparé.
+     */
     @Override
     public void run() {
         try {

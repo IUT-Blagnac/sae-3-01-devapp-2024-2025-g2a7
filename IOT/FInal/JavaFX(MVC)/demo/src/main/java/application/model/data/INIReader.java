@@ -11,11 +11,23 @@ public class INIReader {
     private final Map<String, Map<String, String>> iniData = new HashMap<>();
     private final String filePath;
 
+    /**
+     * Constructeur de la classe INIReader qui charge un fichier INI à partir du chemin spécifié.
+     * 
+     * @param filePath Le chemin du fichier INI à charger.
+     * @throws IOException Si une erreur d'entrée/sortie se produit lors de la lecture du fichier.
+     */
     public INIReader(String filePath) throws IOException {
         this.filePath = filePath;
         load(filePath);
     }
 
+    /**
+     * Charge les données à partir du fichier INI spécifié.
+     * 
+     * @param filePath Le chemin du fichier INI à charger.
+     * @throws IOException Si une erreur d'entrée/sortie se produit lors de la lecture du fichier.
+     */
     private void load(String filePath) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String section = null;
@@ -41,14 +53,35 @@ public class INIReader {
         }
     }
 
+    /**
+     * Récupère la valeur d'une clé spécifique dans une section.
+     * 
+     * @param section La section dans laquelle chercher la clé.
+     * @param key La clé à chercher dans la section.
+     * @return La valeur associée à la clé dans la section spécifiée, ou  null si la clé n'existe pas.
+     */
     public String getValue(String section, String key) {
         return iniData.getOrDefault(section, new HashMap<>()).get(key);
     }
 
+    /**
+     * Récupère la valeur d'une clé spécifique dans une section en tant que double.
+     * 
+     * @param section La section dans laquelle chercher la clé.
+     * @param key La clé à chercher dans la section.
+     * @return La valeur associée à la clé, convertie en double.
+     */
     public double getDouble(String section, String key) {
         return Double.parseDouble(getValue(section, key));
     }
 
+    /**
+     * Récupère la valeur d'une clé spécifique dans une section en tant que valeur booléenne.
+     * 
+     * @param section La section dans laquelle chercher la clé.
+     * @param key La clé à chercher dans la section.
+     * @return La valeur associée à la clé, convertie en boolean.
+     */
     public boolean getBoolean(String section, String key) {
         return Boolean.parseBoolean(getValue(section, key));
     }
