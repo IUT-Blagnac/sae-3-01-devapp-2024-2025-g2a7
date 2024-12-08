@@ -24,3 +24,586 @@
 [2024-12-07 01:01:49] Topic: solaredge/blagnac/overview | Data: Dernière mise à jour: 2024-12-06 23:23:00 | Énergie totale: {'energy': 3464174} Wh | Énergie l'année dernière: {'energy': 2983144} Wh | Énergie le mois dernier: {'energy': 48738} Wh | Énergie du dernier jour: {'energy': 7653} Wh | Puissance actuelle: {'power': 0} W | Mesuré par: INVERTER
 [2024-12-07 01:02:09] Topic: solaredge/blagnac/overview | Data: Dernière mise à jour: 2024-12-06 23:23:00 | Énergie totale: {'energy': 3464174} Wh | Énergie l'année dernière: {'energy': 2983144} Wh | Énergie le mois dernier: {'energy': 48738} Wh | Énergie du dernier jour: {'energy': 7653} Wh | Puissance actuelle: {'power': 0} W | Mesuré par: INVERTER
 [2024-12-07 02:09:02] Topic: solaredge/blagnac/overview | Data: Dernière mise à jour: 2024-12-07 00:23:01 | Énergie totale: {'energy': 3464174} Wh | Énergie l'année dernière: {'energy': 2983144} Wh | Énergie le mois dernier: {'energy': 48738} Wh | Énergie du dernier jour: {'energy': 0} Wh | Puissance actuelle: {'power': 0} W | Mesuré par: INVERTER
+[2024-12-07 18:05:41] Topic: AM107/by-room/E006/data | Data: Température: 19.6 °C | Humidité: 48 % | CO2: 422 ppm | TVOC: 216 ppb | Illumination: 11 lux | Pression: 992.8 hPa | Activité: 0 | Infrarouge: 4 | Infrarouge + Visible: 13 | Nom du dispositif: AM107-29 | Identifiant du dispositif (devEUI): 24e124128c016509 | Pièce: E006 | Étage: 0 | Bâtiment: E
+[2024-12-07 18:05:43] Topic: AM107/by-room/B113/data | Data: Température: 19.3 °C | Humidité: 56.5 % | CO2: 505 ppm | TVOC: 119 ppb | Illumination: 2 lux | Pression: 992.5 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 3 | Nom du dispositif: AM107-18 | Identifiant du dispositif (devEUI): 24e124128c016453 | Pièce: B113 | Étage: 1 | Bâtiment: B
+[2024-12-07 18:05:46] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:05:47] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:05:54] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:05:55] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670204 Wh | Énergie réactive négative: 259038 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:06:02] Topic: AM107/by-room/E209/data | Data: Température: 20.1 °C | Humidité: 43.5 % | CO2: 437 ppm | TVOC: 88 ppb | Illumination: 2 lux | Pression: 992.5 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 3 | Nom du dispositif: AM107-39 | Identifiant du dispositif (devEUI): 24e124128c011464 | Pièce: E209 | Étage: 2 | Bâtiment: E
+[2024-12-07 18:06:10] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:06:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 486 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2873419 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:06:11] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 746 W | Puissance réactive négative: 141 VAR | Énergie active positive: 5786649 Wh | Énergie réactive négative: 2139324 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:06:14] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 101 VAR | Énergie active positive: 148824 Wh | Énergie réactive négative: 1110550 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:06:21] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 270 W | Puissance réactive négative: 281 VAR | Énergie active positive: 4345507 Wh | Énergie réactive négative: 2264651 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:06:23] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 45 W | Puissance réactive négative: 150 VAR | Énergie active positive: 980121 Wh | Énergie réactive négative: 1490394 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:06:25] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 122 W | Puissance réactive négative: 226 VAR | Énergie active positive: 2005095 Wh | Énergie réactive négative: 2511596 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:06:26] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 110 VAR | Énergie active positive: 254788 Wh | Énergie réactive négative: 1225206 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:06:27] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 254 W | Puissance réactive négative: 139 VAR | Énergie active positive: 2243027 Wh | Énergie réactive négative: 1855308 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:06:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 349 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096000 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:06:33] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 391 W | Puissance réactive négative: 270 VAR | Énergie active positive: 4458060 Wh | Énergie réactive négative: 3264884 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:06:37] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 349 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096000 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:06:42] Topic: AM107/by-room/E003/data | Data: Température: 19.6 °C | Humidité: 43 % | CO2: 435 ppm | TVOC: 51 ppb | Illumination: 7 lux | Pression: 993.5 hPa | Activité: 0 | Infrarouge: 4 | Infrarouge + Visible: 11 | Nom du dispositif: AM107-26 | Identifiant du dispositif (devEUI): 24e124128c017035 | Pièce: E003 | Étage: 0 | Bâtiment: E
+[2024-12-07 18:06:43] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:06:47] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 161 W | Puissance réactive négative: 182 VAR | Énergie active positive: 2565474 Wh | Énergie réactive négative: 2257080 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:06:51] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 352 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4095987 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:06:56] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 57 VAR | Énergie active positive: 157931 Wh | Énergie réactive négative: 684082 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:06:56] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 84 W | Puissance réactive négative: 150 VAR | Énergie active positive: 607107 Wh | Énergie réactive négative: 1491467 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:06:58] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 88 W | Puissance réactive négative: 252 VAR | Énergie active positive: 884251 Wh | Énergie réactive négative: 3481048 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:07:05] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 295 W | Puissance réactive négative: 190 VAR | Énergie active positive: 2666695 Wh | Énergie réactive négative: 2027235 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:07:06] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 579 W | Puissance réactive négative: 600 VAR | Énergie active positive: 7237266 Wh | Énergie réactive négative: 6795914 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:07:06] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 16 W | Puissance réactive négative: 83 VAR | Énergie active positive: 335110 Wh | Énergie réactive négative: 875159 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:07:07] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:07:07] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 26 W | Puissance réactive négative: 250 VAR | Énergie active positive: 747829 Wh | Énergie réactive négative: 2784448 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:07:08] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:07:09] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 240 W | Puissance réactive négative: 135 VAR | Énergie active positive: 2666695 Wh | Énergie réactive négative: 2027235 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:07:10] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 523 W | Puissance réactive négative: 542 VAR | Énergie active positive: 7237266 Wh | Énergie réactive négative: 6795915 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:07:11] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 196 W | Puissance réactive négative: 136 VAR | Énergie active positive: 2666695 Wh | Énergie réactive négative: 2027235 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:07:12] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 479 W | Puissance réactive négative: 544 VAR | Énergie active positive: 7237266 Wh | Énergie réactive négative: 6795915 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:07:15] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:07:17] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:07:18] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:07:18] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:07:18] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:07:19] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:07:19] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:07:19] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:07:20] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:07:20] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:07:20] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:13:24] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:13:25] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 729 W | Puissance réactive négative: 699 VAR | Énergie active positive: 9783772 Wh | Énergie réactive négative: 7020012 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:13:25] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:25] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:13:26] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:27] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:13:31] Topic: AM107/by-room/B201/data | Data: Température: 15.6 °C | Humidité: 49.5 % | CO2: 447 ppm | TVOC: 11 ppb | Illumination: 1 lux | Pression: 992.6 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-4 | Identifiant du dispositif (devEUI): 24e124128c017412 | Pièce: B201 | Étage: 2 | Bâtiment: B
+[2024-12-07 18:13:32] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:33] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:36] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:13:36] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:13:40] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:41] Topic: AM107/by-room/C001/data | Data: Température: 22.1 °C | Humidité: 43.5 % | CO2: 477 ppm | TVOC: 146 ppb | Illumination: 0 lux | Pression: 993.4 hPa | Activité: 0 | Infrarouge: 0 | Infrarouge + Visible: 0 | Nom du dispositif: AM107-55 | Identifiant du dispositif (devEUI): 24e124128c143552 | Pièce: C001 | Étage: 0 | Bâtiment: C
+[2024-12-07 18:13:41] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:42] Topic: AM107/by-room/B109/data | Data: Température: 19.7 °C | Humidité: 47.5 % | CO2: 491 ppm | TVOC: 105 ppb | Illumination: 6 lux | Pression: 992.6 hPa | Activité: 0 | Infrarouge: 2 | Infrarouge + Visible: 7 | Nom du dispositif: AM107-16 | Identifiant du dispositif (devEUI): 24e124128c144603 | Pièce: B109 | Étage: 1 | Bâtiment: B
+[2024-12-07 18:13:47] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:48] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:13:53] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:13:54] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:13:55] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670204 Wh | Énergie réactive négative: 259039 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:13:55] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:14:01] Topic: AM107/by-room/B002/data | Data: Température: 18.9 °C | Humidité: 54 % | CO2: 1705 ppm | TVOC: 123 ppb | Illumination: 2 lux | Pression: 993.3 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 3 | Nom du dispositif: AM107-8 | Identifiant du dispositif (devEUI): 24e124128c012259 | Pièce: B002 | Étage: 0 | Bâtiment: B
+[2024-12-07 18:14:05] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:14:10] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:14:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 486 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2873484 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:14:11] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 745 W | Puissance réactive négative: 140 VAR | Énergie active positive: 5786748 Wh | Énergie réactive négative: 2139344 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:14:11] Topic: AM107/by-room/Salle-conseil/data | Data: Température: 23 °C | Humidité: 39 % | CO2: 429 ppm | TVOC: 100 ppb | Illumination: 1 lux | Pression: 992.9 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-43 | Identifiant du dispositif (devEUI): 24e124128c016947 | Pièce: Salle-conseil | Étage: 1 | Bâtiment: A
+[2024-12-07 18:14:14] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 101 VAR | Énergie active positive: 148825 Wh | Énergie réactive négative: 1110564 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:14:14] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 470 W | Puissance réactive négative: 543 VAR | Énergie active positive: 7237323 Wh | Énergie réactive négative: 6795979 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:14:16] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 160 W | Puissance réactive négative: 180 VAR | Énergie active positive: 2565494 Wh | Énergie réactive négative: 2257103 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:14:21] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 294 W | Puissance réactive négative: 283 VAR | Énergie active positive: 4345545 Wh | Énergie réactive négative: 2264689 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:14:23] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 45 W | Puissance réactive négative: 150 VAR | Énergie active positive: 980127 Wh | Énergie réactive négative: 1490414 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:14:25] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 122 W | Puissance réactive négative: 225 VAR | Énergie active positive: 2005111 Wh | Énergie réactive négative: 2511626 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:14:26] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 109 VAR | Énergie active positive: 254789 Wh | Énergie réactive négative: 1225220 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:14:27] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 254 W | Puissance réactive négative: 138 VAR | Énergie active positive: 2243061 Wh | Énergie réactive négative: 1855326 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:14:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 347 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096047 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:14:33] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 392 W | Puissance réactive négative: 266 VAR | Énergie active positive: 4458112 Wh | Énergie réactive négative: 3264920 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:14:33] Topic: AM107/by-room/B105/data | Data: Température: 20 °C | Humidité: 49 % | CO2: 433 ppm | TVOC: 164 ppb | Illumination: 0 lux | Pression: 992.7 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 2 | Nom du dispositif: AM107-13 | Identifiant du dispositif (devEUI): 24e124128c143320 | Pièce: B105 | Étage: 1 | Bâtiment: B
+[2024-12-07 18:14:33] Topic: AM107/by-room/Foyer-etudiants-entrée/data | Data: Température: 48.3 °C | Humidité: 53.5 % | CO2: 441 ppm | TVOC: 206 ppb | Illumination: 1 lux | Pression: 993.7 hPa | Activité: 0 | Infrarouge: 2 | Infrarouge + Visible: 4 | Nom du dispositif: AM107-47 | Identifiant du dispositif (devEUI): 24e124128c143345 | Pièce: Foyer-etudiants-entrée | Étage: 0 | Bâtiment: B
+[2024-12-07 18:14:36] Topic: AM107/by-room/B105/data | Data: Température: 20 °C | Humidité: 49 % | CO2: 433 ppm | TVOC: 164 ppb | Illumination: 0 lux | Pression: 992.7 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 2 | Nom du dispositif: AM107-13 | Identifiant du dispositif (devEUI): 24e124128c143320 | Pièce: B105 | Étage: 1 | Bâtiment: B
+[2024-12-07 18:14:37] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 347 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096047 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:14:40] Topic: AM107/by-room/B111/data | Data: Température: 19.5 °C | Humidité: 48 % | CO2: 420 ppm | TVOC: 117 ppb | Illumination: 2 lux | Pression: 993 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 3 | Nom du dispositif: AM107-3 | Identifiant du dispositif (devEUI): 24e124128c011586 | Pièce: B111 | Étage: 1 | Bâtiment: B
+[2024-12-07 18:14:40] Topic: AM107/by-room/B234/data | Data: Température: 22.6 °C | Humidité: 42.5 % | CO2: 438 ppm | TVOC: 107 ppb | Illumination: 1 lux | Pression: 992.5 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-22 | Identifiant du dispositif (devEUI): 24e124128c016872 | Pièce: B234 | Étage: 2 | Bâtiment: B
+[2024-12-07 18:14:45] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 348 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096033 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:14:46] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:14:51] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 348 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096033 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:14:56] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 57 VAR | Énergie active positive: 157932 Wh | Énergie réactive négative: 684090 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:14:56] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 82 W | Puissance réactive négative: 149 VAR | Énergie active positive: 607118 Wh | Énergie réactive négative: 1491487 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:14:58] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 86 W | Puissance réactive négative: 251 VAR | Énergie active positive: 884263 Wh | Énergie réactive négative: 3481082 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:15:06] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 82 VAR | Énergie active positive: 335112 Wh | Énergie réactive négative: 875170 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:15:07] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 25 W | Puissance réactive négative: 249 VAR | Énergie active positive: 747833 Wh | Énergie réactive négative: 2784481 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:15:08] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 189 W | Puissance réactive négative: 135 VAR | Énergie active positive: 2666721 Wh | Énergie réactive négative: 2027254 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:15:15] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:15:17] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:18] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:15:18] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:15:18] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:15:19] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:15:19] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:15:19] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:15:20] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:15:23] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:24] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:15:24] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:25] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 732 W | Puissance réactive négative: 699 VAR | Énergie active positive: 9783796 Wh | Énergie réactive négative: 7020034 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:15:25] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:15:27] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:15:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:32] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:38] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:39] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:41] Topic: AM107/by-room/E006/data | Data: Température: 19.6 °C | Humidité: 48 % | CO2: 423 ppm | TVOC: 209 ppb | Illumination: 6 lux | Pression: 992.6 hPa | Activité: 0 | Infrarouge: 2 | Infrarouge + Visible: 7 | Nom du dispositif: AM107-29 | Identifiant du dispositif (devEUI): 24e124128c016509 | Pièce: E006 | Étage: 0 | Bâtiment: E
+[2024-12-07 18:15:43] Topic: AM107/by-room/B113/data | Data: Température: 19.3 °C | Humidité: 56.5 % | CO2: 502 ppm | TVOC: 117 ppb | Illumination: 2 lux | Pression: 992.4 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 3 | Nom du dispositif: AM107-18 | Identifiant du dispositif (devEUI): 24e124128c016453 | Pièce: B113 | Étage: 1 | Bâtiment: B
+[2024-12-07 18:15:46] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:48] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:53] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:15:54] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:15:54] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:15:55] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670205 Wh | Énergie réactive négative: 259039 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:16:01] Topic: AM107/by-room/E209/data | Data: Température: 20.1 °C | Humidité: 43 % | CO2: 438 ppm | TVOC: 86 ppb | Illumination: 0 lux | Pression: 992.4 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 2 | Nom du dispositif: AM107-39 | Identifiant du dispositif (devEUI): 24e124128c011464 | Pièce: E209 | Étage: 2 | Bâtiment: E
+[2024-12-07 18:16:05] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:16:10] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:16:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 745 W | Puissance réactive négative: 141 VAR | Énergie active positive: 5786773 Wh | Énergie réactive négative: 2139348 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:16:11] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 486 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2873500 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:16:14] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 3 W | Puissance réactive négative: 102 VAR | Énergie active positive: 148825 Wh | Énergie réactive négative: 1110567 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:16:14] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 160 W | Puissance réactive négative: 182 VAR | Énergie active positive: 2565499 Wh | Énergie réactive négative: 2257109 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:16:16] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 472 W | Puissance réactive négative: 544 VAR | Énergie active positive: 7237338 Wh | Énergie réactive négative: 6795998 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:16:21] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 294 W | Puissance réactive négative: 284 VAR | Énergie active positive: 4345555 Wh | Énergie réactive négative: 2264699 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:16:23] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 45 W | Puissance réactive négative: 151 VAR | Énergie active positive: 980129 Wh | Énergie réactive négative: 1490419 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:16:25] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 123 W | Puissance réactive négative: 226 VAR | Énergie active positive: 2005115 Wh | Énergie réactive négative: 2511634 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:16:26] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 110 VAR | Énergie active positive: 254789 Wh | Énergie réactive négative: 1225224 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:16:27] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 255 W | Puissance réactive négative: 139 VAR | Énergie active positive: 2243070 Wh | Énergie réactive négative: 1855331 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:17:15] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:17:17] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:18] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:17:18] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:17:18] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:17:19] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:17:19] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:17:19] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:17:20] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:17:24] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:17:24] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:25] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:17:25] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:27] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:17:33] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:34] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:39] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:40] Topic: AM107/by-room/B217/data | Data: Température: 19.7 °C | Humidité: 48.5 % | CO2: 436 ppm | TVOC: 87 ppb | Illumination: 2 lux | Pression: 992.5 hPa | Activité: 0 | Infrarouge: 0 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-20 | Identifiant du dispositif (devEUI): 24e124128c014727 | Pièce: B217 | Étage: 2 | Bâtiment: B
+[2024-12-07 18:17:40] Topic: AM107/by-room/B112/data | Data: Température: 19.3 °C | Humidité: 50 % | CO2: 436 ppm | TVOC: 98 ppb | Illumination: 1 lux | Pression: 992.6 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-17 | Identifiant du dispositif (devEUI): 24e124128c012135 | Pièce: B112 | Étage: 1 | Bâtiment: B
+[2024-12-07 18:17:40] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:42] Topic: AM107/by-room/C002/data | Data: Température: 20 °C | Humidité: 49.5 % | CO2: 468 ppm | TVOC: 154 ppb | Illumination: 1 lux | Pression: 993.4 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-54 | Identifiant du dispositif (devEUI): 24e124128c143462 | Pièce: C002 | Étage: 0 | Bâtiment: C
+[2024-12-07 18:17:47] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:48] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:53] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:17:54] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:17:54] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:55] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:17:55] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:17:56] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:17:56] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:17:56] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:17:57] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:18:02] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:18:05] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:18:10] Topic: AM107/by-room/E001/data | Data: Température: 18.7 °C | Humidité: 44.5 % | CO2: 421 ppm | TVOC: 4 ppb | Illumination: 41 lux | Pression: 993.8 hPa | Activité: 0 | Infrarouge: 24 | Infrarouge + Visible: 65 | Nom du dispositif: AM107-28 | Identifiant du dispositif (devEUI): 24e124128c010174 | Pièce: E001 | Étage: 0 | Bâtiment: E
+[2024-12-07 18:18:10] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:18:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 486 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2873516 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:18:11] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 743 W | Puissance réactive négative: 140 VAR | Énergie active positive: 5786798 Wh | Énergie réactive négative: 2139353 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:18:14] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 101 VAR | Énergie active positive: 148825 Wh | Énergie réactive négative: 1110570 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:18:14] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 161 W | Puissance réactive négative: 182 VAR | Énergie active positive: 2565505 Wh | Énergie réactive négative: 2257115 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:18:16] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 472 W | Puissance réactive négative: 543 VAR | Énergie active positive: 7237355 Wh | Énergie réactive négative: 6796016 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:18:20] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:18:21] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 272 W | Puissance réactive négative: 279 VAR | Énergie active positive: 4345564 Wh | Énergie réactive négative: 2264708 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:18:23] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 45 W | Puissance réactive négative: 150 VAR | Énergie active positive: 980130 Wh | Énergie réactive négative: 1490424 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:18:25] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 122 W | Puissance réactive négative: 225 VAR | Énergie active positive: 2005119 Wh | Énergie réactive négative: 2511641 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:18:26] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 6 W | Puissance réactive négative: 110 VAR | Énergie active positive: 254789 Wh | Énergie réactive négative: 1225228 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:18:27] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 255 W | Puissance réactive négative: 139 VAR | Énergie active positive: 2243078 Wh | Énergie réactive négative: 1855336 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:18:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 347 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096070 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:18:33] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 391 W | Puissance réactive négative: 268 VAR | Énergie active positive: 4458138 Wh | Énergie réactive négative: 3264937 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:18:38] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 347 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096070 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:18:45] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 346 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096056 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:18:45] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:18:48] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 142 W | Puissance réactive négative: 200 VAR | Énergie active positive: 2666732 Wh | Énergie réactive négative: 2027262 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:18:50] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 425 W | Puissance réactive négative: 607 VAR | Énergie active positive: 7237358 Wh | Énergie réactive négative: 6796022 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:18:50] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 346 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096056 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:18:51] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:18:53] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 706 W | Puissance réactive négative: 697 VAR | Énergie active positive: 9783837 Wh | Énergie réactive négative: 7020074 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:18:53] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:18:56] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 57 VAR | Énergie active positive: 157932 Wh | Énergie réactive négative: 684094 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:18:56] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 84 W | Puissance réactive négative: 149 VAR | Énergie active positive: 607124 Wh | Énergie réactive négative: 1491497 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:18:58] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 88 W | Puissance réactive négative: 251 VAR | Énergie active positive: 884269 Wh | Énergie réactive négative: 3481099 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:19:01] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:19:06] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 82 VAR | Énergie active positive: 335113 Wh | Énergie réactive négative: 875176 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:19:07] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:19:07] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-07 18:19:07] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 26 W | Puissance réactive négative: 251 VAR | Énergie active positive: 747835 Wh | Énergie réactive négative: 2784499 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:19:08] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:19:10] Topic: AM107/by-room/C102/data | Data: Température: 17.6 °C | Humidité: 53.5 % | CO2: 443 ppm | TVOC: 213 ppb | Illumination: 1 lux | Pression: 993.3 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-53 | Identifiant du dispositif (devEUI): 24e124128c143581 | Pièce: C102 | Étage: 1 | Bâtiment: C
+[2024-12-07 18:19:12] Topic: AM107/by-room/E007/data | Data: Température: 18.9 °C | Humidité: 46 % | CO2: 412 ppm | TVOC: 94 ppb | Illumination: 2 lux | Pression: 993.8 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 3 | Nom du dispositif: AM107-30 | Identifiant du dispositif (devEUI): 24e124128c012980 | Pièce: E007 | Étage: 0 | Bâtiment: E
+[2024-12-07 18:42:39] Topic: AM107/by-room/E004/data | Data: Température: 18.7 °C | Humidité: 46 % | CO2: 440 ppm | TVOC: 45 ppb | Illumination: 0 lux | Pression: 994.2 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 2 | Nom du dispositif: AM107-27 | Identifiant du dispositif (devEUI): 24e124128c012886 | Pièce: E004 | Étage: 0 | Bâtiment: E
+[2024-12-07 18:42:39] Topic: AM107/by-room/E106/data | Data: Température: 20.1 °C | Humidité: 46 % | CO2: 422 ppm | TVOC: 183 ppb | Illumination: 1 lux | Pression: 993.3 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-36 | Identifiant du dispositif (devEUI): 24e124128c017317 | Pièce: E106 | Étage: 1 | Bâtiment: E
+[2024-12-07 18:42:45] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 346 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096196 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:42:46] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-07 18:42:49] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 425 W | Puissance réactive négative: 606 VAR | Énergie active positive: 7237529 Wh | Énergie réactive négative: 6796264 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:42:49] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:42:50] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 142 W | Puissance réactive négative: 199 VAR | Énergie active positive: 2666789 Wh | Énergie réactive négative: 2027342 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:42:50] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 346 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096196 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:42:52] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:42:56] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 57 VAR | Énergie active positive: 157934 Wh | Énergie réactive négative: 684117 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:42:57] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 84 W | Puissance réactive négative: 149 VAR | Énergie active positive: 607157 Wh | Énergie réactive négative: 1491557 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:42:58] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 88 W | Puissance réactive négative: 250 VAR | Énergie active positive: 884304 Wh | Énergie réactive négative: 3481199 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:42:58] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:43:01] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:43:01] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:43:05] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:43:06] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 82 VAR | Énergie active positive: 335119 Wh | Énergie réactive négative: 875209 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:43:07] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 26 W | Puissance réactive négative: 250 VAR | Énergie active positive: 747845 Wh | Énergie réactive négative: 2784599 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:43:08] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:43:08] Topic: AM107/by-room/C004/data | Data: Température: 17 °C | Humidité: 56.5 % | CO2: 422 ppm | TVOC: 128 ppb | Illumination: 1 lux | Pression: 994 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-23 | Identifiant du dispositif (devEUI): 24e124128c019441 | Pièce: C004 | Étage: 0 | Bâtiment: C
+[2024-12-07 18:43:09] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:43:11] Topic: AM107/by-room/Foyer-personnels/data | Data: Température: 19.6 °C | Humidité: 47 % | CO2: 421 ppm | TVOC: 181 ppb | Illumination: 2 lux | Pression: 992.7 hPa | Activité: 0 | Infrarouge: 0 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-46 | Identifiant du dispositif (devEUI): 24e124128c019661 | Pièce: Foyer-personnels | Étage: 2 | Bâtiment: B
+[2024-12-07 18:43:13] Topic: AM107/by-room/B202/data | Data: Température: 19.2 °C | Humidité: 52 % | CO2: 459 ppm | TVOC: 79 ppb | Illumination: 1 lux | Pression: 993.4 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-5 | Identifiant du dispositif (devEUI): 24e124128c017760 | Pièce: B202 | Étage: 2 | Bâtiment: B
+[2024-12-07 18:43:13] Topic: AM107/by-room/Local-velo/data | Data: Température: 7.7 °C | Humidité: 82.5 % | CO2: 440 ppm | TVOC: 0 ppb | Illumination: 2 lux | Pression: 994.4 hPa | Activité: 0 | Infrarouge: 3 | Infrarouge + Visible: 7 | Nom du dispositif: AM107-45 | Identifiant du dispositif (devEUI): 24e124128c016461 | Pièce: Local-velo | Étage: 0 | Bâtiment: Outside
+[2024-12-07 18:43:15] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:43:28] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:43:31] Topic: AM107/by-room/B201/data | Data: Température: 15.2 °C | Humidité: 50 % | CO2: 451 ppm | TVOC: 2 ppb | Illumination: 1 lux | Pression: 993 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-4 | Identifiant du dispositif (devEUI): 24e124128c017412 | Pièce: B201 | Étage: 2 | Bâtiment: B
+[2024-12-07 18:43:33] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:43:36] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 18:43:38] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:43:39] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:46:25] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 123 W | Puissance réactive négative: 226 VAR | Énergie active positive: 2005177 Wh | Énergie réactive négative: 2511747 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:46:26] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 6 W | Puissance réactive négative: 110 VAR | Énergie active positive: 254792 Wh | Énergie réactive négative: 1225279 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:46:27] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 254 W | Puissance réactive négative: 139 VAR | Énergie active positive: 2243197 Wh | Énergie réactive négative: 1855400 VARh | Nom du dispositif: triphaso4
+[2024-12-07 18:46:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 348 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096232 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:46:38] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 348 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096232 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:46:42] Topic: AM107/by-room/E003/data | Data: Température: 19.3 °C | Humidité: 43 % | CO2: 436 ppm | TVOC: 22 ppb | Illumination: 1 lux | Pression: 993.8 hPa | Activité: 0 | Infrarouge: 1 | Infrarouge + Visible: 1 | Nom du dispositif: AM107-26 | Identifiant du dispositif (devEUI): 24e124128c017035 | Pièce: E003 | Étage: 0 | Bâtiment: E
+[2024-12-07 18:46:45] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 349 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096219 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:46:46] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-07 18:46:49] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 424 W | Puissance réactive négative: 607 VAR | Énergie active positive: 7237556 Wh | Énergie réactive négative: 6796304 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:46:49] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:46:50] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 140 W | Puissance réactive négative: 199 VAR | Énergie active positive: 2666798 Wh | Énergie réactive négative: 2027355 VARh | Nom du dispositif: triphaso6
+[2024-12-07 18:46:50] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 349 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096219 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:46:56] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 57 VAR | Énergie active positive: 157934 Wh | Énergie réactive négative: 684121 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:46:57] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 83 W | Puissance réactive négative: 150 VAR | Énergie active positive: 607162 Wh | Énergie réactive négative: 1491567 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:46:57] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 18:46:58] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:46:58] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:46:58] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 87 W | Puissance réactive négative: 252 VAR | Énergie active positive: 884309 Wh | Énergie réactive négative: 3481216 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:46:59] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:47:04] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:47:05] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 18:47:05] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 18:47:06] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 16 W | Puissance réactive négative: 83 VAR | Énergie active positive: 335120 Wh | Énergie réactive négative: 875214 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 18:47:07] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 25 W | Puissance réactive négative: 251 VAR | Énergie active positive: 747846 Wh | Énergie réactive négative: 2784615 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:11:34] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:11:36] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:11:39] Topic: AM107/by-room/E102/data | Data: Timestamp: 2024-12-07 19:11:39 | Room: E102 | Data: {'temperature': 19.2, 'humidity': 43.5, 'co2': 423, 'illumination': 1}
+[2024-12-07 19:11:41] Topic: AM107/by-room/E103/data | Data: Timestamp: 2024-12-07 19:11:41 | Room: E103 | Data: {'temperature': 17.7, 'humidity': 45.5, 'co2': 450, 'illumination': 1}
+[2024-12-07 19:16:22] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 23 W | Puissance réactive négative: 61 VAR | Énergie active positive: 1485537 Wh | Énergie réactive négative: 733925 VARh | Nom du dispositif: triphaso5
+[2024-12-07 19:16:23] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 1 W | Puissance réactive négative: 271 VAR | Énergie active positive: 1445269 Wh | Énergie réactive négative: 2656472 VARh | Nom du dispositif: triphaso5
+[2024-12-07 19:16:24] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 108 W | Puissance réactive négative: 332 VAR | Énergie active positive: 4134516 Wh | Énergie réactive négative: 3390425 VARh | Nom du dispositif: triphaso5
+[2024-12-07 19:16:25] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 123 W | Puissance réactive négative: 231 VAR | Énergie active positive: 2005238 Wh | Énergie réactive négative: 2511859 VARh | Nom du dispositif: triphaso6
+[2024-12-07 19:16:27] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 112 VAR | Énergie active positive: 254795 Wh | Énergie réactive négative: 1225334 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:16:27] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 254 W | Puissance réactive négative: 141 VAR | Énergie active positive: 2243324 Wh | Énergie réactive négative: 1855470 VARh | Nom du dispositif: triphaso4
+[2024-12-07 19:16:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 371 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096405 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:16:37] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 371 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096405 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:16:44] Topic: AM107/by-room/E003/data | Data: Timestamp: 2024-12-07 19:16:44 | Room: E003 | Data: {'temperature': 19.1, 'humidity': 43, 'co2': 434, 'illumination': 1}
+[2024-12-07 19:16:45] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 370 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096392 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:16:50] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 370 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4096392 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:16:57] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 58 VAR | Énergie active positive: 157937 Wh | Énergie réactive négative: 684149 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:16:57] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 86 W | Puissance réactive négative: 256 VAR | Énergie active positive: 884353 Wh | Énergie réactive négative: 3481340 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 19:16:58] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 82 W | Puissance réactive négative: 152 VAR | Énergie active positive: 607204 Wh | Énergie réactive négative: 1491641 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 19:17:06] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 26 W | Puissance réactive négative: 255 VAR | Énergie active positive: 747860 Wh | Énergie réactive négative: 2784740 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:17:07] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 85 VAR | Énergie active positive: 335128 Wh | Énergie réactive négative: 875256 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:17:07] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 19:17:18] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 19:17:19] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:19] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 19:17:19] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-07 19:17:19] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:17:19] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 19:17:20] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-07 19:17:20] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 19:17:20] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-07 19:17:20] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:17:20] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 19:17:21] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 140 W | Puissance réactive négative: 201 VAR | Énergie active positive: 2666879 Wh | Énergie réactive négative: 2027444 VARh | Nom du dispositif: triphaso6
+[2024-12-07 19:17:21] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-07 19:17:21] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-07 19:17:21] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:17:22] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 423 W | Puissance réactive négative: 618 VAR | Énergie active positive: 7237782 Wh | Énergie réactive négative: 6796601 VARh | Nom du dispositif: triphaso6
+[2024-12-07 19:17:24] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:25] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:32] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:46] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:47] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:48] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 83 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1203712 Wh | Énergie réactive négative: 28 VARh | Nom du dispositif: triphaso5
+[2024-12-07 19:17:55] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:17:55] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670210 Wh | Énergie réactive négative: 259041 VARh | Nom du dispositif: triphaso4
+[2024-12-07 19:18:10] Topic: AM107/by-room/E001/data | Data: Timestamp: 2024-12-07 19:18:10 | Room: E001 | Data: {'temperature': 18.4, 'humidity': 44, 'co2': 427, 'illumination': 1}
+[2024-12-07 19:18:10] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 19:18:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 488 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2874002 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-07 19:18:11] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 745 W | Puissance réactive négative: 142 VAR | Énergie active positive: 5787543 Wh | Énergie réactive négative: 2139494 VARh | Nom du dispositif: triphaso4
+[2024-12-07 19:18:15] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 161 W | Puissance réactive négative: 185 VAR | Énergie active positive: 2565665 Wh | Énergie réactive négative: 2257296 VARh | Nom du dispositif: triphaso6
+[2024-12-07 19:18:20] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 104 VAR | Énergie active positive: 148829 Wh | Énergie réactive négative: 1110672 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-07 19:18:22] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 109 W | Puissance réactive négative: 333 VAR | Énergie active positive: 4134520 Wh | Énergie réactive négative: 3390436 VARh | Nom du dispositif: triphaso5
+[2024-12-07 19:18:23] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 2 W | Puissance réactive négative: 271 VAR | Énergie active positive: 1445269 Wh | Énergie réactive négative: 2656481 VARh | Nom du dispositif: triphaso5
+[2024-12-07 19:18:24] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 24 W | Puissance réactive négative: 62 VAR | Énergie active positive: 1485538 Wh | Énergie réactive négative: 733927 VARh | Nom du dispositif: triphaso5
+[2024-12-07 19:18:25] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 122 W | Puissance réactive négative: 231 VAR | Énergie active positive: 2005242 Wh | Énergie réactive négative: 2511867 VARh | Nom du dispositif: triphaso6
+[2024-12-07 19:18:27] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 6 W | Puissance réactive négative: 113 VAR | Énergie active positive: 254795 Wh | Énergie réactive négative: 1225338 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-07 19:18:27] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 255 W | Puissance réactive négative: 141 VAR | Énergie active positive: 2243332 Wh | Énergie réactive négative: 1855474 VARh | Nom du dispositif: triphaso4
+[2024-12-07 19:18:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 370 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096418 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-07 19:18:37] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 370 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4096418 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 10:59:26] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 109 W | Puissance réactive négative: 332 VAR | Énergie active positive: 4136208 Wh | Énergie réactive négative: 3395598 VARh | Nom du dispositif: triphaso5
+[2024-12-08 10:59:27] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 24 W | Puissance réactive négative: 62 VAR | Énergie active positive: 1485900 Wh | Énergie réactive négative: 734885 VARh | Nom du dispositif: triphaso5
+[2024-12-08 10:59:28] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 10:59:28] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 2 W | Puissance réactive négative: 270 VAR | Énergie active positive: 1445296 Wh | Énergie réactive négative: 2660685 VARh | Nom du dispositif: triphaso5
+[2024-12-08 10:59:30] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 365 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4101996 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 10:59:32] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 3 W | Puissance réactive négative: 103 VAR | Énergie active positive: 148890 Wh | Énergie réactive négative: 1112281 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 10:59:38] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 747 W | Puissance réactive négative: 143 VAR | Énergie active positive: 5799257 Wh | Énergie réactive négative: 2141725 VARh | Nom du dispositif: triphaso4
+[2024-12-08 10:59:39] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 255 W | Puissance réactive négative: 141 VAR | Énergie active positive: 2247326 Wh | Énergie réactive négative: 1857675 VARh | Nom du dispositif: triphaso4
+[2024-12-08 10:59:40] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 58 VAR | Énergie active positive: 158016 Wh | Énergie réactive négative: 685059 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 10:59:48] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 25 W | Puissance réactive négative: 254 VAR | Énergie active positive: 748269 Wh | Énergie réactive négative: 2788717 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 10:59:49] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 83 VAR | Énergie active positive: 335373 Wh | Énergie réactive négative: 876574 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 10:59:49] Topic: AM107/by-room/E100/data | Data: Timestamp: 2024-12-08 10:59:49 | Room: E100 | Data: {'temperature': 23.7, 'humidity': 29, 'co2': 403, 'illumination': 1}
+[2024-12-08 10:59:52] Topic: AM107/by-room/C006/data | Data: Timestamp: 2024-12-08 10:59:52 | Room: C006 | Data: {'temperature': 18.2, 'humidity': 49, 'co2': 412, 'illumination': 1}
+[2024-12-08 10:59:54] Topic: AM107/by-room/hall-amphi/data | Data: Timestamp: 2024-12-08 10:59:54 | Room: hall-amphi | Data: {'temperature': 18.4, 'humidity': 43, 'co2': 441, 'illumination': 5}
+[2024-12-08 10:59:55] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 10:59:56] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 10:59:57] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 270 W | Puissance réactive négative: 284 VAR | Énergie active positive: 4351665 Wh | Énergie réactive négative: 2268569 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 10:59:58] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 706 W | Puissance réactive négative: 701 VAR | Énergie active positive: 9797214 Wh | Énergie réactive négative: 7031016 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:00:05] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:00:08] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 11:00:08] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:00:08] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:00:08] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:00:08] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:00:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 486 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2881645 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:00:11] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:00:11] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:00:14] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 11:00:14] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:00:14] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:00:14] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:00:14] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:00:14] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:00:15] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:00:15] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:00:15] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:00:15] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:00:18] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:00:19] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 11:00:19] Topic: AM107/by-room/E102/data | Data: Timestamp: 2024-12-08 11:00:19 | Room: E102 | Data: {'temperature': 16.7, 'humidity': 41, 'co2': 425, 'illumination': 1}
+[2024-12-08 11:00:22] Topic: AM107/by-room/E103/data | Data: Timestamp: 2024-12-08 11:00:22 | Room: E103 | Data: {'temperature': 15.2, 'humidity': 44.5, 'co2': 450, 'illumination': 2}
+[2024-12-08 11:00:23] Topic: AM107/by-room/B110/data | Data: Timestamp: 2024-12-08 11:00:23 | Room: B110 | Data: {'temperature': 16.9, 'humidity': 41.5, 'co2': 417, 'illumination': 0}
+[2024-12-08 11:00:25] Topic: AM107/by-room/hall-entrée-principale/data | Data: Timestamp: 2024-12-08 11:00:25 | Room: hall-entrée-principale | Data: {'temperature': 18.6, 'humidity': 42, 'co2': 435, 'illumination': 9}
+[2024-12-08 11:00:28] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 363 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4102016 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:00:28] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:00:29] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 87 W | Puissance réactive négative: 255 VAR | Énergie active positive: 885723 Wh | Énergie réactive négative: 3485329 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:00:30] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 83 W | Puissance réactive négative: 152 VAR | Énergie active positive: 608513 Wh | Énergie réactive négative: 1494016 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:00:42] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 11:00:42] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:00:42] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:00:42] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:00:42] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:00:43] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:00:43] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:00:43] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:00:44] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670291 Wh | Énergie réactive négative: 259071 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:10:44] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670292 Wh | Énergie réactive négative: 259072 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:10:47] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:10:52] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:10:52] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:10:52] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:10:54] Topic: AM107/by-room/B106/data | Data: Timestamp: 2024-12-08 11:10:54 | Room: B106 | Data: {'temperature': 19.1, 'humidity': 43.5, 'co2': 419, 'illumination': 2}
+[2024-12-08 11:10:57] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:10:58] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:10:58] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:10:58] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:10:59] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:10:59] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:10:59] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:11:05] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:11:06] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 45 W | Puissance réactive négative: 155 VAR | Énergie active positive: 980897 Wh | Énergie réactive négative: 1492998 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:11:06] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:11:06] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:11:08] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 113 VAR | Énergie active positive: 254881 Wh | Énergie réactive négative: 1227105 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:11:12] Topic: AM107/by-room/B001/data | Data: Timestamp: 2024-12-08 11:11:12 | Room: B001 | Data: {'temperature': 19.1, 'humidity': 40.5, 'co2': 417, 'illumination': 2}
+[2024-12-08 11:11:12] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 122 W | Puissance réactive négative: 232 VAR | Énergie active positive: 2007189 Wh | Énergie réactive négative: 2515510 VARh | Nom du dispositif: triphaso6
+[2024-12-08 11:11:12] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 391 W | Puissance réactive négative: 275 VAR | Énergie active positive: 4464734 Wh | Énergie réactive négative: 3269528 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:11:19] Topic: AM107/by-room/E106/data | Data: Timestamp: 2024-12-08 11:11:19 | Room: E106 | Data: {'temperature': 19.4, 'humidity': 39, 'co2': 416, 'illumination': 1}
+[2024-12-08 11:11:19] Topic: AM107/by-room/E004/data | Data: Timestamp: 2024-12-08 11:11:19 | Room: E004 | Data: {'temperature': 16.6, 'humidity': 43, 'co2': 441, 'illumination': 16}
+[2024-12-08 11:11:21] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 161 W | Puissance réactive négative: 183 VAR | Énergie active positive: 2568299 Wh | Énergie réactive négative: 2260222 VARh | Nom du dispositif: triphaso6
+[2024-12-08 11:11:24] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:11:25] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:11:25] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 698 W | Puissance réactive négative: 710 VAR | Énergie active positive: 9797353 Wh | Énergie réactive négative: 7031152 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:11:28] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:11:30] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 368 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4102069 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:11:32] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 103 VAR | Énergie active positive: 148890 Wh | Énergie réactive négative: 1112302 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:11:38] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 746 W | Puissance réactive négative: 142 VAR | Énergie active positive: 5799406 Wh | Énergie réactive négative: 2141754 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:11:39] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 254 W | Puissance réactive négative: 140 VAR | Énergie active positive: 2247376 Wh | Énergie réactive négative: 1857703 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:11:40] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 58 VAR | Énergie active positive: 158017 Wh | Énergie réactive négative: 685071 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:11:48] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 24 W | Puissance réactive négative: 254 VAR | Énergie active positive: 748274 Wh | Énergie réactive négative: 2788768 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:11:49] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 84 VAR | Énergie active positive: 335376 Wh | Énergie réactive négative: 876590 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:11:49] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 473 W | Puissance réactive négative: 553 VAR | Énergie active positive: 7244812 Wh | Énergie réactive négative: 6806159 VARh | Nom du dispositif: triphaso6
+[2024-12-08 11:11:50] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 189 W | Puissance réactive négative: 137 VAR | Énergie active positive: 2669322 Wh | Énergie réactive négative: 2030424 VARh | Nom du dispositif: triphaso6
+[2024-12-08 11:11:51] Topic: AM107/by-room/Foyer-personnels/data | Data: Timestamp: 2024-12-08 11:11:51 | Room: Foyer-personnels | Data: {'temperature': 17.5, 'humidity': 40.5, 'co2': 411, 'illumination': 4}
+[2024-12-08 11:11:52] Topic: AM107/by-room/B202/data | Data: Timestamp: 2024-12-08 11:11:52 | Room: B202 | Data: {'temperature': 18.6, 'humidity': 43, 'co2': 430, 'illumination': 2}
+[2024-12-08 11:11:55] Topic: AM107/by-room/C004/data | Data: Timestamp: 2024-12-08 11:11:55 | Room: C004 | Data: {'temperature': 17.2, 'humidity': 49, 'co2': 422, 'illumination': 1}
+[2024-12-08 11:11:57] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 270 W | Puissance réactive négative: 285 VAR | Énergie active positive: 4351722 Wh | Énergie réactive négative: 2268627 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:12:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 487 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2881742 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:12:11] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 11:12:11] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:12:11] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:12:12] Topic: AM107/by-room/B201/data | Data: Timestamp: 2024-12-08 11:12:12 | Room: B201 | Data: {'temperature': 11.4, 'humidity': 55.5, 'co2': 449, 'illumination': 1}
+[2024-12-08 11:12:12] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 11:12:16] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:15:12] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 123 W | Puissance réactive négative: 232 VAR | Énergie active positive: 2007197 Wh | Énergie réactive négative: 2515525 VARh | Nom du dispositif: triphaso6
+[2024-12-08 11:15:12] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 384 W | Puissance réactive négative: 274 VAR | Énergie active positive: 4464760 Wh | Énergie réactive négative: 3269546 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:15:21] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 161 W | Puissance réactive négative: 185 VAR | Énergie active positive: 2568310 Wh | Énergie réactive négative: 2260234 VARh | Nom du dispositif: triphaso6
+[2024-12-08 11:15:23] Topic: AM107/by-room/E003/data | Data: Timestamp: 2024-12-08 11:15:23 | Room: E003 | Data: {'temperature': 17.3, 'humidity': 41, 'co2': 440, 'illumination': 2}
+[2024-12-08 11:15:24] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:15:25] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:15:25] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 708 W | Puissance réactive négative: 713 VAR | Énergie active positive: 9797400 Wh | Énergie réactive négative: 7031199 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 11:15:28] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 128320 Wh | Énergie réactive négative: 879030 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:15:30] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 366 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4102094 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 11:15:32] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 103 VAR | Énergie active positive: 148891 Wh | Énergie réactive négative: 1112309 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 11:15:38] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 747 W | Puissance réactive négative: 143 VAR | Énergie active positive: 5799456 Wh | Énergie réactive négative: 2141764 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:15:39] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 255 W | Puissance réactive négative: 141 VAR | Énergie active positive: 2247393 Wh | Énergie réactive négative: 1857713 VARh | Nom du dispositif: triphaso4
+[2024-12-08 11:15:40] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 58 VAR | Énergie active positive: 158017 Wh | Énergie réactive négative: 685075 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:15:48] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 25 W | Puissance réactive négative: 256 VAR | Énergie active positive: 748276 Wh | Énergie réactive négative: 2788785 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:15:49] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 84 VAR | Énergie active positive: 335377 Wh | Énergie réactive négative: 876596 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 11:15:49] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 472 W | Puissance réactive négative: 555 VAR | Énergie active positive: 7244843 Wh | Énergie réactive négative: 6806197 VARh | Nom du dispositif: triphaso6
+[2024-12-08 11:15:50] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 188 W | Puissance réactive négative: 138 VAR | Énergie active positive: 2669334 Wh | Énergie réactive négative: 2030434 VARh | Nom du dispositif: triphaso6
+[2024-12-08 12:16:18] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:16:20] Topic: AM107/by-room/B217/data | Data: Timestamp: 2024-12-08 12:16:20 | Room: B217 | Data: {'temperature': 18, 'humidity': 40, 'co2': 418, 'illumination': 2}
+[2024-12-08 12:16:21] Topic: AM107/by-room/B112/data | Data: Timestamp: 2024-12-08 12:16:21 | Room: B112 | Data: {'temperature': 17.7, 'humidity': 42, 'co2': 431, 'illumination': 1}
+[2024-12-08 12:16:22] Topic: AM107/by-room/C002/data | Data: Timestamp: 2024-12-08 12:16:22 | Room: C002 | Data: {'temperature': 19.6, 'humidity': 45, 'co2': 473, 'illumination': 1}
+[2024-12-08 12:16:27] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 369 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4102480 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:16:29] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:16:30] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 82 W | Puissance réactive négative: 153 VAR | Énergie active positive: 608618 Wh | Énergie réactive négative: 1494209 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 12:17:12] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 121 W | Puissance réactive négative: 229 VAR | Énergie active positive: 2007323 Wh | Énergie réactive négative: 2515764 VARh | Nom du dispositif: triphaso6
+[2024-12-08 12:17:12] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:17:16] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:17:16] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:17:17] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:17:21] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 160 W | Puissance réactive négative: 183 VAR | Énergie active positive: 2568476 Wh | Énergie réactive négative: 2260425 VARh | Nom du dispositif: triphaso6
+[2024-12-08 12:17:26] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 24 W | Puissance réactive négative: 61 VAR | Énergie active positive: 1485931 Wh | Énergie réactive négative: 734965 VARh | Nom du dispositif: triphaso5
+[2024-12-08 12:22:33] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:22:36] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:22:37] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:22:41] Topic: AM107/by-room/B002/data | Data: Timestamp: 2024-12-08 12:22:41 | Room: B002 | Data: {'temperature': 19, 'humidity': 45.5, 'co2': 1655, 'illumination': 11}
+[2024-12-08 12:22:44] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670299 Wh | Énergie réactive négative: 259074 VARh | Nom du dispositif: triphaso4
+[2024-12-08 12:22:47] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:22:51] Topic: AM107/by-room/Salle-conseil/data | Data: Timestamp: 2024-12-08 12:22:51 | Room: Salle-conseil | Data: {'temperature': 20.6, 'humidity': 33.5, 'co2': 425, 'illumination': 0}
+[2024-12-08 12:22:51] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 730 W | Puissance réactive négative: 720 VAR | Énergie active positive: 9798207 Wh | Énergie réactive négative: 7032001 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:22:57] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 84 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1205128 Wh | Énergie réactive négative: 28 VARh | Nom du dispositif: triphaso5
+[2024-12-08 12:23:06] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 45 W | Puissance réactive négative: 153 VAR | Énergie active positive: 980951 Wh | Énergie réactive négative: 1493182 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:23:06] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:23:08] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 112 VAR | Énergie active positive: 254888 Wh | Énergie réactive négative: 1227240 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:23:11] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:23:11] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:23:11] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:23:11] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:23:11] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:23:12] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:23:12] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:23:12] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 123 W | Puissance réactive négative: 232 VAR | Énergie active positive: 2007336 Wh | Énergie réactive négative: 2515787 VARh | Nom du dispositif: triphaso6
+[2024-12-08 12:23:12] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:23:12] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:23:13] Topic: AM107/by-room/B105/data | Data: Timestamp: 2024-12-08 12:23:13 | Room: B105 | Data: {'temperature': 19.3, 'humidity': 41.5, 'co2': 414, 'illumination': 2}
+[2024-12-08 12:23:13] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:23:13] Topic: AM107/by-room/Foyer-etudiants-entrée/data | Data: Timestamp: 2024-12-08 12:23:13 | Room: Foyer-etudiants-entrée | Data: {'temperature': 47.6, 'humidity': 42.5, 'co2': 426, 'illumination': 12}
+[2024-12-08 12:23:16] Topic: AM107/by-room/Foyer-etudiants-entrée/data | Data: Timestamp: 2024-12-08 12:23:16 | Room: Foyer-etudiants-entrée | Data: {'temperature': 47.6, 'humidity': 42.5, 'co2': 426, 'illumination': 12}
+[2024-12-08 12:23:19] Topic: AM107/by-room/B111/data | Data: Timestamp: 2024-12-08 12:23:19 | Room: B111 | Data: {'temperature': 18, 'humidity': 40, 'co2': 418, 'illumination': 0}
+[2024-12-08 12:23:19] Topic: AM107/by-room/B234/data | Data: Timestamp: 2024-12-08 12:23:19 | Room: B234 | Data: {'temperature': 22.2, 'humidity': 35, 'co2': 418, 'illumination': 1}
+[2024-12-08 12:23:21] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:23:22] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 160 W | Puissance réactive négative: 185 VAR | Énergie active positive: 2568492 Wh | Énergie réactive négative: 2260443 VARh | Nom du dispositif: triphaso6
+[2024-12-08 12:23:26] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 2 W | Puissance réactive négative: 270 VAR | Énergie active positive: 1445299 Wh | Énergie réactive négative: 2661064 VARh | Nom du dispositif: triphaso5
+[2024-12-08 12:23:27] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 109 W | Puissance réactive négative: 332 VAR | Énergie active positive: 4136360 Wh | Énergie réactive négative: 3396063 VARh | Nom du dispositif: triphaso5
+[2024-12-08 12:23:27] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 390 W | Puissance réactive négative: 272 VAR | Énergie active positive: 4465205 Wh | Énergie réactive négative: 3269855 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:23:28] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 24 W | Puissance réactive négative: 62 VAR | Énergie active positive: 1485933 Wh | Énergie réactive négative: 734971 VARh | Nom du dispositif: triphaso5
+[2024-12-08 12:23:29] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:23:30] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:23:31] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 367 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 4102508 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:31:38] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 747 W | Puissance réactive négative: 142 VAR | Énergie active positive: 5800401 Wh | Énergie réactive négative: 2141944 VARh | Nom du dispositif: triphaso4
+[2024-12-08 12:31:39] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 255 W | Puissance réactive négative: 140 VAR | Énergie active positive: 2247715 Wh | Énergie réactive négative: 1857891 VARh | Nom du dispositif: triphaso4
+[2024-12-08 12:31:40] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 58 VAR | Énergie active positive: 158023 Wh | Énergie réactive négative: 685149 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:31:44] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:31:45] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:31:45] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:31:45] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:31:45] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:31:45] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:31:45] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:31:48] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 26 W | Puissance réactive négative: 254 VAR | Énergie active positive: 748309 Wh | Énergie réactive négative: 2789108 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:31:48] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:31:48] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:31:49] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:31:49] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 83 VAR | Énergie active positive: 335397 Wh | Énergie réactive négative: 876703 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:31:49] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:31:50] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:31:50] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:31:51] Topic: AM107/by-room/Foyer-personnels/data | Data: Timestamp: 2024-12-08 12:31:51 | Room: Foyer-personnels | Data: {'temperature': 17.4, 'humidity': 41, 'co2': 409, 'illumination': 2}
+[2024-12-08 12:31:51] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:31:51] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:31:52] Topic: AM107/by-room/B202/data | Data: Timestamp: 2024-12-08 12:31:52 | Room: B202 | Data: {'temperature': 18.5, 'humidity': 42.5, 'co2': 427, 'illumination': 2}
+[2024-12-08 12:31:52] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:31:53] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:31:54] Topic: AM107/by-room/Local-velo/data | Data: Timestamp: 2024-12-08 12:31:54 | Room: Local-velo | Data: {'temperature': 7.2, 'humidity': 80, 'co2': 441, 'illumination': 99}
+[2024-12-08 12:31:55] Topic: AM107/by-room/C004/data | Data: Timestamp: 2024-12-08 12:31:55 | Room: C004 | Data: {'temperature': 17.2, 'humidity': 48.5, 'co2': 420, 'illumination': 6}
+[2024-12-08 12:31:57] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 270 W | Puissance réactive négative: 288 VAR | Énergie active positive: 4352098 Wh | Énergie réactive négative: 2269011 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:32:04] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:32:04] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:32:05] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:32:05] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:32:05] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:32:05] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:32:09] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 142 W | Puissance réactive négative: 204 VAR | Énergie active positive: 2669526 Wh | Énergie réactive négative: 2030679 VARh | Nom du dispositif: triphaso6
+[2024-12-08 12:32:10] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:32:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 487 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2882391 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-08 12:32:10] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 425 W | Puissance réactive négative: 622 VAR | Énergie active positive: 7245396 Wh | Énergie réactive négative: 6806972 VARh | Nom du dispositif: triphaso6
+[2024-12-08 12:32:11] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:32:11] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:32:12] Topic: AM107/by-room/B201/data | Data: Timestamp: 2024-12-08 12:32:12 | Room: B201 | Data: {'temperature': 11.4, 'humidity': 56.5, 'co2': 447, 'illumination': 1}
+[2024-12-08 12:32:12] Topic: Triphaso/by-room/Amphi2/data | Data: Nom du dispositif: triphaso5
+[2024-12-08 12:32:18] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:32:21] Topic: AM107/by-room/C001/data | Data: Timestamp: 2024-12-08 12:32:21 | Room: C001 | Data: {'temperature': 21.7, 'humidity': 40.5, 'co2': 482, 'illumination': 1}
+[2024-12-08 12:32:21] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 706 W | Puissance réactive négative: 715 VAR | Énergie active positive: 9798320 Wh | Énergie réactive négative: 7032114 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:32:21] Topic: AM107/by-room/B109/data | Data: Timestamp: 2024-12-08 12:32:21 | Room: B109 | Data: {'temperature': 17.5, 'humidity': 40.5, 'co2': 490, 'illumination': 2}
+[2024-12-08 12:32:22] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:32:22] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:32:22] Topic: Triphaso/by-room/Salle anechoique/data | Data: Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:32:22] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:32:22] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:32:23] Topic: Triphaso/by-room/B110/data | Data: Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 12:32:23] Topic: Triphaso/by-room/Amphi1/data | Data: Nom du dispositif: triphaso4
+[2024-12-08 12:32:27] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 369 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4102578 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:32:29] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:32:41] Topic: AM107/by-room/B002/data | Data: Timestamp: 2024-12-08 12:32:41 | Room: B002 | Data: {'temperature': 19, 'humidity': 45, 'co2': 1650, 'illumination': 9}
+[2024-12-08 12:32:44] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670299 Wh | Énergie réactive négative: 259074 VARh | Nom du dispositif: triphaso4
+[2024-12-08 12:32:49] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 12:32:50] Topic: AM107/by-room/Salle-conseil/data | Data: Timestamp: 2024-12-08 12:32:50 | Room: Salle-conseil | Data: {'temperature': 20.6, 'humidity': 33.5, 'co2': 425, 'illumination': 0}
+[2024-12-08 12:32:57] Topic: Triphaso/by-room/Amphi2/data | Data: Puissance active positive: 84 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1205142 Wh | Énergie réactive négative: 28 VARh | Nom du dispositif: triphaso5
+[2024-12-08 12:38:19] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:38:21] Topic: AM107/by-room/B203/data | Data: Timestamp: 2024-12-08 12:38:21 | Room: B203 | Data: {'temperature': 18.4, 'humidity': 43.5, 'co2': 441, 'illumination': 6}
+[2024-12-08 12:38:21] Topic: AM107/by-room/amphi1/data | Data: Timestamp: 2024-12-08 12:38:21 | Room: amphi1 | Data: {'temperature': 16, 'humidity': 45, 'co2': 429, 'illumination': 1}
+[2024-12-08 12:38:21] Topic: AM107/by-room/E208/data | Data: Timestamp: 2024-12-08 12:38:21 | Room: E208 | Data: {'temperature': 18, 'humidity': 41, 'co2': 417, 'illumination': 4}
+[2024-12-08 12:38:28] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 1 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:38:29] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 365 VAR | Énergie active positive: 1 Wh | Énergie réactive négative: 4102615 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 12:38:33] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:38:35] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 1626 W | Puissance réactive négative: 315 VAR | Énergie active positive: 4352175 Wh | Énergie réactive négative: 2269043 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:38:36] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 2058 W | Puissance réactive négative: 738 VAR | Énergie active positive: 9798440 Wh | Énergie réactive négative: 7032188 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 12:38:39] Topic: AM107/by-room/E210/data | Data: Timestamp: 2024-12-08 12:38:39 | Room: E210 | Data: {'temperature': 17.2, 'humidity': 42.5, 'co2': 418, 'illumination': 69}
+[2024-12-08 12:38:44] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 2 VAR | Énergie active positive: 670300 Wh | Énergie réactive négative: 259074 VARh | Nom du dispositif: triphaso4
+[2024-12-08 12:38:52] Topic: AM107/by-room/B103/data | Data: Timestamp: 2024-12-08 12:38:52 | Room: B103 | Data: {'temperature': 19, 'humidity': 39, 'co2': 1642, 'illumination': 1}
+[2024-12-08 13:05:40] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 5 W | Puissance réactive négative: 58 VAR | Énergie active positive: 158026 Wh | Énergie réactive négative: 685182 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 13:05:41] Topic: Triphaso/by-room/B102/data | Data: Puissance active positive: 4 W | Puissance réactive négative: 103 VAR | Énergie active positive: 148898 Wh | Énergie réactive négative: 1112499 VARh | Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 13:05:47] Topic: Triphaso/by-room/Atelier recherche/data | Data: Puissance active positive: 386 W | Puissance réactive négative: 108 VAR | Énergie active positive: 4352361 Wh | Énergie réactive négative: 2269145 VARh | Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 13:05:48] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 15 W | Puissance réactive négative: 84 VAR | Énergie active positive: 335405 Wh | Énergie réactive négative: 876751 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 13:05:49] Topic: Triphaso/by-room/B110/data | Data: Puissance active positive: 26 W | Puissance réactive négative: 253 VAR | Énergie active positive: 748323 Wh | Énergie réactive négative: 2789253 VARh | Nom du dispositif: triphaso10 | Bâtiment: B
+[2024-12-08 13:06:10] Topic: Triphaso/by-room/Amphi1/data | Data: Puissance active positive: 487 W | Puissance réactive négative: 0 VAR | Énergie active positive: 2882667 Wh | Énergie réactive négative: 24979 VARh | Nom du dispositif: triphaso4
+[2024-12-08 13:06:14] Topic: Triphaso/by-room/Atelier recherche/data | Data: Nom du dispositif: triphaso12 | Bâtiment: C
+[2024-12-08 13:06:15] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 194 W | Puissance réactive négative: 187 VAR | Énergie active positive: 2568618 Wh | Énergie réactive négative: 2260576 VARh | Nom du dispositif: triphaso6
+[2024-12-08 13:06:16] Topic: Triphaso/by-room/B102/data | Data: Nom du dispositif: triphaso11 | Bâtiment: B
+[2024-12-08 13:06:16] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 13:06:17] Topic: Triphaso/by-room/A105/data | Data: Nom du dispositif: triphaso6
+[2024-12-08 13:06:19] Topic: Triphaso/by-room/Salle anechoique/data | Data: Puissance active positive: 0 W | Puissance réactive négative: 0 VAR | Énergie active positive: 0 Wh | Énergie réactive négative: 14 VARh | Nom du dispositif: triphaso7 | Bâtiment: C
+[2024-12-08 13:06:20] Topic: AM107/by-room/B112/data | Data: Timestamp: 2024-12-08 13:06:20 | Room: B112 | Data: {'temperature': 17.7, 'humidity': 42.5, 'co2': 429, 'illumination': 1}
+[2024-12-08 13:06:20] Topic: AM107/by-room/B217/data | Data: Timestamp: 2024-12-08 13:06:20 | Room: B217 | Data: {'temperature': 18, 'humidity': 40.5, 'co2': 414, 'illumination': 2}
+[2024-12-08 13:06:21] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 140 W | Puissance réactive négative: 203 VAR | Énergie active positive: 2669614 Wh | Énergie réactive négative: 2030783 VARh | Nom du dispositif: triphaso6
+[2024-12-08 13:06:22] Topic: AM107/by-room/C002/data | Data: Timestamp: 2024-12-08 13:06:22 | Room: C002 | Data: {'temperature': 19.6, 'humidity': 45, 'co2': 477, 'illumination': 1}
+[2024-12-08 13:06:23] Topic: Triphaso/by-room/A105/data | Data: Puissance active positive: 456 W | Puissance réactive négative: 622 VAR | Énergie active positive: 7245657 Wh | Énergie réactive négative: 6807314 VARh | Nom du dispositif: triphaso6
