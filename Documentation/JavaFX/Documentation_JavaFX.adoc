@@ -82,6 +82,8 @@ image::../images/DS_SolarEdge.PNG[DS_SolarEdge]
 * **config.ini** : stock les données de configuration des données
 
 
+image::../images/DS_Config.PNG[DS_Config]
+
 
 
 
