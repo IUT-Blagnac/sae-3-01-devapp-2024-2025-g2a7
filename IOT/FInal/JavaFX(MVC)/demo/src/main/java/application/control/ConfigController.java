@@ -18,6 +18,7 @@ public class ConfigController {
     public ConfigController(Stage _parentStage) {
         // Logique pour le bouton "Configuration"
         System.out.println("Configuration button clicked");
+
         /*
          * try {
          * FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -31,6 +32,7 @@ public class ConfigController {
          * e.printStackTrace();
          * }
          */
+
         try {
             FXMLLoader loader = new FXMLLoader(
                     ConfigViewController.class

@@ -4,11 +4,16 @@ import paho.mqtt.client as mqtt
 import json
 import configparser
 from datetime import datetime
-import os
+
+import ast  # Pour convertir les chaînes de type dictionnaire en dict Python
+import os 
+
+
 
 config = configparser.ConfigParser()
 configpath = os.path.join(os.path.dirname(__file__), 'config.ini')
 config.read(configpath)
+
 
 solaredge_id = config['mqtt'].get('solaredge_id', '')
 room = config['mqtt'].get('room', '')
@@ -17,6 +22,10 @@ topic_triphaso = config['mqtt']['topic_triphaso'].format(room=room)
 topic_am107 = config['mqtt']['topic_am107'].format(room=room)
 topic_solaredge = config['mqtt']['topic_solaredge'].format(solaredge_id=solaredge_id)
 broker = config['mqtt']['broker']
+
+
+print("Répertoire courant Python:", os.getcwd())
+
 
 def on_connect(client, userdata, flags, rc):
     print(f"Connecté avec le code de résultat {rc}")
@@ -40,13 +49,17 @@ def on_message(client, userdata, msg):
         
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log_data(timestamp, msg.topic, processed_data)
+        print(f"Payload reçu : {payload}")
+
 
     except Exception as e:
         print(f"Erreur lors du traitement du message: {e}")
 
 def log_data(timestamp, topic, data):
     try:
+
         with open("IOT/Final/datas/data_log.txt", "a", encoding='utf-8') as f:
+
             log_entry = f"[{timestamp}] Topic: {topic} | Data: {data}\n"
             f.write(log_entry)
         print("Données enregistrées dans le fichier.")
@@ -58,6 +71,12 @@ def extraire_chiffres_et_points(chaine):
 
 
 def donnee_filtree(data_list, config_file='config.ini', output_file='IOT/Final/datas/AM07_filtre_data.json'):
+
+
+def donnee_filtree(data_list, config_file='config.ini', output_file='datas/AM07_filtre_data.json'):
+
+    
+    # Chargement des seuils
 
     seuils = {key: config.getfloat('seuils', key) for key in config['seuils']}
     room_filter = config['device']['room'].strip().lower()
@@ -176,49 +195,123 @@ def process_triphaso_data(payload):
         if cle in infos_dispositif:
             result.append(modele.format(infos_dispositif[cle]))
 
+
     donnee_filtree(result, 'config.ini', 'IOT/Final/datas/Triphaso_filtre_data.json')
+
     return " | ".join(result)
+
+import os
+import json
 
 def process_am107_data(payload):
     sensor_data, device_info = payload
-    result = []
-
-    sensor_keys = {
-        'temperature': "Température: {} °C",
-        'humidity': "Humidité: {} %",
-        'co2': "CO2: {} ppm",
-        'tvoc': "TVOC: {} ppb",
-        'illumination': "Illumination: {} lux",
-        'pressure': "Pression: {} hPa",
-        'activity': "Activité: {}",
-        'infrared': "Infrarouge: {}",
-        'infrared_and_visible': "Infrarouge + Visible: {}"
-    }
-
-    device_keys = {
-        'deviceName': "Nom du dispositif: {}",
-        'devEUI': "Identifiant du dispositif (devEUI): {}",
-        'room': "Pièce: {}",
-        'floor': "Étage: {}",
-        'Building': "Bâtiment: {}"
+    
+    # Structurer les données comme souhaité
+    filtered_data = {
+        "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),  # Ajouter la date et heure actuelle
+        "room": device_info.get('room', 'unknown'),  # Récupérer la salle ou mettre 'unknown' si non défini
+        "data": {}  # Initialiser la section "data" qui contiendra les valeurs des capteurs
     }
     
-    for cle, modele in sensor_keys.items():
-        if cle in sensor_data:
-            result.append(modele.format(sensor_data[cle]))
-    
-    for cle, modele in device_keys.items():
-        if cle in device_info:
-            result.append(modele.format(device_info[cle]))
 
-    donnee_filtree(result, 'config.ini', 'IOT/Final/datas/AM107_filtre_data.json')
-    return " | ".join(result)
+    # Ajouter les données filtrées dans la section "data"
+    if 'temperature' in sensor_data:
+        filtered_data['data']['temperature'] = sensor_data['temperature']
+    if 'humidity' in sensor_data:
+        filtered_data['data']['humidity'] = sensor_data['humidity']
+    if 'co2' in sensor_data:
+        filtered_data['data']['co2'] = sensor_data['co2']
+    if 'illumination' in sensor_data:
+        filtered_data['data']['illumination'] = sensor_data['illumination']
+    
+    # Charger les anciennes données et ajouter les nouvelles
+    output_file = 'datas/AM07_filtre_data.json'
+    
+    if os.path.exists(output_file):
+        with open(output_file, 'r+', encoding='utf-8') as json_file:
+            try:
+                existing_data = json.load(json_file)
+                # Si les anciennes données sont un dictionnaire, les convertir en liste
+                if isinstance(existing_data, dict):
+                    existing_data = [existing_data]
+            except json.JSONDecodeError:
+                existing_data = []
+            
+            # Ajouter la nouvelle entrée sans effacer les anciennes
+            existing_data.append(filtered_data)
+            
+            # Nettoyer les données si plus de 20 entrées
+            if len(existing_data) > 15:
+                existing_data = existing_data[-15:]  # Conserver les 20 dernières entrées
+            
+            json_file.seek(0)
+            json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
+    else:
+        # Si le fichier n'existe pas, créez-le avec la nouvelle entrée
+        with open(output_file, 'w', encoding='utf-8') as json_file:
+            json.dump([filtered_data], json_file, ensure_ascii=False, indent=4)
+
+    # Retourner un résumé de ce qui a été traité
+    return f"Timestamp: {filtered_data['timestamp']} | Room: {filtered_data['room']} | Data: {filtered_data['data']}"
+
+def process_solaredge_data(payload):
+    # Définir le chemin du fichier
+    output_file = 'datas/Solaredge_filtre_data.json'
+
+    # Charger les données existantes
+    if os.path.exists(output_file):
+        with open(output_file, 'r', encoding='utf-8') as json_file:
+            try:
+                solar_data = json.load(json_file)
+            except json.JSONDecodeError:
+                solar_data = {"solar": {}}
+    else:
+        solar_data = {"solar": {}}
+
+    # Trouver le prochain index disponible
+    next_index = str(len(solar_data["solar"]))
+
+    # Ajouter les nouvelles données avec le bon format
+    solar_data["solar"][next_index] = {
+        "currentPower": {
+            "power": float(payload.get('currentPower', {}).get('power', 0))  
+        },
+        "lastDayData": {
+            "energy": float(payload.get('lastDayData', {}).get('energy', 0))  
+        },
+        "lastMonthData": {
+            "energy": float(payload.get('lastMonthData', {}).get('energy', 0))  
+        },
+        "lastYearData": {
+            "energy": float(payload.get('lastYearData', {}).get('energy', 0))  
+        },
+        "lifeTimeData": {
+            "energy": float(payload.get('lifeTimeData', {}).get('energy', 0))  
+        },
+        "lastUpdateTime": payload.get('lastUpdateTime', "")
+    }
+
+
+    # Sauvegarder les données mises à jour dans le fichier JSON
+    with open(output_file, 'w', encoding='utf-8') as json_file:
+        json.dump(solar_data, json_file, ensure_ascii=False, indent=4)
+
+    
+    return solar_data
+
+    
 
 def process_solaredge_data(payload):
     return json.dumps(payload)
 
+
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.connect(broker, 1883, 60)
+
+
+client.connect(broker, port=1883, keepalive=60)
+
 client.loop_forever()
+
+
