@@ -1,10 +1,16 @@
 = Documentation du Code
-:toc:
 :toc-title: Sommaire
+:toc: macro
 
-:Version: Finale
-:Auteurs: 
-:Date: 2023-10-01
+*Par :* _Ducry Pierre-Louis, Da Chao Romain, Razafinirina Mialisoa, Pellegatta Matteo_ +
+*Pour :* André Peninou +
+*Date :* 08/12/2024 +
+*Équipe :* 2A7
+
+---
+toc::[]
+---
+
 
 == Informations générales
 ==== Version : {Version}  
