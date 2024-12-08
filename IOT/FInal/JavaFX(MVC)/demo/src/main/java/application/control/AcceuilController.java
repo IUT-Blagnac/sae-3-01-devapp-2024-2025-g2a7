@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 
 import application.App;
 import application.model.data.JsonFileWatcher;
@@ -35,7 +36,7 @@ public class AcceuilController extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws URISyntaxException {
         try {
 
             this.mainStage = primaryStage;
@@ -183,6 +184,8 @@ public class AcceuilController extends Application {
         }
         if (pythonThread != null && pythonThread.isAlive()) {
             pythonThread.interrupt();
+        }
+    }
 
     // Méthode pour notifier qu'une nouvelle entrée a été trouvée
     public void notifierNouvelleEntree(String ligne) {

@@ -73,7 +73,6 @@ def extraire_chiffres_et_points(chaine):
 def donnee_filtree(data_list, config_file='config.ini', output_file='IOT/Final/datas/AM07_filtre_data.json'):
 
 
-def donnee_filtree(data_list, config_file='config.ini', output_file='datas/AM07_filtre_data.json'):
 
     
     # Chargement des seuils
