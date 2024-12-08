@@ -52,7 +52,8 @@ public class AcceuilController extends Application {
                 e.consume(); // Empêche la fermeture par défaut
                 controller.doQuit();
                 System.out.println("Arrêt du script Python");
-                stopPythonScript(); // Assurez-vous de stopper proprement le script Python
+                stopPythonScript(); 
+                stopJsonWatcher();
             });
         } catch (IOException e) {
             e.printStackTrace();

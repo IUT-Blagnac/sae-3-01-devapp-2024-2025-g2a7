@@ -186,7 +186,7 @@ public class AffDonneesViewController {
         Double lastLum = getLastValue(room.getIlluminationList());
     
         labTemp.setText("Température : " + (lastTemp != null ? lastTemp + "°C" : "N/A"));
-        labHum.setText("Humidité : " + (lastHum != null ? lastHum + "%" : "N/A"));
+        labHum.setText("Humidité : " + (lastHum != null ? lastHum + "" : "N/A"));
         labCO2.setText("CO2 : " + (lastCO2 != null ? lastCO2 + " ppm" : "N/A"));
         labLum.setText("Luminosité : " + (lastLum != null ? lastLum + " lx" : "N/A"));
     }
@@ -218,7 +218,7 @@ public class AffDonneesViewController {
                 // Créer une chaîne de caractères avec les dernières données
                 String roomData = "Salle: " + room.getRoomId() +
                                 (lastTemperature != null ? ", Temp: " + lastTemperature + "°C" : ", Temp: N/A") +
-                                (lastHumidity != null ? ", Humidité: " + lastHumidity + "%" : ", Humidité: N/A") +
+                                (lastHumidity != null ? ", Humidité: " + lastHumidity + "" : ", Humidité: N/A") +
                                 (lastCo2 != null ? ", CO2: " + lastCo2 + "ppm" : ", CO2: N/A") +
                                 (lastIllumination != null ? ", Luminosité: " + lastIllumination + "lx" : ", Luminosité: N/A");
     
@@ -281,7 +281,7 @@ public class AffDonneesViewController {
                 updateBarChartLum(newValue);
                 updateBarChartHum(newValue);
                 updateBarChartCO2(newValue);  
-                displayRoomData(newValue); // Passez la salle sélectionnée à la méthode
+                displayRoomData(newValue); 
             }
         });
     }

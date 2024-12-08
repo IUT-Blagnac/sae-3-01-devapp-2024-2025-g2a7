@@ -65,11 +65,4 @@ public class JsonFileWatcher implements Runnable {
         }
     }
 
-
-    private Double toDouble(Object value) {
-        if (value instanceof Number) {
-            return ((Number) value).doubleValue();
-        }
-        return 0.0; // Valeur par défaut si ce n'est pas un nombre
-    }
 }

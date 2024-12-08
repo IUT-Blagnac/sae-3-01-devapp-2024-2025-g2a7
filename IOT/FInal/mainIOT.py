@@ -216,6 +216,9 @@ def process_triphaso_data(payload):
     donnee_filtree(result,'config.ini','datas/Triphaso_filtre_data.json')
     return " | ".join(result)
 
+import os
+import json
+
 def process_am107_data(payload):
     sensor_data, device_info = payload
     
@@ -251,6 +254,11 @@ def process_am107_data(payload):
             
             # Ajouter la nouvelle entrée sans effacer les anciennes
             existing_data.append(filtered_data)
+            
+            # Nettoyer les données si plus de 20 entrées
+            if len(existing_data) > 15:
+                existing_data = existing_data[-15:]  # Conserver les 20 dernières entrées
+            
             json_file.seek(0)
             json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
     else:
@@ -260,7 +268,6 @@ def process_am107_data(payload):
 
     # Retourner un résumé de ce qui a été traité
     return f"Timestamp: {filtered_data['timestamp']} | Room: {filtered_data['room']} | Data: {filtered_data['data']}"
-
 
 def process_solaredge_data(payload):
     # Définir le chemin du fichier
