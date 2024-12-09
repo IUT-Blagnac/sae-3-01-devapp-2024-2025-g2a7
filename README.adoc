@@ -116,8 +116,8 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 |===
 | Semaine | ODJ | Bilan 
-| 49 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/ODJ_02-12-24.pdf[ODJ-S49]|
-| 50 ||
+| 49 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/ODJ_02-12-24.pdf[ODJ-S49]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/CR_02-12-24.pdf[CR-S49]
+| 50 |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2050/ODJ_09-12-24.pdf[ODJ-S50]|
 | 51 ||
 |===
 
