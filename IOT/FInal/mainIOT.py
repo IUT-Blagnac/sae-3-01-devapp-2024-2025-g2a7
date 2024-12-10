@@ -53,7 +53,7 @@ def on_message(client, userdata, msg):
 
 
     except Exception as e:
-        print(f"Erreur lors du traitement du message: {e}")
+        print(f"")
 
 def log_data(timestamp, topic, data):
     try:
@@ -195,7 +195,7 @@ def process_triphaso_data(payload):
             result.append(modele.format(infos_dispositif[cle]))
 
 
-    donnee_filtree(result, 'config.ini', 'IOT/Final/datas/Triphaso_filtre_data.json')
+    donnee_filtree(result, 'config.ini', 'IOT/FInal/datas/Triphaso_filtre_data.json')
 
     return " | ".join(result)
 
