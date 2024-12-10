@@ -126,6 +126,10 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 J'ai l'ODJ mais pas le compte rendu ! ODJ : Préciser qui est responsable de chaque rubrique, combien de temps on y consacre, qui fera le CR. 
 note : 0,3/3
 
+=== Retour communication semaine 49 EP
+ODJ : manque toujours qui est resp de chaque rubrique et quel temps on y consacre ! CR : Préciser ABS/Present, préciser qui a rédigé le CR. Manque CR réunion client et analyse réussites et difficultés.
+note : 1,95/3
+
 == Gestion de projet & Qualité
 
 Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
