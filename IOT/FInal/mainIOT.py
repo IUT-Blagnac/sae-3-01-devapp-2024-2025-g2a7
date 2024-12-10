@@ -255,7 +255,7 @@ def process_am107_data(payload):
 
 def process_solaredge_data(payload):
     # Définir le chemin du fichier
-    output_file = 'datas/Solaredge_filtre_data.json'
+    output_file = 'IOT/Final/datas/Solaredge_filtre_data.json'
 
     # Charger les données existantes
     if os.path.exists(output_file):
@@ -300,8 +300,6 @@ def process_solaredge_data(payload):
 
     
 
-def process_solaredge_data(payload):
-    return json.dumps(payload)
 
 
 client = mqtt.Client()
