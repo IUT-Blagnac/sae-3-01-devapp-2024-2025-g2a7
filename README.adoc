@@ -129,6 +129,7 @@ note : 0,3/3
 === Retour communication semaine 49 EP
 ODJ : manque toujours qui est resp de chaque rubrique et quel temps on y consacre ! CR : Préciser ABS/Present, préciser qui a rédigé le CR. Manque CR réunion client et analyse réussites et difficultés.
 note : 1,95/3
+note appel offre : 12,65/20
 
 == Gestion de projet & Qualité
 
