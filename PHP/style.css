@@ -1,0 +1,266 @@
+
+/* Test d'une police importée pour le titre*/
+@font-face {
+    font-family: 'MaPolice'; 
+    src: url('fonts/Popcat.otf') format('opentype'); 
+}
+
+
+.nav-link.active {
+    color: white; 
+    text-decoration: none; 
+    font-size: 25px; 
+    font-family: 'Gill Sans', sans-serif; 
+    font-weight: bold; 
+    padding: 5px 10px; 
+    transition: all 0.3s ease; 
+}
+
+/* Titres */
+
+h1 {
+    font-family: 'MaPolice', sans-serif; 
+    font-size: 40px;
+    color:white;
+    margin:0;
+
+}
+
+h2 {
+    font-family: 'MaPolice', sans-serif; 
+    font-size: clamp(20px, 5vw, 40px); /* Min 20px, max 40px, s'adapte entre les deux */
+    color: Black;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word; /* Évite le débordement du texte */
+}
+
+
+
+/* cadre des nouveautés */
+.right-frame {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: auto; /* Hauteur automatique */
+    max-height: 90vh; /* Limiter la hauteur si nécessaire */
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-frame .card-container {
+    display: flex; /* Place les cartes côte à côte */
+    flex-wrap: wrap; /* S'assure qu'elles passent en dessous si nécessaire */
+    gap: 10px; /* Espacement entre les cartes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+    width: 100%; /* Empêche de dépasser la largeur */
+}
+
+.right-frame .card {
+    flex: 1 1 calc(50% - 15px); /* Chaque carte occupe 50% de la largeur */
+    max-width: calc(50% - 15px); /* Empêche les débordements */
+    max-height: 300px; /* Limite la hauteur */
+    overflow: hidden; /* Cache le contenu qui dépasse */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-frame .card img {
+    max-width: 100%;
+    max-height: 150px; /* Limite la hauteur de l'image */
+}
+
+.right-frame .card-body {
+    padding: 10px;
+    text-align: center;
+    height: auto;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px; 
+    margin-bottom: 20px;
+}
+
+
+.filter-item label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-item select,
+.filter-item input[type="range"],
+.filter-item input[type="number"] {
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Le système de notation avec étoiles */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl; 
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+/* Etoiles vides */
+.star-rating label {
+    font-size: 20px;
+    color: #ccc;  
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Etoiles pleines */
+.star-rating input[type="radio"]:checked ~ label {
+    color: gold;  
+}
+
+/* animation des etoiles */
+.star-rating input[type="radio"]:hover ~ label,
+.star-rating label:hover {
+    color: #ffcc00;  
+}
+
+.star-rating label {
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+/* ====== Frames Layout ====== */
+/* Cadre générique (base commune) */
+.frame {
+    background-color: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Cadre droit (pour index.php) */
+.right-frame {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translateY(-50%);
+    width: 45vw;
+    height: 50%;
+}
+
+/* Cadre compte (pour informationCompte.php) */
+.account-frame {
+    width: 60%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: var(--white);
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Account Page Specific Styles ====== */
+.account-header {
+    background-color: #e95321; /* Orange Brickolo */
+    margin: -30px -30px 30px -30px;
+    padding: 20px;
+    border-radius: 18px 18px 0 0;
+}
+
+.account-header h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: 32px;
+    margin: 0;
+}
+
+.account-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.account-form .form-group {
+    margin-bottom: 20px;
+}
+
+.account-form label {
+    display: block;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.account-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.account-form input:focus {
+    border-color: #e95321;
+    outline: none;
+}
+
+.account-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.btn-brickolo {
+    background-color: #e95321;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-brickolo:hover {
+    background-color: #d64a1a;
+}
+
+.btn-brickolo-secondary {
+    background-color: #4a90e2;
+}
+
+.btn-brickolo-secondary:hover {
+    background-color: #357abd;
+}
