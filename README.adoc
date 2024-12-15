@@ -147,8 +147,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers la doc utilisateur
 - Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
 - Tests unitaires et plans de test
-- Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+
 
 Voici un exemple d'évaluation :
 
