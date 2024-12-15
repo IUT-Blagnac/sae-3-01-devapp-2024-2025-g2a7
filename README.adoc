@@ -12,7 +12,6 @@
 [.correction]
 !Correction!
 
-
 // Useful definitions
 :asciidoc: http://www.methods.co.nz/asciidoc[AsciiDoc]
 :icongit: icon:git[]
@@ -83,11 +82,11 @@ Ce dépôt initial a été créé pour que tous les groupes de 2ème année aien
 
 Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pas utiles :
 
-- `.gitignore` => un fichier minimaliste des éléments à ne pas pousser en général sur vos dépôts (utiliser la commande `git add -f` pour forcer l'ajout d'un fichier Jar qui ne bougera plus, pour archive par exemple).
+- `.gitignore` => un fichier minimaliste des éléments à ne pas pousser en général sur vos dépôts (utiliser la commande `git add -f` pour forcer l’ajout d’un fichier Jar qui ne bougera plus, pour archive par exemple).
 - `.github` => le répertoire qui contient des éléments de gestion de projet :
 ** `workflows` => le repertoire qui contient les actions à lancer à chaque push sur votre repo. 
 *** `blank.yml` => un exemple bidon mais dont vous pourrez vérifier l’exécution correcte (1er tag)
-** `ISSUE_TEMPLATE` => le repertoire qui contient quelques templates pour vos issues.
+** `ISSUE_TEMPLATE` => le répertoire qui contient quelques templates pour vos issues.
 *** `us.yml` => Exemple de template pour les User Stories
 *** `bug.yml` => Exemple de template pour les issues de bug report
 
@@ -96,7 +95,6 @@ TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-
 [[liensUtiles]]
 === Liens utiles
 
-- Le lien vers le projet PHP : http://symfony.iut-blagnac.fr/~R2024SAE3005/WEB/PHP/index.php
 - Le https://webetud.iut-blagnac.fr/course/view.php?id=841[cours Moodle] sur la SAE
 - Le dépôt https://github.com/IUT-Blagnac/sae3-01-template[template] qui sert de base à tous les dépôts étudiants.
 - Le lien https://classroom.github.com/a/OUF7gxEa[classroom] si besoin.
@@ -113,6 +111,7 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 | Sprint 3 | | |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/2[User Story 3]
 | Sprint 4 | | |
 | Sprint 5 | | |
+| Sprint 6 | | |
 |===
 
 
@@ -140,4 +139,48 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0
+- Version courante : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/releases
+- Changelog : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Changelog.md
+
+== Planning des Sprints
+
+|===
+| Sprint   | Lundi AM | Lundi PM | Mardi AM | Mardi PM | Mercredi AM | Mercredi PM | Jeudi AM  | Jeudi PM  | Vendredi AM | Vendredi PM |
+| Sprint 1 | Télétravail |          |          | Télétravail |             |             |           |           | Télétravail |        Télétravail     |
+| Sprint 2 |          |          | Télétravail | Télétravail | Télétravail possible | Télétravail | Télétravail |           | |       Télétravail      |
+| Sprint 3 | Télétravail | Télétravail |          |          | Télétravail |             | Télétravail | Télétravail |  |             |
+| Sprint 4 |          | Télétravail |          |          | Télétravail |             |           |           | Télétravail |             |
+| Sprint 5 | Télétravail |          |          | Télétravail |             |             |           | Télétravail | |             |
+| Sprint 6 |          | Télétravail | Télétravail |          |             | Télétravail | Télétravail |           | Télétravail | Télétravail  |
+|===
+
+==== Cycle de vie de la version
+
+Chaque nouvelle version de votre application doit être :
+- Nommée version X.Y.Z
+- Taggée en version X.Y.Z où X = majeure, Y = mineure, Z = patch
+- Décrite dans un `Changelog.md` incluant l’historique des versions.
+
+==== Bonnes pratiques
+
+- Lancement continu des tests unitaires avec https://github.com/actions[GitHub Actions]
+- Tests fonctionnels réguliers de votre application
+- Versionner vos versions dans le fichier `Changelog.md` avec la norme Semver : https://semver.org/lang/fr/
+
+==== Liens utiles
+
+- https://github.com/actions[GitHub Actions]
+- https://semver.org/lang/fr/
+- https://github.com/greenkeeperio/greenkeeper[Greenkeeper]
+
+=== Dépôt et Version
+
+Chaque groupe doit pousser régulièrement ses avancées.
+
+- Lors de la **création du projet**, commencez par créer une branche pour votre fonctionnalité.
+- Poussez chaque nouvelle version sur votre dépôt.
+
+=== Bonus
+
+- L'équipe à réaliser un test complet.
+- Ajouter l'intégration continue via Github Actions.
