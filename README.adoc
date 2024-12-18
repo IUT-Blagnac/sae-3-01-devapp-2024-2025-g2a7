@@ -132,6 +132,10 @@ ODJ : manque toujours qui est resp de chaque rubrique et quel temps on y consacr
 note : 1,95/3
 note appel offre : 12,65/20
 
+=== Retour communication semaine 50 par EP
+ODJ et CR: cf remarques semaine 49 !!! Merci d'en prendre compte !
+note : 2,06/3
+
 == Gestion de projet & Qualité
 
 Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
