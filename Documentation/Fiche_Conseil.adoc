@@ -1,0 +1,17 @@
+= Fiche Conseil
+:toc-title: Sommaire
+:toc: macro
+
+*Par :* _Ducry Pierre-Louis, Da Chao Romain, Razafinirina Mialisoa, Pellegatta Matteo_ +
+*Équipe :* 2A7
+
+---
+toc::[]
+---
+== I. La liste des mentions légales
+
+
+== II. Une description détaillée du processus de vente en ligne
+
+
+== III.  Mesures applicables et leurs modalités de mise en œuvre concernant la protection des données
