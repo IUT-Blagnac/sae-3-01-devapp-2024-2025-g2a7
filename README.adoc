@@ -114,6 +114,7 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 | Sprint 6 | | |
 |===
 
+Droit : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Fiche_Conseil.adoc[Fiche de conseils juridiques et de sécurité]
 
 |===
 | Semaine | ODJ | Bilan 
