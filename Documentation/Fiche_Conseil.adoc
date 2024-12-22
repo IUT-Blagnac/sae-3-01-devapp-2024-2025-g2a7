@@ -27,8 +27,7 @@ Nom du directeur de la publication ou du codirecteur de la publication ou du res
 * Son numéro de téléphone
 
 ==== 4. Politique de gestion des cookies (l’utilisation de cookies)
-Depuis le 31 mars 2021, la loi RGPD prévoit la mention de l’utilisation de cookies (des traceurs informatiques qui permettent d’analyser le comportement d’un visiteur). Les internautes sont donc soumis à un consentement, ayant pour objectif de personnaliser les données qu’ils autorisent à tracer. 
-
+Les internautes doivent être soumis à un consentement, ayant pour objectif de personnaliser les données qu’ils autorisent à tracer.  
 Le site doit donc : 
 
 * expliquer l’utilisation des cookies
@@ -41,7 +40,7 @@ Le site doit donc :
 * Caractère obligatoire ou facultatif des réponses de l’internaute et les conséquences s’il décide de ne pas y répondre
 * Destinataire des données 
 * Donner au visiteur  le droit d’opposition, d’interrogation, d’accès et de rectification
-* Si besoin, préciser les transferts de données à caractère personnel à destination d’un pays hors Union européenne
+* Préciser les transferts de données à caractère personnel à destination d’un pays hors Union européenne
 * Autorisation légale de leur traitement
 * Faire mention de la possibilité de porter plainte auprès de la CNIL
 
@@ -49,6 +48,8 @@ Le site doit donc :
 
 === Mentions actuellement manquantes sur le site 
 * Informations sur l'hébergeur.
+* Coordonnées du DPD 
+* Les données d’identification du responsable éditorial
 * Politique de confidentialité claire et explicite.
 
 == II. Une description détaillée du processus de vente en ligne
