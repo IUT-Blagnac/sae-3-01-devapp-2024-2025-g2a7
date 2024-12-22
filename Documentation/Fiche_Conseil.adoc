@@ -9,6 +9,7 @@
 toc::[]
 ---
 == I. La liste des mentions légales
+=== Mentions légales 
 ==== 1. Les données d’identification du propriétaire du site :
 * Dénomination ou raison sociale
 * Adresse du siège social
@@ -46,6 +47,9 @@ Le site doit donc :
 
 6. Conditions générales de vente (CGV) pour les transactions commerciales.
 
+=== Mentions actuellement manquantes sur le site 
+* Informations sur l'hébergeur.
+* Politique de confidentialité claire et explicite.
 
 == II. Une description détaillée du processus de vente en ligne
 
