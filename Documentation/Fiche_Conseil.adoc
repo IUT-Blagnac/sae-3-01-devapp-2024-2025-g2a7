@@ -14,4 +14,7 @@ toc::[]
 == II. Une description détaillée du processus de vente en ligne
 
 
+image::images/BPMN-SiteWeb.png[processus de commande]
+
+
 == III.  Mesures applicables et leurs modalités de mise en œuvre concernant la protection des données
