@@ -45,7 +45,7 @@ Le site doit donc :
 * Autorisation légale de leur traitement
 * Faire mention de la possibilité de porter plainte auprès de la CNIL
 
-6. Conditions générales de vente (CGV) pour les transactions commerciales.
+==== 6. Conditions générales de vente (CGV) pour les transactions commerciales.
 
 === Mentions actuellement manquantes sur le site 
 * Informations sur l'hébergeur.
@@ -58,11 +58,48 @@ image::images/BPMN-SiteWeb.png[processus de commande]
 
 
 == III. Protection des Données - Mesures et Modalités
+[cols="3*"]
+|===
+| Mesure | Modalités | Priorité
+
+| Consentement explicite des utilisateurs pour le traitement des données personnelles
+| Recueil lors de la création de compte via formulaire
+| Must
+
+| Droit d'accès, de rectification et de suppression des données
+| Formulaire de demande dans l'espace client
+| Must
+
+| Politique de confidentialité claire
+| Ajout d'une section dédiée dans le pied de page avec accès rapide 
+| Should 
+
+| Consentement des cookies 
+| Bandeau de gestion des cookies avec options d’acceptation/refus explicites
+| Must
+
+| Définition d'une durée de conservation des données
+| Suppression automatique des données après 3 ans d'inactivité
+| Should
+|===
 
 == IV. Sécurité des Données - Mesures et Modalités
+[cols="3*"]
+|===
+| Mesure | Modalités | Priorité
+
+| Stockage sécurisé
+| Base de données protégée avec un mot de passe fort
+| Must
+
+| Hachage des mots de passe
+| Utilisation d’algorithmes sécurisés
+| Must
+|===
 
 == V. La liste des US à ajouter au dernier sprint pour tenir compte des points 3 et 4 les plus importants
-* Ajouter une case à cocher pour le consentement explicite lors de l'inscription.
-* Ajouter une page de politique de confidentialité détaillée.
-* Ajouter un bandeau d'acceptation des cookies conforme au RGPD.
+* En tant qu'utilisateur, je veux être informé clairement sur la collecte et l’utilisation de mes données personnelles.
 
+* En tant qu’administrateur, je veux pouvoir gérer les demandes d’accès et de suppression des données rapidement.
+
+* En tant qu’utilisateur, je veux avoir un contrôle total sur mes préférences de cookies.
