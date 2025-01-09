@@ -121,7 +121,7 @@ Droit : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/maste
 | 49 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/ODJ_02-12-24.pdf[ODJ-S49]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/CR_02_12-24.pdf[CR-S49]
 | 50 |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2050/ODJ_09-12-24.pdf[ODJ-S50]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2050/CR_11-12-24.pdf[CR-S50]
 | 51 |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2051/ODJ_16-12-24.pdf[ODJ-S51]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2051/CR%20S50[CR-S51]
-| 02 |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/8da61e1e0fc80e627eabce25368a56659025074a/R%C3%A9unions/Semaine%202/ODJ_07-01-25.pdf[ODJ-S02]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/8da61e1e0fc80e627eabce25368a56659025074a/R%C3%A9unions/Semaine%202/CR_07-01-25.pdf[CR-S02]
+| 02 |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/8da61e1e0fc80e627eabce25368a56659025074a/R%C3%A9unions/Semaine%202/ODJ_07-01-25.pdf[ODJ-S02]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/tree/4f1f1b17c5b57de2c1a4ce89f4d6a7ea564765e9/R%C3%A9unions/Semaine%202/CR_07_-01-25.pdf[CR-S02]
 | 03 |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%203/ODJ%20POST%20MORTEM%20SAE.pdf[ODJ-03 PostMortem] |
 |===
 
