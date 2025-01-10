@@ -24,26 +24,24 @@ Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse
 
 Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse suivante : http://193.54.227.164/~R2024SAE3003/index.php
 
-== Accueil
+== Présentation du site e-commerce 
 
-=== En-tête du site 
+=== Accueil
+
+==== En-tête du site 
 
 Lorsque vous êtes redirigé vers notre site vous arrivez sur la page d'accueil. Vous pouvez y accéder à tout moment en cliquant sur le logo de notre site en haut à gauche de la page.
 
 image::images/accueil.png[accueil]
 
-=== Pied de page du site
+==== Pied de page du site
 
-Le pied de page du site contient des informations sur notre société, les mentions légales, aide ainsi que des liens vers nos réseaux sociaux. (Servant notamment à nous contacter)
-
+Le pied de page du site contient des informations sur notre société, les mentions légales, contacts ainsi que des liens vers nos réseaux sociaux. 
 image::images/footer.png[piedDePage]
 
-== Connexion et création d'un compte
+=== Connexion et création d'un compte
 Pour se connecter, il vous suffit de cliquer sur l'icône en forme de personne située en haut à droite à cotê de l'icône du panier.
-Puis cliquer sur le bouton "Se connecter"
-image::images/seConnecter.jpg[se connecter]
-
-Pour se connecter, vous devez saisier votre mail et votre mot de passe. En cas d'echec de connexion, des messages spécifiques s'afficheront.
+Puis vous devez saisier votre mail et votre mot de passe. En cas d'echec de connexion, des messages spécifiques s'afficheront.
 Si vous avez pas encore de compte, en bas du formulaire de connexion, vous avez un lien qui vous redirige vers le formulaire d'inscription. 
 
 image::images/login.png[formulaire de connexion]
@@ -63,26 +61,28 @@ Vous avez également une option "Se souvenir de moi" qui vous permettra de reste
 
 image::images/souvenirMoi.jpg[se souvenir de moi]
 
-== Recherche de produit 
+=== Deconnexion
+
+=== Recherche de produit 
 
 Pour rechercher un produit, il vous suffit de cliquer sur la barre de recherche au milieu de la page et de saisir le nom du produit que vous souhaitez trouver. 
 
 image::images/rechercheProduit.png[rechercheProduit]
 
-== Consultation de tous les produits 
+=== Consultation de tous les produits 
 Pour consulter tous les produits en vente, il vous suffit de cliquer sur le bouton Catalogue à côté du logo de l'entreprise.
 Cela vous redirigera sur une nouvelle page dans laquelle vous pourrez observer les divers produits disponibles.
 image::images/Catalogue.png[Catalogue]
 
-== Trier les produits
+=== Trier les produits
 
-== Consultation du panier
+=== Consultation du panier
 
 Pour accéder à votre panier, cliquez simplement sur l'icône en forme de panier située dans le coin supérieur droit de la page.
 Dans votre panier, vous pourriez ajouter un produit, modifier la quantité des produit et supprimer un produit.
 image::images/panier.png[panier]
 
-== Consultation des détails d'un produit 
+=== Consultation des détails d'un produit 
 
 Pour afficher les détails d’un produit, cliquez simplement sur le bouton "Détails" situé sous l’image de chaque produit. 
 
@@ -92,8 +92,28 @@ Cela vous redirigera vers une nouvelle page où vous pourrez consulter tous les 
 
 image::images/detailsProduits.png[details produit]
 
-== Ajout d'un avis
+=== Ajout d'un avis
+=== Consultation et modification les informations personnelles
+=== Visualisation des dernières consulations 
+=== Consultation des commandes 
+=== Réalisation d'une commande
 
+== Présentation des fonctionnalités pour les administrateurs 
+=== 1. Gestion de produit 
+==== Ajouter un produit 
+==== Modifier un produit 
+==== Supprimer un produit 
+
+=== 2. Gestion des utitlisateurs 
+==== Ajouter un utilisateur  
+==== Modifier un utilisateur
+==== Supprimer un utilisateur
+
+== Diagrammes de collaboration pour faciliter la communication lors de la formation des futurs administrateurs du site 
+
+=== 1. Diagramme pour le processus de création d’un produit
+
+=== 2. Diagramme pour le suivi de la commande complète 
 
 
 
