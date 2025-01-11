@@ -113,7 +113,11 @@ image::images/detailsProduits.png[details produit]
 
 === 1. Diagramme pour le processus de création d’un produit
 
+
+image::../images/BPMN-AjoutProd.png[Processus d'ajout de produit]
+
 === 2. Diagramme pour le suivi de la commande complète 
 
+image::../images/BPMN-SuiviCommande.png[Processus de suivi de commande]
 
 
