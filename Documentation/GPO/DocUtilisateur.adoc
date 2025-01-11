@@ -32,65 +32,91 @@ Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse
 
 Lorsque vous êtes redirigé vers notre site vous arrivez sur la page d'accueil. Vous pouvez y accéder à tout moment en cliquant sur le logo de notre site en haut à gauche de la page.
 
-image::images/accueil.png[accueil]
+image::../images/entête_PgAcceuil.png[accueil]
 
 ==== Pied de page du site
 
 Le pied de page du site contient des informations sur notre société, les mentions légales, contacts ainsi que des liens vers nos réseaux sociaux. 
-image::images/footer.png[piedDePage]
+
+image::../images/piedPage.png[piedDePage]
 
 === Connexion et création d'un compte
-Pour se connecter, il vous suffit de cliquer sur l'icône en forme de personne située en haut à droite à cotê de l'icône du panier.
+Pour se connecter, il vous suffit de cliquer sur l'icône de connexion située en haut à droite à cotê de l'icône du panier.
+
+image::../images/icone_connexion.png[formulaire de connexion]
+
 Puis vous devez saisier votre mail et votre mot de passe. En cas d'echec de connexion, des messages spécifiques s'afficheront.
 Si vous avez pas encore de compte, en bas du formulaire de connexion, vous avez un lien qui vous redirige vers le formulaire d'inscription. 
 
-image::images/login.png[formulaire de connexion]
-image::images/signUp.png[creationCompte]
+image::../images/formulaire_connexion.png[formulaire de connexion, width=300]
 
-Suite à la réaction d'un compte,vous serez alors redirigé vers la page de connexion. 
+image::../images/formulaire_inscription.png[creation de compte, width=300]
 
-Vous arriverez alors sur la page de création de compte. Il vous suffit de remplir les champs avec vos informations personnelles.
+Suite à la créaction d'un compte,vous serez alors redirigé vers la page de connexion. 
 
-Et de cliquer sur le bouton "valider".
-
-image::images/valider.jpg[valider]
+Vous arriverez alors sur la page de création de compte. Il vous suffit de remplir les champs avec vos informations personnelles et de cliquer sur le bouton "valider".
 
 Un compte sera alors crée avec succès. Vous pouvez maintenant vous connecter avec vos identifiants. 
 
 Vous avez également une option "Se souvenir de moi" qui vous permettra de rester connecté sur notre site. Vous avez simplement à cocher la case correspondante. 
 
-image::images/souvenirMoi.jpg[se souvenir de moi]
+image::../images/se_souvenir_de_moi.png[se souvenir de moi, width=300]
 
 === Deconnexion
+Pour se déconnecter, il faut cliquer sur le bouton de deconnexion en haut à droite de l'icône de connexion. 
+
+image::../images/deconnexion.png[deconnexion]
 
 === Recherche de produit 
 
 Pour rechercher un produit, il vous suffit de cliquer sur la barre de recherche au milieu de la page et de saisir le nom du produit que vous souhaitez trouver. 
 
-image::images/rechercheProduit.png[rechercheProduit]
+image::../images/barre_recherche.png[rechercher un produit]
 
 === Consultation de tous les produits 
 Pour consulter tous les produits en vente, il vous suffit de cliquer sur le bouton Catalogue à côté du logo de l'entreprise.
 Cela vous redirigera sur une nouvelle page dans laquelle vous pourrez observer les divers produits disponibles.
-image::images/Catalogue.png[Catalogue]
+
+image::../images/bouton_catalogue.png[pour accéder aux produits]
+
+image::../images/affichage_produit.png[Catalogue]
 
 === Trier les produits
+L'utilisateur peut trier le produit par catégorie, nom de l'article, fourchette de prix, poids, dimensions, nombre de pièces, tranche d'âge, couluer et par prix (décroissant ou croissant). 
+Pour afficher que les nouveaux produits, l'utilisateur doit cocher sur "Nouveauté". 
+
+image::../images/trier.png[trier,  width= 800]
 
 === Consultation du panier
 
 Pour accéder à votre panier, cliquez simplement sur l'icône en forme de panier située dans le coin supérieur droit de la page.
-Dans votre panier, vous pourriez ajouter un produit, modifier la quantité des produit et supprimer un produit.
-image::images/panier.png[panier]
+
+image::../images/icone_panier.png[icône panier]
+
+Dans votre panier, vous pourriez modifier la quantité des produits, supprimer des produits et choisir le mode de livraison. L'option d'emballage cadeau est aussi disponible pour l'utilisateur. 
+
+image::../images/affichage_panier.png[panier]
+
+=== Passer une commande 
+Pour passer une commande, l'utilisateur doit se rediriger vers son panier et tout en bas de la page, il doit appuyer sur le bouton "Passer la commande"
+
+image::../images/passer_commande.png[bouton pour passer la commande]
+
+Puis, il suffit de remplir tous les informations et cliquer sur le bouton "confirmer la commande". 
+
+image::../images/commande.png[Page commande]
+
+Si la commande a été bien effetuer, un message de confimartion est afficher. 
 
 === Consultation des détails d'un produit 
 
 Pour afficher les détails d’un produit, cliquez simplement sur le bouton "Détails" situé sous l’image de chaque produit. 
 
-image::images/Detail.png[bouton détails d'un produit]
+image::../images/bouton_détail.png[bouton détail d'un produit, width= 300] 
 
 Cela vous redirigera vers une nouvelle page où vous pourrez consulter tous les détails du produit sélectionné, tels que : le prix, la description, les couleurs disponibles, le poids, les dimensions, la tranche d’âge recommandée et le nombre d’unités en stock.
 
-image::images/detailsProduits.png[details produit]
+image::../images/detail_produit.png[détails d'un produit, width= 500]
 
 === Ajout d'un avis
 === Consultation et modification les informations personnelles
