@@ -106,7 +106,7 @@ Dans votre panier, vous pourriez modifier la quantité des produits, supprimer d
 
 image::../images/affichage_panier.png[title = "panier"]
 
-=== Passer une commande 
+=== Réalisation d'une commande 
 Pour passer une commande, accédez à votre panier et cliquez sur le bouton "Passer la commande" situé en bas de la page.
 
 image::../images/passer_commabde.png[title = "bouton pour passer la commande"]
@@ -133,7 +133,7 @@ image::../images/detail_produit.png[title = "détails d'un produit", width= 500]
 === Consultation et modification les informations personnelles
 === Visualisation des dernières consulations 
 === Consultation des commandes 
-=== Réalisation d'une commande
+
 
 == Présentation des fonctionnalités pour les administrateurs 
 === 1. Gestion de produit 
