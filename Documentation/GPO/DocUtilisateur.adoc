@@ -109,15 +109,15 @@ image::../images/affichage_panier.png[title = "panier"]
 === Passer une commande 
 Pour passer une commande, accédez à votre panier et cliquez sur le bouton "Passer la commande" situé en bas de la page.
 
-image::../images/passer_commande.png[title = "bouton pour passer la commande"]
+image::../images/passer_commabde.png[title = "bouton pour passer la commande"]
 
 Remplissez ensuite les informations nécessaires et cliquez sur "Confirmer la commande".
 
-image::../images/commande.png[title = "Page commande"]
+image::../images/commande.png[title = "Page commande", width= 700]
 
 Une fois la commande validée, un message de confirmation s’affichera.
 
-image::../images/commande_passé.png[title = "commande réussie"]
+image::../images/commande_reussie.png[title = "commande réussie"]
 
 === Consultation des détails d'un produit 
 
