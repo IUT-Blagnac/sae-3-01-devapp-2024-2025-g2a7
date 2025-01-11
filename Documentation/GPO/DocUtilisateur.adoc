@@ -30,93 +30,104 @@ Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse
 
 ==== En-tête du site 
 
-Lorsque vous êtes redirigé vers notre site vous arrivez sur la page d'accueil. Vous pouvez y accéder à tout moment en cliquant sur le logo de notre site en haut à gauche de la page.
+À votre arrivée sur notre site, vous serez redirigé vers la page d'accueil. Vous pouvez y revenir à tout moment en cliquant sur le logo situé en haut à gauche.
 
-image::../images/entête_PgAcceuil.png[accueil]
+image::../images/entête_PgAcceuil.png[title = "accueil"]
 
 ==== Pied de page du site
 
-Le pied de page du site contient des informations sur notre société, les mentions légales, contacts ainsi que des liens vers nos réseaux sociaux. 
+Le pied de page contient des informations essentielles telles que :
 
-image::../images/piedPage.png[piedDePage]
+* Les mentions légales
+* Les coordonnées de contact
+* Des liens vers nos réseaux sociaux
+
+image::../images/piedPage.png[title = "footer"]
 
 === Connexion et création d'un compte
-Pour se connecter, il vous suffit de cliquer sur l'icône de connexion située en haut à droite à cotê de l'icône du panier.
+Pour vous connecter, cliquez sur l’icône de connexion située en haut à droite, à côté de l’icône du panier.
 
-image::../images/icone_connexion.png[formulaire de connexion]
+image::../images/icone_connexion.png[title = "Pour se connecter"]
 
-Puis vous devez saisier votre mail et votre mot de passe. En cas d'echec de connexion, des messages spécifiques s'afficheront.
-Si vous avez pas encore de compte, en bas du formulaire de connexion, vous avez un lien qui vous redirige vers le formulaire d'inscription. 
+Entrez ensuite votre email et votre mot de passe, puis appuyer sur "se connecter". En cas d'échec, un message d'erreur s'affichera.
 
-image::../images/formulaire_connexion.png[formulaire de connexion, width=300]
+image::../images/formulaire_connexion.png[title = "formulaire de connexion", width=300]
 
-image::../images/formulaire_inscription.png[creation de compte, width=300]
+Si vous ne possédez pas encore de compte, cliquez sur le lien d'inscription en bas du formulaire de connexion.
 
-Suite à la créaction d'un compte,vous serez alors redirigé vers la page de connexion. 
+image::../images/formulaire_inscription.png[title = "creation de compte", width=300] 
 
-Vous arriverez alors sur la page de création de compte. Il vous suffit de remplir les champs avec vos informations personnelles et de cliquer sur le bouton "valider".
+Après avoir rempli le formulaire avec vos informations personnelles, cliquez sur "s'incrire". Une fois votre compte créé avec succès, vous serez redirigé vers la page de connexion.
 
-Un compte sera alors crée avec succès. Vous pouvez maintenant vous connecter avec vos identifiants. 
+Option supplémentaire : activez "Se souvenir de moi" pour rester connecté en cochant la case correspondante. 
 
-Vous avez également une option "Se souvenir de moi" qui vous permettra de rester connecté sur notre site. Vous avez simplement à cocher la case correspondante. 
-
-image::../images/se_souvenir_de_moi.png[se souvenir de moi, width=300]
+image::../images/se_souvenir_de_moi.png[title = "se souvenir de moi", width=300]
 
 === Deconnexion
-Pour se déconnecter, il faut cliquer sur le bouton de deconnexion en haut à droite de l'icône de connexion. 
+Pour vous déconnecter, cliquez sur l'icône de déconnexion en haut à droite, à côté de l’icône de connexion.
 
-image::../images/deconnexion.png[deconnexion]
+image::../images/deconnexion.png[title = "deconnexion"]
 
 === Recherche de produit 
 
-Pour rechercher un produit, il vous suffit de cliquer sur la barre de recherche au milieu de la page et de saisir le nom du produit que vous souhaitez trouver. 
+Pour rechercher un produit, il vous suffit de cliquer sur la barre de recherche au milieu l'entête et de saisir le nom du produit que vous souhaitez trouver. 
 
-image::../images/barre_recherche.png[rechercher un produit]
+image::../images/barre_recherche.png[title = "rechercher un produit"]
 
 === Consultation de tous les produits 
-Pour consulter tous les produits en vente, il vous suffit de cliquer sur le bouton Catalogue à côté du logo de l'entreprise.
+Pour afficher tous les produits disponibles, cliquez sur le bouton Catalogue situé à côté du logo de l’entreprise.
 Cela vous redirigera sur une nouvelle page dans laquelle vous pourrez observer les divers produits disponibles.
 
-image::../images/bouton_catalogue.png[pour accéder aux produits]
+image::../images/bouton_catalogue.png[title = "pour accéder aux produits"]
 
-image::../images/affichage_produit.png[Catalogue]
+image::../images/affichage_produit.png[title = "Catalogue"]
 
 === Trier les produits
-L'utilisateur peut trier le produit par catégorie, nom de l'article, fourchette de prix, poids, dimensions, nombre de pièces, tranche d'âge, couluer et par prix (décroissant ou croissant). 
+Les produits peuvent être triés selon plusieurs critères :
+
+* Catégorie
+* Nom de l’article
+* Fourchette de prix
+* Poids, dimensions
+* Tranche d’âge, couleur
+* Prix (croissant ou décroissant)
+
 Pour afficher que les nouveaux produits, l'utilisateur doit cocher sur "Nouveauté". 
 
-image::../images/trier.png[trier,  width= 800]
+image::../images/trier.png[title = "trier",  width= 800]
 
 === Consultation du panier
 
-Pour accéder à votre panier, cliquez simplement sur l'icône en forme de panier située dans le coin supérieur droit de la page.
+Pour accéder à votre panier, cliquez sur l'icône panier en haut à droite de la page.
 
-image::../images/icone_panier.png[icône panier]
+image::../images/icone_panier.png[title = "icône panier"]
 
 Dans votre panier, vous pourriez modifier la quantité des produits, supprimer des produits et choisir le mode de livraison. L'option d'emballage cadeau est aussi disponible pour l'utilisateur. 
 
-image::../images/affichage_panier.png[panier]
+image::../images/affichage_panier.png[title = "panier"]
 
 === Passer une commande 
-Pour passer une commande, l'utilisateur doit se rediriger vers son panier et tout en bas de la page, il doit appuyer sur le bouton "Passer la commande"
+Pour passer une commande, accédez à votre panier et cliquez sur le bouton "Passer la commande" situé en bas de la page.
 
-image::../images/passer_commande.png[bouton pour passer la commande]
+image::../images/passer_commande.png[title = "bouton pour passer la commande"]
 
-Puis, il suffit de remplir tous les informations et cliquer sur le bouton "confirmer la commande". 
+Remplissez ensuite les informations nécessaires et cliquez sur "Confirmer la commande".
 
-image::../images/commande.png[Page commande]
+image::../images/commande.png[title = "Page commande"]
 
-Si la commande a été bien effetuer, un message de confimartion est afficher. 
+Une fois la commande validée, un message de confirmation s’affichera.
+
+image::../images/commande_passé.png[title = "commande réussie"]
 
 === Consultation des détails d'un produit 
 
-Pour afficher les détails d’un produit, cliquez simplement sur le bouton "Détails" situé sous l’image de chaque produit. 
+Pour consulter les détails d’un produit, cliquez sur le bouton "Détails" sous l’image de l’article souhaité.
 
-image::../images/bouton_détail.png[bouton détail d'un produit, width= 300] 
+image::../images/bouton_détail.png[title = "bouton détail d'un produit", width= 300] 
 
 Cela vous redirigera vers une nouvelle page où vous pourrez consulter tous les détails du produit sélectionné, tels que : le prix, la description, les couleurs disponibles, le poids, les dimensions, la tranche d’âge recommandée et le nombre d’unités en stock.
 
-image::../images/detail_produit.png[détails d'un produit, width= 500]
+image::../images/detail_produit.png[title = "détails d'un produit", width= 500]
 
 === Ajout d'un avis
 === Consultation et modification les informations personnelles
@@ -140,10 +151,10 @@ image::../images/detail_produit.png[détails d'un produit, width= 500]
 === 1. Diagramme pour le processus de création d’un produit
 
 
-image::../images/BPMN-AjoutProd.png[Processus d'ajout de produit]
+image::../images/BPMN-AjoutProd.png[title = "Processus d'ajout de produit"]
 
 === 2. Diagramme pour le suivi de la commande complète 
 
-image::../images/BPMN-SuiviCommande.png[Processus de suivi de commande]
+image::../images/BPMN-SuiviCommande.png[title = "Processus de suivi de commande"]
 
 
