@@ -136,10 +136,46 @@ image::../images/detail_produit.png[title = "détails d'un produit", width= 500]
 
 
 == Présentation des fonctionnalités pour les administrateurs 
+
+Une fois connecté, sur un compte administrateur, nous pouvons accéder à l'espace admin en allant sur le bouton en haut à droite de votre page actuelle.
+
+image::../images/boutonAdmin.png[title = "bouton administrateur", width= 600] 
+
 === 1. Gestion de produit 
+
 ==== Ajouter un produit 
+
+Pour ajouter un produit, il suffit de cliquer sur le bouton vert "ajouter un produit" au dessus du tableau des produits.
+
+image::../images/ajouter_produit_bouton.png[title = "bouton ajouter produit", width= 800] 
+
+Une fois cliqué, le bouton redirigera sur la page de création de produit avec plusieurs champs à compléter. Une fois la complétion terminée, il ne manquera plus qu'à cliquer sur le bouton bleu "Ajouter" pour confirmer l'ajout du produit.
+
+image::../images/ajouter_produit.png[title = "ajouter produit", width= 600] 
+
+
 ==== Modifier un produit 
+
+Pour ajouter un produit, il suffit de cliquer sur le bouton jaune "modifier" sur la ligne du produit qu'on souhaite changer.
+
+image::../images/modifier_produit_bouton.png[title = "bouton modifier produit", width= 800] 
+
+Une fois cliqué, le bouton redirigera sur la page de modification de produit avec plusieurs champs à éditer. Une fois la complétion terminée, il ne manquera plus qu'à cliquer sur le bouton bleu "Mettre à jour" pour confirmer les modifications du produit.
+
+image::../images/modifier_produit.png[title = "modifier produit", width= 600] 
+
+
 ==== Supprimer un produit 
+
+Pour supprimer un produit, il suffit de cliquer sur le bouton rouge "supprimer" sur la ligne du produit qu'on souhaite changer.
+
+image::../images/supprimer_produit_bouton.png[title = "supprimer produit", width= 800] 
+
+Une fois cliqué, un formulaire de confirmation apparaîtra pour nous demander si nous sommes sûr de vouloir supprimer le produit. Si oui, alors il suffit de cliquer "OK". Sinon, il faudra cliquer sur "Annuler", ce qui annulera la suppression souhaitée.
+
+image::../images/supprimer_produit_confirmation.png[title = "supprimer produit confirmation", width= 600] 
+
+
 
 === 2. Gestion des utitlisateurs 
 ==== Ajouter un utilisateur  
