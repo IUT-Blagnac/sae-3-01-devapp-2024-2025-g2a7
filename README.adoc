@@ -125,11 +125,11 @@ https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/4[Tâche
 | Sprint #5 |
 https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/5[Tâches Sprint 5]
 | Sprint #6 |
-https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/5[Tâches Sprint 6]
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/6[Tâches Sprint 6]
 | Sprint #7 |
-https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/5[Tâches Sprint 7]
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/7[Tâches Sprint 7]
 | Sprint #8 |
-https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/5[Tâches Sprint 8]
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/milestone/8[Tâches Sprint 8]
 
 
 |===
