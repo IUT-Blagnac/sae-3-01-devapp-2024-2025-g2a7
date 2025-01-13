@@ -1,18 +1,113 @@
-
 = Documentation Technique
 :toc-title: Sommaire
 :toc: macro
 
-*Par :* _Ducry Pierre-Louis, Da Chao Romain, Razafinirina Mialisoa, Pellegatta Matteo_ +
-*Pour :* _Brickolo_ +
-*Date :* 20/11/2024 +
-*Équipe : 2A7* 
+Par : Ducry Pierre-Louis, Da Chao Romain, Razafinirina Mialisoa, Pellegatta Matteo +
+Pour : Brickolo +
+Date : 20/11/2024 +
+Équipe : 2A7
 
----
 toc::[]
----
 
 == I. Présentation du site E-commerce
-== II. Architecture 
+
+Le site e-commerce de l'entreprise Brickolo permet la mise en relation des clients avec une gamme variée de produits, facilitant les achats en ligne avec des fonctionnalités modernes et intuitives.
+
+=== 1. Public cible
+
+Le site est destiné à une audience générale souhaitant acheter des produits de qualité en ligne tout en bénéficiant d'une navigation sécurisée et fluide.
+
+=== 2. Objectifs principaux
+
+Fournir une plateforme d'achat ergonomique et responsive.
+
+Faciliter la gestion des produits et utilisateurs pour les administrateurs.
+
+Offrir une expérience utilisateur optimisée, incluant des fonctionnalités de tri, de recherche et de personnalisation.
+
+== II. Architecture
+
+=== 1. Infrastructure
+
+Le site est hébergé sur un serveur accessible via deux adresses différentes :
+
+Accès via le réseau de l'IUT : http://192.168.224.139/~R2024SAE3003/index.php
+
+Accès via le réseau externe : http://193.54.227.164/~R2024SAE3003/index.php
+
+=== 2. Stack technologique
+
+Frontend : HTML, CSS, JavaScript
+
+Backend : PHP
+
+Base de données : MySQL
+
+Serveur web : Apache
+
+Outils de développement : Laragon pour l'environnement local
+
+=== 3. Organisation des fichiers
+
+Les fichiers sont structurés en plusieurs répertoires pour une meilleure organisation :
+
+/images : Contient toutes les images utilisées dans le site.
+
+/css : Feuilles de style pour le design.
+
+/js : Scripts JavaScript pour les interactions utilisateur.
+
+/php : Scripts PHP pour le traitement backend.
+
+=== 4. Diagramme de l'architecture
+
+image::../images/architecture_site.png[title="Diagramme de l'architecture"]
+
 == III. Fonctionnalités
+
+=== 1. Fonctionnalités pour les utilisateurs
+
+Navigation intuitive : Retour à l'accueil via le logo, barre de recherche, tri par catégories et prix.
+
+Gestion des comptes : Création, connexion, déconnexion, et gestion des informations personnelles.
+
+Panier : Modification de quantités, suppression d'articles, choix du mode de livraison, et option d'emballage cadeau.
+
+Commandes : Passage et suivi des commandes avec messages de confirmation.
+
+=== 2. Fonctionnalités pour les administrateurs
+
+Gestion des produits : Ajout, modification, et suppression de produits via une interface dédiée.
+
+Gestion des utilisateurs : Ajout, modification, et suppression d'utilisateurs.
+
+=== 3. Diagrammes de collaboration
+
+==== 1. Processus de création d’un produit
+
+image::../images/BPMN-AjoutProd.png[title="Processus d'ajout de produit"]
+
+==== 2. Suivi de commande complet
+
+image::../images/BPMN-SuiviCommande.png[title="Processus de suivi de commande"]
+
+=== 4. Sécurité et performances
+
+Authentification : Gestion des sessions et cookies pour une navigation sécurisée.
+
+Protection des données : Utilisation de htmlentities pour éviter les injections malveillantes.
+
+Optimisation des performances : Compression des images et minification des fichiers CSS et JavaScript.
+
+== IV. Annexes
+
+=== 1. Adresses importantes
+
+Site local : http://192.168.224.139/~R2024SAE3003/index.php
+
+Site distant : http://193.54.227.164/~R2024SAE3003/index.php
+
+=== 2. Liens utiles
+
+Documentation utilisateur : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/GPO/DocUtilisateur.adoc
 
