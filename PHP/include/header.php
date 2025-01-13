@@ -15,16 +15,28 @@ if (isset($_SESSION['nom'])) {
         $role = $result['rôle'];
     }
 }
+
+// Traitement de la recherche
+$searchTerm = '';
+if (isset($_GET['search'])) {
+    $searchTerm = htmlspecialchars($_GET['search']);
+    // Exemple de requête pour rechercher dans une base de données, à adapter à tes besoins
+    // $query = "SELECT * FROM produits WHERE nom LIKE :searchTerm";
+    // $stmt = $conn->prepare($query);
+    // $stmt->execute(['searchTerm' => "%$searchTerm%"]);
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brickolo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -38,15 +50,21 @@ if (isset($_SESSION['nom'])) {
             margin: 0;
             color: white;
         }
-        .nav-link.active {
-    color: white; 
-    text-decoration: none; 
-    font-size: 25px; 
-    font-family: 'Gill Sans', sans-serif; 
-    font-weight: bold; 
-    padding: 5px 10px; 
-    transition: all 0.3s ease; 
-}
+
+        .btn-catalog {
+            background-color: #417ba0;
+            color: white;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-catalog:hover {
+            background-color: #e95321;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(233, 83, 33, 0.5);
+        }
+
     </style>
 </head>
 <body>
@@ -56,7 +74,7 @@ if (isset($_SESSION['nom'])) {
     <a class="navbar-brand" href="index.php">
         <img src="images/LogoBrickoloV2.png" alt="Logo Brickolo" style="height: 70px; border-radius: 15px; padding: 5px;">
     </a>
-    <a class="nav-link active" aria-current="page" href="catalogue.php">Catalogue</a>
+    <a href="catalogue.php" class="btn btn-catalog btn-lg">Catalogue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -67,21 +85,50 @@ if (isset($_SESSION['nom'])) {
   </div>
   <div class="offcanvas-body">
     
-    <form class="d-flex d-lg-none mx-auto mb-3" role="search" onsubmit="event.preventDefault();">
-      <input class="form-control rounded-pill" style="width: 100%;" type="search" placeholder="Rechercher..." aria-label="Search" onkeydown="if(event.key === 'Enter'){ this.form.submit(); }">
+    <form class="d-flex d-lg-none mx-auto mb-3" role="search" action="" method="get">
+      <input class="form-control rounded-pill" style="width: 100%;" type="search" placeholder="Rechercher..." aria-label="Search" name="search" value="<?= $searchTerm ?>" onkeydown="if(event.key === 'Enter'){ this.form.submit(); }">
     </form>
     
-    <form class="d-none d-lg-flex mx-auto" role="search" onsubmit="event.preventDefault();">
-      <input class="form-control rounded-pill" style="width: 500px;" type="search" placeholder="Rechercher..." aria-label="Search" onkeydown="if(event.key === 'Enter'){ this.form.submit(); }">
-    </form>
+<form class="d-none d-lg-flex mx-auto" role="search" action="catalogue.php" method="get">
+  <input 
+    class="form-control rounded-pill" 
+    style="width: 500px;" 
+    type="search" 
+    placeholder="Rechercher..." 
+    aria-label="Search" 
+    name="search" 
+    value="<?= htmlentities($_GET['search'] ?? '') ?>" 
+    onkeydown="if(event.key === 'Enter'){ this.form.submit(); }">
+</form>
+
     
     <div class="d-flex flex-column flex-lg-row gap-3 align-items-center">
-      <a href="panier.php"><img src="images/logoPanier.png" alt="Logo Panier" style="height: 40px;"></a>
-      <a href="compte.php"><img src="images/logoProfil.png" alt="Logo Profil" style="height: 40px;"></a>
-      <a href="logout.php"><img src="images/logoLogout.png" alt="Logo Profil" style="height: 40px;"></a>
-          <?php if ($role === 'Admin'): ?>
-      <a href="administrateur.php"><button class="btn btn-warning">Admin</button></a>
-          <?php endif; ?> 
+      <a href="panier.php">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+        </svg>
+      </a>
+      <?php if (isset($_SESSION['nom'])): ?>
+      <a href="utilisateur.php">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+        </svg>
+      </a>
+      <?php else: ?>
+    <a href="login.php">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+        </svg>
+    </a>
+      <?php endif; ?>
+      <?php if (isset($_SESSION['nom'])): ?>
+        <a href="logout.php">
+          <i class="bi bi-box-arrow-right text-white" style="font-size: 40px;"></i>
+        </a>
+      <?php endif; ?>
+      <?php if ($role === 'Admin'): ?>
+        <a href="administrateur.php"><button class="btn btn-warning">Admin</button></a>
+      <?php endif; ?>
     </div>
   </div>
 </div>

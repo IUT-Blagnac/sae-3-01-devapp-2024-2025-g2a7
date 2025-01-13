@@ -1,10 +1,22 @@
 <?php
 try {
-  $user = 'R2024MYSAE3003'; // Nom d'utilisateur pour se connecter à la base de données
-  $pass = 'PJ99R3ai53Bumw'; // Mot de passe associé à cet utilisateur
-  // Création d'une instance PDO pour se connecter à la base de données MySQL
-  $conn = new PDO('mysql:host=localhost;dbname=R2024MYSAE3003;charset=UTF8', $user, $pass, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $user = 'R2024MYSAE3003';
+    $pass = 'PJ99R3ai53Bumw';
+    
+    // Add PDO options for UTF-8
+    $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4"
+    ];
+    
+    $conn = new PDO(
+        'mysql:host=localhost;dbname=R2024MYSAE3003;charset=utf8mb4',
+        $user,
+        $pass,
+        $options
+    );
+    
 } catch (PDOException $e) {
-  echo "Erreur: " . $e->getMessage() . "<br>"; // Affiche un message d'erreur détaillé
-  die(); // Stoppe l'exécution du script après l'affichage du message d'erreur
+    echo "Erreur: " . $e->getMessage() . "<br>";
+    die();
 }

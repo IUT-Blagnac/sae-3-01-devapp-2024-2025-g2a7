@@ -6,15 +6,44 @@
 }
 
 
-.nav-link.active {
-    color: white; 
-    text-decoration: none; 
-    font-size: 25px; 
-    font-family: 'Gill Sans', sans-serif; 
-    font-weight: bold; 
-    padding: 5px 10px; 
-    transition: all 0.3s ease; 
-}
+.btn-catalog {
+            background-color: #417ba0;
+            color: white;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-catalog:hover {
+            background-color: #e95321;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(233, 83, 33, 0.5);
+        }
+        
+.carousel-control-prev,
+    .carousel-control-next {
+        background-color: #e95321;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.8;
+    }
+
+    .carousel-control-prev {
+        left: 5%;
+    }
+
+    .carousel-control-next {
+        right: 5%;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+        background-color: #d64a1a;
+    }
 
 /* Titres */
 
@@ -38,23 +67,16 @@ h2 {
 
 
 /* cadre des nouveautés */
+.main-content {
+    min-height: 70vh;
+}
+
 .right-frame {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw;
-    height: auto; /* Hauteur automatique */
-    max-height: 90vh; /* Limiter la hauteur si nécessaire */
-    background-color: white;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .right-frame .card-container {
@@ -263,4 +285,115 @@ h2 {
 
 .btn-brickolo-secondary:hover {
     background-color: #357abd;
+}
+
+/* Details produit */
+
+style section
+.rating-container {
+    text-align: center;
+}
+
+.rating-container .fas.fa-star {
+    color: #ffd700;
+}
+
+.rating-container .far.fa-star {
+    color: #ccc;
+}
+
+.review-title {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Espace Admin */
+.admin-header {
+    background-color: #e95321;
+    color: white;
+    border-radius: 8px;
+}
+
+.btn-brickolo {
+    background-color: #e95321;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-brickolo:hover {
+    background-color: #d64a1a;
+}
+
+.btn-brickolo-secondary {
+    background-color: #4a90e2;
+}
+
+.btn-brickolo-secondary:hover {
+    background-color: #357abd;
+}
+
+.admin-links {
+    margin: 20px 0;
+}
+
+.admin-link {
+    display: inline-block;
+    background-color: #e95321;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-link:hover {
+    background-color: #d64a1a;
+}
+
+.message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 8px 8px 0 0;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+/* gestion des produits */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
 }

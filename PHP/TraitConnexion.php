@@ -27,14 +27,15 @@ if (!empty($_POST['Entrer']) && !empty($_POST['login']) && !empty($_POST['PWD'])
     }
 
     // Vérifie si le mot de passe est correct
-    if ($password === $user['mdp']) {
+    if (password_verify($password, $user['mdp'])) {
         // Si les identifiants sont corrects, crée une variable de session
         $_SESSION['Sutilisateur'] = 'oui';
         $_SESSION['nom'] = htmlentities($user['email']);
+        $_SESSION['idUtilisateur'] = $user['idUtilisateur'];
 
         // Si l'utilisateur a coché "Se souvenir de moi", un cookie est créé
         if (isset($_POST['seSouvenirMoi'])) {
-            setcookie("Cutilisateur", $user['email'], time() + 60 * 5);
+            setcookie("Cutilisateur", $user['email'], time() + 60 * 5, "/", "", false, true);
         }
 
         // Redirige vers la page d'accueil
@@ -42,7 +43,7 @@ if (!empty($_POST['Entrer']) && !empty($_POST['login']) && !empty($_POST['PWD'])
         exit();
     } else {
         // Mot de passe incorrect
-        header("Location: login.php?msgErreur=Erreur de connexion ! Login ou mot de passe incorrect ... Recommencez");
+        header("Location: login.php?msgErreur=Erreur de connexion ! Mot de passe incorrect ... Recommencez");
         exit();
     }
 } else {

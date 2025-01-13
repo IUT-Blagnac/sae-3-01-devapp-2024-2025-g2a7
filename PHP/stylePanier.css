@@ -1,0 +1,157 @@
+/* Appliquer le style uniquement au body */
+#page-panier {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#page-panier .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#page-panier h1 {
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Affichage des articles du panier */
+#page-panier .panier-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#page-panier .panier-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+#page-panier .item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#page-panier .item-details {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+#page-panier .item-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#page-panier .item-price,
+#page-panier .item-quantity,
+#page-panier .item-subtotal {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+#page-panier .item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+#page-panier .quantity-actions a {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Section résumé panier */
+#page-panier .panier-summary {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+#page-panier .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#page-panier .btn, body .btn-action {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+#page-panier .btn-action {
+    background-color: #ffc107;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#page-panier .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#page-panier .delete {
+    background-color: #dc3545;
+}
+
+/* Style spécifique pour le bouton désactivé */
+#page-panier .btn-action[disabled], body .btn-action:disabled {
+    background-color: #d3d3d3; /* Gris clair */
+    color: #888;               /* Texte gris foncé */
+    cursor: not-allowed;       /* Curseur "interdit" */
+    pointer-events: none;      /* Désactive toute interaction */
+    opacity: 0.5;              /* Rendre le bouton visuellement désactivé */
+}
+
+#page-panier .btn:hover {
+    background-color: #595e5a;
+}
+
+#page-panier .item-link {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Utilise la couleur par défaut du texte parent */
+}
+
+#page-panier .item-link:hover {
+    text-decoration: underline; /* Facultatif : ajoute un soulignement au survol */
+    color: #333; /* Facultatif : couleur légèrement différente au survol */
+}
+
+
+@media (max-width: 768px) {
+    #page-panier .container {
+        width: 95%;
+    }
+
+    #page-panier .panier-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #page-panier .item-actions {
+        align-items: flex-start;
+    }
+}

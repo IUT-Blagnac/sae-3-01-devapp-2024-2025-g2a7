@@ -8,6 +8,12 @@ session_start();
 // Initialisation des variables
 $error = '';
 
+// Vérifie si un message d'erreur est passé dans l'URL
+if (isset($_GET['msgErreur'])) {
+    $error = htmlspecialchars($_GET['msgErreur']);
+}
+
+
 // Gère la soumission du formulaire d'inscription
 if (!empty($_POST['signUp'])) {
     // Récupère et nettoie les données du formulaire
@@ -106,7 +112,7 @@ if (!empty($_POST['signUp'])) {
         input[type="email"],
         input[type="password"],
         input[type="submit"] {
-            width: 100%;
+            width: 95%;
             padding: 12px;
             margin: 10px 0 20px 0;
             border-radius: 4px;
@@ -161,6 +167,7 @@ if (!empty($_POST['signUp'])) {
         <!-- Lien vers la page de connexion -->
         <p style="text-align: center;">Déjà inscrit ? <a href="login.php">Connectez-vous ici</a>.</p>
     </div>
+    
 </body>
 
 </html>

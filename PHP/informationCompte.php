@@ -1,12 +1,8 @@
 <?php
-
 session_start();
 
 // Inclure le fichier de connexion à la base de données
 require 'include/Connect.inc.php';
-
-// Inclure le fichier de header qui contient l'importation de style.css
-require 'include/header.php';
 
 // Initialiser les variables utilisateur
 $nom = $prenom = $civilite = $email = $telephone = $numAdr = $rue = $codePostal = $ville = $pays = $complement = "";
@@ -14,42 +10,131 @@ $nom = $prenom = $civilite = $email = $telephone = $numAdr = $rue = $codePostal 
 // Récupérer les informations de l'utilisateur connecté
 if (isset($_SESSION['nom'])) {
     $login = $_SESSION['nom'];
-    
+
     // Si le formulaire est soumis, mettre à jour les informations de l'utilisateur
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $nom = $_POST['nom'];
-        $prenom = $_POST['prenom'];
-        $civilite = $_POST['civilite'];
-        $email = $_POST['email'];
-        $telephone = $_POST['telephone'];
-        $numAdr = $_POST['numAdr'];
-        $rue = $_POST['rue'];
-        $codePostal = $_POST['codePostal'];
-        $ville = $_POST['ville'];
-        $pays = $_POST['pays'];
-        $complement = $_POST['complement'];
-        
-        // Requête pour mettre à jour les informations de l'utilisateur
-        $updateQuery = "
-        UPDATE Utilisateur u
-        LEFT JOIN Adresse a ON u.idUtilisateur = a.idUtilisateur
-        SET u.nom = ?, u.prenom = ?, u.Civilite = ?, u.email = ?, u.numTel = ?, 
-            a.numAdr = ?, a.rue = ?, a.codePostal = ?, a.ville = ?, a.pays = ?, a.complement = ?
-        WHERE u.email = ?";
-        $stmt = $conn->prepare($updateQuery);
-        $stmt->execute([$nom, $prenom, $civilite, $email, $telephone, $numAdr, $rue, $codePostal, $ville, $pays, $complement, $login]);
-        
+        // Validation des champs avec des expressions régulières
+        if (!preg_match("/^[a-zA-ZÀ-ÿ '-]+$/", $_POST['nom'])) {
+            $_SESSION['message'] = "Nom invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[a-zA-ZÀ-ÿ '-]+$/", $_POST['prenom'])) {
+            $_SESSION['message'] = "Prénom invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $_SESSION['message'] = "Email invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[0-9]{10}$/", $_POST['telephone'])) {
+            $_SESSION['message'] = "Téléphone invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[0-9]+$/", $_POST['numAdr'])) {
+            $_SESSION['message'] = "Numéro d'adresse invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[a-zA-ZÀ-ÿ0-9 '-]+$/", $_POST['rue'])) {
+            $_SESSION['message'] = "Rue invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[0-9]{5}$/", $_POST['codePostal'])) {
+            $_SESSION['message'] = "Code postal invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[a-zA-ZÀ-ÿ '-]+$/", $_POST['ville'])) {
+            $_SESSION['message'] = "Ville invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[a-zA-ZÀ-ÿ '-]+$/", $_POST['pays'])) {
+            $_SESSION['message'] = "Pays invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+        if (!preg_match("/^[a-zA-ZÀ-ÿ0-9 '-]*$/", $_POST['complement'])) {
+            $_SESSION['message'] = "Complément d'adresse invalide.";
+            $_SESSION['message_type'] = "danger";
+            header('Location: informationCompte.php');
+            exit();
+        }
+
+        $nom = htmlspecialchars($_POST['nom']);
+        $prenom = htmlspecialchars($_POST['prenom']);
+        $civilite = htmlspecialchars($_POST['civilite']);
+        $email = htmlspecialchars($_POST['email']);
+        $telephone = htmlspecialchars($_POST['telephone']);
+        $numAdr = htmlspecialchars($_POST['numAdr']);
+        $rue = htmlspecialchars($_POST['rue']);
+        $codePostal = htmlspecialchars($_POST['codePostal']);
+        $ville = htmlspecialchars($_POST['ville']);
+        $pays = htmlspecialchars($_POST['pays']);
+        $complement = htmlspecialchars($_POST['complement']);
+
+        // Mettre à jour les informations de l'utilisateur
+        $updateUserQuery = "
+        UPDATE Utilisateur
+        SET nom = ?, prenom = ?, Civilite = ?, email = ?, numTel = ?
+        WHERE email = ?";
+        $stmt = $conn->prepare($updateUserQuery);
+        $stmt->execute([$nom, $prenom, $civilite, $email, $telephone, $login]);
+
+        // Récupérer l'idUtilisateur
+        $stmt = $conn->prepare("SELECT idUtilisateur FROM Utilisateur WHERE email = ?");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $idUtilisateur = $user['idUtilisateur'];
+
+        // Vérifier si une adresse existe déjà pour cet utilisateur
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM Adresse WHERE idUtilisateur = ?");
+        $stmt->execute([$idUtilisateur]);
+        $adresseExists = $stmt->fetchColumn();
+
+        if ($adresseExists) {
+            // Mettre à jour l'adresse existante
+            $updateAddressQuery = "
+            UPDATE Adresse
+            SET numAdr = ?, rue = ?, codePostal = ?, ville = ?, pays = ?, complement = ?
+            WHERE idUtilisateur = ?";
+            $stmt = $conn->prepare($updateAddressQuery);
+            $stmt->execute([$numAdr, $rue, $codePostal, $ville, $pays, $complement, $idUtilisateur]);
+        } else {
+            // Insérer une nouvelle adresse
+            $insertAddressQuery = "
+            INSERT INTO Adresse (idUtilisateur, numAdr, rue, codePostal, ville, pays, complement)
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $conn->prepare($insertAddressQuery);
+            $stmt->execute([$idUtilisateur, $numAdr, $rue, $codePostal, $ville, $pays, $complement]);
+        }
+
         // Mettre à jour la session avec le nouvel email
         $_SESSION['nom'] = $email;
 
         // Définir un message de confirmation
         $_SESSION['message'] = "Les modifications ont été enregistrées avec succès.";
-        
+        $_SESSION['message_type'] = "success";
+
         // Rediriger pour éviter la resoumission du formulaire
         header('Location: informationCompte.php');
         exit();
     }
-    
+
     // Requête pour obtenir les informations de l'utilisateur
     $query = "
     SELECT 
@@ -61,20 +146,20 @@ if (isset($_SESSION['nom'])) {
     $stmt = $conn->prepare($query);
     $stmt->execute([$login]);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+
     if ($result) {
         // Récupérer les données
-        $nom = htmlentities($result['nom']);
-        $prenom = htmlentities($result['prenom']);
-        $civilite = htmlentities($result['Civilite']);
-        $email = htmlentities($result['email']);
-        $telephone = htmlentities($result['numTel']);
-        $numAdr = htmlentities($result['numAdr']);
-        $rue = htmlentities($result['rue']);
-        $codePostal = htmlentities($result['codePostal']);
-        $ville = htmlentities($result['ville']);
-        $pays = htmlentities($result['pays']);
-        $complement = htmlentities($result['complement']);
+        $nom = htmlspecialchars($result['nom']);
+        $prenom = htmlspecialchars($result['prenom']);
+        $civilite = htmlspecialchars($result['Civilite']);
+        $email = htmlspecialchars($result['email']);
+        $telephone = htmlspecialchars($result['numTel']);
+        $numAdr = htmlspecialchars($result['numAdr']);
+        $rue = htmlspecialchars($result['rue']);
+        $codePostal = htmlspecialchars($result['codePostal']);
+        $ville = htmlspecialchars($result['ville']);
+        $pays = htmlspecialchars($result['pays']);
+        $complement = htmlspecialchars($result['complement']);
     } else {
         // Si l'utilisateur n'existe pas dans la base, déconnecter
         header('Location: login.php?msgErreur=Utilisateur non trouvé.');
@@ -85,6 +170,9 @@ if (isset($_SESSION['nom'])) {
     header('Location: login.php?msgErreur=Veuillez vous connecter.');
     exit();
 }
+
+// Inclure le fichier de header qui contient l'importation de style.css
+require 'include/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -92,159 +180,89 @@ if (isset($_SESSION['nom'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informations du Compte</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .account-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .account-form .form-group {
-            margin-bottom: 20px;
-        }
-
-        .account-form label {
-            display: block;
-            color: #444;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .account-form input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: border-color 0.3s ease;
-        }
-
-        .account-form input:focus {
-            border-color: #e95321;
-            outline: none;
-        }
-
-        .account-buttons {
-            grid-column: 1 / -1;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-        }
-
-        .btn-brickolo {
-            background-color: #e95321;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-brickolo:hover {
-            background-color: #d64a1a;
-        }
-
-        .btn-brickolo-secondary {
-            background-color: #4a90e2;
-        }
-
-        .btn-brickolo-secondary:hover {
-            background-color: #357abd;
-        }
-
-        .message {
-            color: green;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="frame account-frame">
-    <div class="account-header">
-        <h1>Mon Compte</h1>
-    </div>
+<div class="container mt-5">
+    <h2>Mon Compte</h2>
     
     <?php
     if (isset($_SESSION['message'])) {
-        echo '<div class="message">' . $_SESSION['message'] . '</div>';
+        $alertType = $_SESSION['message_type'] == 'success' ? 'alert-success' : 'alert-danger';
+        echo '<div class="alert ' . $alertType . '">' . htmlspecialchars($_SESSION['message']) . '</div>';
         unset($_SESSION['message']);
+        unset($_SESSION['message_type']);
     }
     ?>
     
-    <form class="account-form" action="informationCompte.php" method="post">
-        <div class="form-group">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" value="<?php echo $nom; ?>">
+    <form class="row g-3" action="informationCompte.php" method="post">
+        <div class="col-md-6">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nom" name="nom" value="<?php echo $nom; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" value="<?php echo $prenom; ?>">
+        <div class="col-md-6">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" value="<?php echo $prenom; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="civilite">Civilité</label>
-            <input type="text" id="civilite" name="civilite" value="<?php echo $civilite; ?>">
+        <div class="col-md-6">
+            <label for="civilite" class="form-label">Civilité</label>
+            <select class="form-select" id="civilite" name="civilite" required>
+                <option value="H" <?php echo $civilite == 'H' ? 'selected' : ''; ?>>Homme</option>
+                <option value="F" <?php echo $civilite == 'F' ? 'selected' : ''; ?>>Femme</option>
+                <option value="A" <?php echo $civilite == 'A' ? 'selected' : ''; ?>>Autre</option>
+            </select>
+        </div>
+                
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="<?php echo $email; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="<?php echo $email; ?>">
+        <div class="col-md-6">
+            <label for="telephone" class="form-label">Téléphone</label>
+            <input type="text" class="form-control" id="telephone" name="telephone" value="<?php echo $telephone; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="telephone">Téléphone</label>
-            <input type="text" id="telephone" name="telephone" value="<?php echo $telephone; ?>">
+        <div class="col-md-6">
+            <label for="numAdr" class="form-label">Numéro d'adresse</label>
+            <input type="text" class="form-control" id="numAdr" name="numAdr" value="<?php echo $numAdr; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="numAdr">Numéro d'adresse</label>
-            <input type="text" id="numAdr" name="numAdr" value="<?php echo $numAdr; ?>">
+        <div class="col-md-6">
+            <label for="rue" class="form-label">Rue</label>
+            <input type="text" class="form-control" id="rue" name="rue" value="<?php echo $rue; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="rue">Rue</label>
-            <input type="text" id="rue" name="rue" value="<?php echo $rue; ?>">
+        <div class="col-md-6">
+            <label for="codePostal" class="form-label">Code Postal</label>
+            <input type="text" class="form-control" id="codePostal" name="codePostal" value="<?php echo $codePostal; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="codePostal">Code Postal</label>
-            <input type="text" id="codePostal" name="codePostal" value="<?php echo $codePostal; ?>">
+        <div class="col-md-6">
+            <label for="ville" class="form-label">Ville</label>
+            <input type="text" class="form-control" id="ville" name="ville" value="<?php echo $ville; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="ville">Ville</label>
-            <input type="text" id="ville" name="ville" value="<?php echo $ville; ?>">
+        <div class="col-md-6">
+            <label for="pays" class="form-label">Pays</label>
+            <input type="text" class="form-control" id="pays" name="pays" value="<?php echo $pays; ?>" required>
         </div>
         
-        <div class="form-group">
-            <label for="pays">Pays</label>
-            <input type="text" id="pays" name="pays" value="<?php echo $pays; ?>">
+        <div class="col-md-6">
+            <label for="complement" class="form-label">Complément</label>
+            <input type="text" class="form-control" id="complement" name="complement" value="<?php echo $complement; ?>">
         </div>
         
-        <div class="form-group">
-            <label for="complement">Complément</label>
-            <input type="text" id="complement" name="complement" value="<?php echo $complement; ?>">
-        </div>
-        
-        <div class="account-buttons">
-            <button type="submit" class="btn-brickolo">Enregistrer les modifications</button>
-            <a href="panier.php" class="btn-brickolo btn-brickolo-secondary">Accéder au panier</a>
+        <div class="col-12 d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+            <a href="panier.php" class="btn btn-secondary">Accéder au panier</a>
         </div>
     </form>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

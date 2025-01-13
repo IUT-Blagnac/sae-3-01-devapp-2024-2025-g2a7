@@ -5,9 +5,10 @@ session_start();
 // Vérifie si l'utilisateur est connecté
 if (isset($_SESSION['Sutilisateur']) && $_SESSION['Sutilisateur'] === 'oui') {
     // Redirige vers la page des informations du compte si connecté
-    header("Location: informationCompte.php");
+    header("Location: utilisateur.php");
     exit();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -89,4 +90,5 @@ if (isset($_SESSION['Sutilisateur']) && $_SESSION['Sutilisateur'] === 'oui') {
 </div>
 
 </body>
+
 </html>

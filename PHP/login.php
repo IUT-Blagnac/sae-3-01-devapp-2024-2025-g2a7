@@ -40,10 +40,11 @@
         input[type="email"],
         input[type="password"],
         input[type="submit"] {
-            width: 100%;
+            width: 95%;
             padding: 12px;
-            margin: 10px 0 20px 0;
+            margin: 10px auto 20px auto;
             border-radius: 4px;
+            display: block; /* Permet le centrage */
             border: 1px solid #ccc;
             font-size: 16px;
         }
@@ -126,7 +127,7 @@
             </div>
 
             <!-- Bouton de soumission -->
-            <input type="submit" name="Entrer" value="Valider" />
+            <input type="submit" name="Entrer" value="Se connecter" />
         </form>
 
         <!-- Lien vers la page d'inscription -->
