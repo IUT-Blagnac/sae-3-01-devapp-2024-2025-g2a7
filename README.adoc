@@ -116,6 +116,8 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 Droit : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Fiche_Conseil.adoc[Fiche de conseils juridiques et de sécurité]
 
+Lien du site web : http://193.54.227.208/~R2024SAE3003/index.php[Brickolo]
+
 |===
 | Semaine | ODJ | Bilan 
 | 49 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/ODJ_02-12-24.pdf[ODJ-S49]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/R%C3%A9unions/Semaine%2049/CR_02_12-24.pdf[CR-S49]
