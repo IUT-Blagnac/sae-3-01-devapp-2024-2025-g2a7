@@ -109,5 +109,5 @@ Site distant : http://193.54.227.164/~R2024SAE3003/index.php
 
 === 2. Liens utiles
 
-Documentation utilisateur : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/GPO/DocUtilisateur.adoc
+Documentation utilisateur : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/GPO/DocUtilisateur.adoc[Doc user]
 
