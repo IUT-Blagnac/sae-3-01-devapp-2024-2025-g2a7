@@ -103,16 +103,35 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 == Réalisations 
 
-|===
-| Sprint | Doc.Tech | Doc.Util | User Story
 
-| Sprint 1 | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Sprint%201/DocTechnique.adoc[Doc Technique] | https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Sprint%201/DocUtilisateur.adoc[Doc Utilisateur]|https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/1[User Story 1]
-| Sprint 2 | | |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/3[User Story 2]
-| Sprint 3 | | |https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/2[User Story 3]
-| Sprint 4 | | |
-| Sprint 5 | | |
-| Sprint 6 | | |
+
+[cols="1,3"]
 |===
+| Sprints | Documents 
+
+| Sprint#1 |
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/GPO/DocTechnique.adoc[Doc Technique] + 
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/GPO/DocUtilisateur.adoc[Doc Utilisateur] + 
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/GPO/DocConception.adoc[Document de Conception] +
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/1[Charte Graphique] 
+| Sprint #2 |
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/20[Creation de compte] +
+| Sprint #3 |
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/2[Gestion des catégories] +
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/24[Page detail produit] + 
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/25[gestion Panier] +
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/GPO/CahierDeRecettes-2A7%20(1).pdf[Cahier de recette]
+| Sprint #4 |
+
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/3[Recherche triée]
+
+| Sprint #5 |
+https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/35[Passer une commande] 
+
+|===
+
+
+Livraison Finale du Site Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/tree/master/PHP[Dossier WebSite]
 
 Droit : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Fiche_Conseil.adoc[Fiche de conseils juridiques et de sécurité]
 
