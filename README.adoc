@@ -131,6 +131,9 @@ https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/issues/35[Passer u
 |===
 
 
+https://github.com/orgs/IUT-Blagnac/projects/273[Backlog Produit]
+
+
 Livraison Finale du Site Web : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/tree/master/PHP[Dossier WebSite]
 
 Droit : https://github.com/IUT-Blagnac/sae-3-01-devapp-2024-2025-g2a7/blob/master/Documentation/Fiche_Conseil.adoc[Fiche de conseils juridiques et de sécurité]
