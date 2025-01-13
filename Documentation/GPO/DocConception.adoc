@@ -5,7 +5,6 @@ Pour : Brickolo
 Date : 20/11/2024
 Équipe : 2A7
 
-image::./img/logo_iut_blagnac.png[Logo IUT de Blagnac]image::./img/logo_univ_jean_jaures.jpg[Logo Université Toulouse II - Jean Jaurès]
 
 == Introduction
 
