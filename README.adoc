@@ -171,6 +171,9 @@ note : 2,06/3
 Responsable de chaque item toujours non indiqué ! Pas de CR semaine 51
 0,4/3
 
+== Note droit fiche synthèse
+14,5/20
+
 == Gestion de projet & Qualité
 
 Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
